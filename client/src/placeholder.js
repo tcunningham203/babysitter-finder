@@ -1,1 +1,0 @@
-// Put all react stuff in this folder. You can delete this file after it is set up.
