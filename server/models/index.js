@@ -1,6 +1,7 @@
-// Placeholder file from MERN mini project. Make neccessary adjustments then delete this comment. (Models go in this folder.)
+const Babysitter = require('./Babysitter');
+const User = require('./User');
+const Parent = require('./Parent');
+const Starred = require('./Starred');
 
-const Tech = require('./Tech');
-const Matchup = require('./Matchup');
+module.exports = { Babysitter, User, Parent, Starred };
 
-module.exports = { Tech, Matchup };
