@@ -10,9 +10,7 @@ Signup as a babysitter or a parent, search for babysitters that meet your needs,
      Deployed Application
     </a>
     <br>
-    <a href="LINK HERE" target="_blank">
-     Promotional Video
-    </a>
+
     <!-- ADD RELEVANT LINKS HERE -->
 </h1>
 
@@ -68,7 +66,7 @@ This section will walk through the features of each page.
 ## Credits
 
 - Educational resources like W3Schools, Stack Overflow, and ChatGPT were used to help our team better understand concepts and fine-tune our vision.
-- The second commit titled "Starter Code" had the file structure taken from the mini project in Module 21 to act as a starting point. Most of the files say things like "insert code here", but some of them, like the package.json files, were taken directly. However, as the project went on, certain dependencies were added and removed to better suit our needs for this project.
+- The second commit titled "Starter Code and file structure from Mini Project" had the file structure taken from the mini project in Module 21 to act as a starting point. Most of the files say things like "insert code here", but some of them, like the package.json files, were taken directly. However, as the project went on, certain dependencies were added and removed to better suit our needs for this project.
 
 
 <!-- ADD ADDITIONAL CREDITS HERE AS THE PROJECT GOES ON. -->
