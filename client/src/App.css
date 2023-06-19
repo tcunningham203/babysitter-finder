@@ -38,33 +38,43 @@
 }
 
 /* HOVER EFFECTS TO CHANGE MAP COLOR */
+.map0{
+  fill:#414141
+  }
 .map1{
-  fill:#825acc
+  fill:#9961b3
   }
   .map2{
-  fill:#5a7ecc
+  fill:#826ec7
   }
   .map3{
-  fill:#5AA5CC
+  fill:#6b7bd1
   }
   .map4{
-  fill:#5acccc
+    fill:#61b0b6
   }
   .map5{
-  fill:#77c999
+    fill:#72c494
+  }
+  .map6{
+  fill:#819b60
   }
   .map1:hover {
-    fill:#caaeff
+    fill:#efc7ff
   }
   .map2:hover {
-    fill:#a4c1ff
+    fill:#cfc6ff
   }
   .map3:hover {
-    fill:#a6e0ff
+    fill:#bacaff
   }
   .map4:hover {
-    fill:#bffdff
+    fill:#c2fdff
   }
   .map5:hover {
-    fill:#c9ffe4
+    fill:#c9ffde
   }
+  .map6:hover {
+    fill:#ddffc9
+  }
+
