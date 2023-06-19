@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* HOVER EFFECTS TO CHANGE MAP COLOR */
+.map1{
+  fill:#825acc
+  }
+  .map2{
+  fill:#5a7ecc
+  }
+  .map3{
+  fill:#5AA5CC
+  }
+  .map4{
+  fill:#5acccc
+  }
+  .map5{
+  fill:#77c999
+  }
+  .map1:hover {
+    fill:#caaeff
+  }
+  .map2:hover {
+    fill:#a4c1ff
+  }
+  .map3:hover {
+    fill:#a6e0ff
+  }
+  .map4:hover {
+    fill:#bffdff
+  }
+  .map5:hover {
+    fill:#c9ffe4
+  }

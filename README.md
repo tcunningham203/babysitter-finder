@@ -67,6 +67,7 @@ This section will walk through the features of each page.
 
 - Educational resources like W3Schools, Stack Overflow, and ChatGPT were used to help our team better understand concepts and fine-tune our vision.
 - The second commit titled "Starter Code and file structure from Mini Project" had the file structure taken from the mini project in Module 21 to act as a starting point. Most of the files say things like "insert code here", but some of them, like the package.json files, were taken directly. However, as the project went on, certain dependencies were added and removed to better suit our needs for this project.
+- https://www.vecteezy.com/vector-art/137630-vector-of-manhattam-map Credit to this page for the manhattan svg. it was later working on in illustrator to change the colors and reduce it to single map. Then, the svg was converted to jsx for use in react.
 
 
 <!-- ADD ADDITIONAL CREDITS HERE AS THE PROJECT GOES ON. -->
