@@ -1,34 +1,28 @@
 import Map from "./components/Map";
 import './App.css';
 import Home from "./components/Home";
-
+import {Routes, Route} from 'react-router-dom'
+import Header from "./components/Header";
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <Home/>
+<Header/>
+<Routes>
+  <Route path="/" element={<Home/>}/>
+  <Route path="/map" element={<Map />}/>
+</Routes>
+      
       
 
 
 {/* this is the map file you see when you open the page. it is only here for now, we should move it eventually, I just wanted to get it working.*/}
-      <Map />
+      
 
 
 {/* the rest of this stuff came default with the app install */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
