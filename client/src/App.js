@@ -1,11 +1,15 @@
 import Map from "./components/Map";
 import './App.css';
+import Home from "./components/Home";
+
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <Home/>
+      
 
 
 {/* this is the map file you see when you open the page. it is only here for now, we should move it eventually, I just wanted to get it working.*/}
