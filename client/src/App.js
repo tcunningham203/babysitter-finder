@@ -1,6 +1,7 @@
 import Map from "./components/Map";
 import './App.css';
 import Home from "./components/Home";
+import Bookmarks from "./components/pages/Bookmarked";
 import {Routes, Route} from 'react-router-dom'
 import Header from "./components/Header";
 
@@ -12,6 +13,7 @@ function App() {
 <Routes>
   <Route path="/" element={<Home/>}/>
   <Route path="/map" element={<Map />}/>
+  <Route path="/bookmarks" element={<Bookmarks/>}/>
 </Routes>
       
       
