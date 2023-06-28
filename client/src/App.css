@@ -1,21 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-nav a {
-  color: black;
-  font-size: 30px
-}
-
-nav a.active {
-  color: white;
-  background-color: grey;
-}
 /* HOVER EFFECTS TO CHANGE MAP COLOR */
 .map0{
   fill:#414141

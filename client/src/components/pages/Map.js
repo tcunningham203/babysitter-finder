@@ -1,7 +1,10 @@
 import React from "react";
+import Header from "../Header";
 
 function Map() {
     return (
+<div className="bg-purple-200">
+        <Header/>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="987.1"
@@ -496,6 +499,7 @@ function Map() {
                 clipRule="evenodd"
             ></path>
         </svg>
+        </div>
     );
 }
 

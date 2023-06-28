@@ -1,32 +1,31 @@
-import Map from "./components/Map";
 import './App.css';
-import Home from "./components/Home";
-import Bookmarks from "./components/pages/Bookmarked";
-import {Routes, Route} from 'react-router-dom'
-import Header from "./components/Header";
-
+import Home from "./components/pages/Home";
+import Map from "./components/pages/Map";
+import {Routes, NavLink, Route} from 'react-router-dom'
+import Signup from "./components/NewUserQuiz/signup";
+import Login from "./components/Login";
+import Bookmarks from "./components/pages/Bookmarked"
 
 function App() {
   return (
     <div className="App">
-<Header/>
+--- TEST LINKS ONLY IGNORE FOR LAYOUT PURPOSES ---
+<NavLink to='/login'>| Login |</NavLink>
+<NavLink to='/signup'>| Signup |</NavLink>
+<NavLink to='/home'>| Home |</NavLink>
 <Routes>
-  <Route path="/" element={<Home/>}/>
+  <Route path="/home" element={<Home/>}/>
+  <Route path="/login" element={<Login/>}/>
   <Route path="/map" element={<Map />}/>
+  <Route path="/signup" element={<Signup />}/>
   <Route path="/bookmarks" element={<Bookmarks/>}/>
 </Routes>
       
-      
-
-
-{/* this is the map file you see when you open the page. it is only here for now, we should move it eventually, I just wanted to get it working.*/}
-      
-
-
-{/* the rest of this stuff came default with the app install */}
 
     </div>
   );
 }
 
 export default App;
+
+
