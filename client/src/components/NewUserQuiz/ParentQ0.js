@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function ParentQuestions () {
+function ParentQ0 () {
     return (
         <div className="bg-purple-200 min-h-screen">
      
@@ -11,4 +11,4 @@ function ParentQuestions () {
     )
 }
 
-export default ParentQuestions;
+export default ParentQ0;

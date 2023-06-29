@@ -10,6 +10,7 @@ const Signup = () => {
   const [userType, setUserType] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimating2, setIsAnimating2] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -32,14 +33,20 @@ const Signup = () => {
     //   confirmPassword !== '' &&
     //   userType !== ''
     // ) {
-      setIsAnimating(true);
-      setTimeout(() => {
+      
+      
         if (userType === 'babysitter') {
-          navigate('/signupbsq'); // Navigate to /signupbsq for babysitters
+            setIsAnimating(true); 
+            setTimeout(() => {
+          navigate('/signupbsq/0'); 
+            }, 1300);// Navigate to /signupbsq for babysitters
         } else if (userType === 'parent') {
-          navigate('/signuppq'); // Navigate to /signuppq for parents
+            setIsAnimating2(true);
+            setTimeout(() => {
+          navigate('/signuppq/0'); 
+        }, 1300);// Navigate to /signuppq for parents
         }
-      }, 1300);
+      
     // } else {
     //   setShowAlert(true);
     // }
@@ -51,11 +58,15 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-gray-200 min-h-screen flex-col flex items-center justify-center">
+    <div className={`  bg-gray-200 min-h-screen flex-col flex items-center justify-center ${isAnimating2 ? 'animate-bg-2' : ''
+} ${isAnimating ? 'animate-bg-1' : ''
+}`}>
       <div
         className={`  ${
           isAnimating ? 'animate-slide-up' : ''
-        }`}
+        } ${
+            isAnimating2 ? 'animate-slide-up' : ''
+          }`}
       >
        
         <form onSubmit={handleSubmit}>
@@ -70,7 +81,7 @@ const Signup = () => {
               Sign up with CubCare
             </div>
             <div className="block text-gray-700 text-center text-xl font-bold mb-2" htmlFor="lastName">
-              Make everything easier.
+            Make finding child care easy.
             </div>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
