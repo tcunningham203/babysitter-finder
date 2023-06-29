@@ -12,7 +12,7 @@ import ParentQ0 from './components/NewUserQuiz/ParentQ0';
 function App() {
   return (
     <div className="App">
---- TEST LINKS ONLY IGNORE FOR LAYOUT PURPOSES ---
+--- TEST LINKS ONLY! --- IGNORE THIS WHITE STRIP WHEN DOING CSS. ---
 <NavLink to='/login'>| Login |</NavLink>
 <NavLink to='/signup'>| Signup |</NavLink>
 <NavLink to='/home'>| Home |</NavLink>

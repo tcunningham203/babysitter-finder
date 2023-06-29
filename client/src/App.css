@@ -13,19 +13,120 @@
   animation: slide-up 1.3s ease forwards;
 }
 
-.animate-bg-1 {
+.animate-bg-bbs {
   animation: color-change1 1.3s ease forwards;
 }
-.animate-bg-2 {
+.animate-bg-pnt {
   animation: color-change2 1.3s ease forwards;
 }
+
+
+
+.animate-fade-in-button {
+  opacity: 0;
+  animation: fadeAndGrow1 .8s ease-in-out forwards;
+  animation-delay: calc(0.3s * var(--word-index));
+}
+@keyframes fadeAndGrow1 {
+  0% {
+    opacity: 0;
+    transform: scale(.7);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+   
+  }
+}
+.animate-fade-in-word {
+  opacity: 0;
+  animation: fadeAndGrow2 .8s ease-in-out forwards;
+  animation-delay: calc(0.3s * var(--word-index));
+}
+@keyframes fadeAndGrow2 {
+  0% {
+    opacity: 0;
+   
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    
+    transform: translateY(0px)
+  }
+}
+
+.animate-fade-out-button {
+  opacity: 1;
+  animation: fade-out-btn .6s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--out-index));
+}
+
+@keyframes fade-out-btn {
+  0% {
+    opacity: 1;
+   
+  }
+  100% {
+    opacity: 0;
+    
+  }
+}
+
+.animate-blowup-button {
+  opacity: 1;
+  animation: blowup-btn 1.3s ease-in forwards;
+  animation-delay: calc(0.2s * var(--blowup-index));
+}
+
+@keyframes blowup-btn {
+  0% {
+    transform: scale3d(1, 1, 1);
+   
+  }
+  55% {
+    transform: scale3d(13, 1, 1);
+   
+  }
+  70% {
+    transform: scale3d(13, 1, 1);
+   
+  }
+ 
+  100% {
+    transform: scale3d(13, 42, 1);
+    
+  }
+}
+
+
+.animate-fade-out-words {
+  opacity: 1;
+  animation: fade-out 1s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--out-index));
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
+
 
 @keyframes color-change1 {
   0% {
     background-color: #c2fdff;
   }
   100% {
-    background-color: #414141;
+    background-color: #ffe4e6;
     
   }
 }

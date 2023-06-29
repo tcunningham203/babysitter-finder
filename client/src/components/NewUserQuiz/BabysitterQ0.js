@@ -2,48 +2,32 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const BabysitterQ0 = () => {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  // Add more state variables for other form inputs
-
+  const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
 
   const handleNext = (e) => {
     e.preventDefault();
-    navigate('/signupbsq/1'); // Navigate to the next question page
+    setIsAnimating(true);
+    setTimeout(() => {
+      navigate('/signupbsq/1'); // Navigate to the next question page
+    }, 2000); // Adjust the delay time as needed for the animation
   };
 
   return (
-    <div className="bg-green-200 min-h-screen flex-col flex items-center justify-center">
-      <div className="bg-white shadow-md rounded px-8 py-6">
+    <div className="bg-rose-100 min-h-screen flex-col flex items-center justify-center">
+      <div className="rounded px-8 py-6 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
-          <h2 className="text-2xl font-bold mb-4">Question 1</h2>
-          <label htmlFor="name" className="block mb-2">
-            Name:
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </label>
-          <label htmlFor="age" className="block mb-2">
-            Age:
-            <input
-              type="number"
-              id="age"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </label>
-          {/* Add more form inputs for the current question */}
+          <h2 className={`text-center md:mb-24 my-8 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '2'}}>Thanks for choosing CubCare.</h2>
+          <h2 className={`animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '6', '--out-index': '3'}}>Let's create your babysitting profile to advertise your business.</h2>
+          <h2 className={`md:mt-24 mt-8 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '4'}}>We'll ask a series of questions to help you build your brand.</h2>
+          <h2 className={`md:mb-24 mb-16 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '5'}}>Don't worry; you can edit your answers later.</h2>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className={`my-16 bg-rose-200 hover:bg-rose-500 text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-fade-in-button ${isAnimating ? 'animate-blowup-button hover:bg-rose-200' : ''}`}
+            style={{'--word-index': '18', '--blowup-index': '3'}}
           >
-            Next
+           <span className={`button-text ${isAnimating ? 'animate-fade-out-button' : ''}`}
+            style={{'--word-index': '18', '--out-index': '0'}}>I'm ready!</span>
           </button>
         </form>
       </div>
