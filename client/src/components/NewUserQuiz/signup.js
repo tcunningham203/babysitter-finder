@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [firstName, setFirstName] = useState('');
@@ -7,40 +8,70 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [userType, setUserType] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform validation here
-    if (
-      firstName !== '' &&
-      lastName !== '' &&
-      email !== '' &&
-      password !== '' &&
-      confirmPassword !== '' &&
-      userType !== ''
-    ) {
-      // All fields are filled in and user type is selected
-      // Proceed to the next page or perform necessary actions
-      console.log('Signup successful!');
-    } else {
-      // Show error or validation message
-      console.log('Please fill in all fields and select a user type.');
-    }
+
+
+
+
+    // THIS IF STATEMENT AND THE ELSE STATEMENT HAVE BEEN COMMENTED OUT FOR TESTING. MUST UNCOMMENT FOR SIGNUP FORM.
+
+
+
+
+    // if (
+    //   firstName !== '' &&
+    //   lastName !== '' &&
+    //   email !== '' &&
+    //   password !== '' &&
+    //   confirmPassword !== '' &&
+    //   userType !== ''
+    // ) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        if (userType === 'babysitter') {
+          navigate('/signupbsq'); // Navigate to /signupbsq for babysitters
+        } else if (userType === 'parent') {
+          navigate('/signuppq'); // Navigate to /signuppq for parents
+        }
+      }, 1300);
+    // } else {
+    //   setShowAlert(true);
+    // }
   };
 
   const handleUserType = (type) => {
     setUserType(type);
+    setShowAlert(false);
   };
 
   return (
-    <div className="bg-green-200 min-h-screen flex items-center justify-center">
-      <div className="bg-white shadow-md rounded px-8 py-6">
+    <div className="bg-gray-200 min-h-screen flex-col flex items-center justify-center">
+      <div
+        className={`  ${
+          isAnimating ? 'animate-slide-up' : ''
+        }`}
+      >
+       
         <form onSubmit={handleSubmit}>
+        <div className='bg-white shadow-md rounded px-8 py-6 relative'>
+        {showAlert && (
+          <div className="bg-red-100 border-l-4 border-red-500 text-red-700 text-center py-7 absolute top-9 left-0 w-full text-sm -mt-4 mb-4 z-10">
+            <p>Please fill in all fields correctly, and select a user type.</p>
+          </div>
+        )}
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
-              First Name
-            </label>
+            <div className="block text-gray-700 text-center text-3xl font-bold mb-2" htmlFor="lastName">
+              Sign up with CubCare
+            </div>
+            <div className="block text-gray-700 text-center text-xl font-bold mb-2" htmlFor="lastName">
+              Make everything easier.
+            </div>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="firstName"
@@ -51,9 +82,6 @@ const Signup = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
-              Last Name
-            </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="lastName"
@@ -64,22 +92,19 @@ const Signup = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-              Email
-            </label>
             <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
+              name="email"
               type="email"
               placeholder="Email"
+              autoComplete="off"
+              
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-              Password
-            </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
@@ -90,9 +115,6 @@ const Signup = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">
-              Confirm Password
-            </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="confirmPassword"
@@ -103,34 +125,39 @@ const Signup = () => {
             />
           </div>
           <div className="mb-4">
-            <p className="block text-gray-700 text-sm font-bold mb-2">How will you be using CubCare?</p>
-            <div className="flex">
+            <p className="block text-gray-700 text-lg text-center font-bold mb-2">How will you use CubCare?</p>
+            <div className="flex justify-evenly">
               <button
-                className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 ${
-                  userType === 'babysitter' ? 'bg-blue-700' : ''
+                className={`bg-blue-200 hover:bg-green-500 w-32 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 ${
+                  userType === 'babysitter' ? 'bg-green-600' : ''
                 }`}
                 type="button"
                 onClick={() => handleUserType('babysitter')}
               >
-                As a babysitter
+                Babysitter
               </button>
               <button
-                className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
-                  userType === 'parent' ? 'bg-blue-700' : ''
+                className={`bg-blue-200 hover:bg-green-500 w-32  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                  userType === 'parent' ? 'bg-green-600' : ''
                 }`}
                 type="button"
                 onClick={() => handleUserType('parent')}
               >
-                As a parent
+                Parent
               </button>
             </div>
-          </div>
-          <div className="flex justify-center">
+          </div></div>
+          <div className="flex justify-center pt-7">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className={`bg-cyan-700 hover:bg-blue-700 w-64 text-white text-2xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                isAnimating || (!firstName || !lastName || !email || !password || !confirmPassword || !userType)
+                  ? 'opacity-50 hover:bg-cyan-700 cursor-default'
+                  : ''
+              }`}
               type="submit"
+        
             >
-              Submit
+              Get Started
             </button>
           </div>
         </form>
