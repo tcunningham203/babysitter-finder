@@ -5,6 +5,7 @@ const parentSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
+    // location
     city: {
         type: String,
         required: true
@@ -41,10 +42,10 @@ const parentSchema = new Schema({
         type: String,
         required: false
     },
-    profilePicture: {
-        type: String,
-        required: false
-    },
+    // profilePicture: {
+    //     type: String,
+    //     required: false
+    // },
     createdAt: {
         type: Date,
         default: Date.now
