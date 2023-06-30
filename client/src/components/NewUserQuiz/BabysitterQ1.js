@@ -1,51 +1,29 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Map from '../pages/Map';
 
 const BabysitterQ1 = () => {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  // Add more state variables for other form inputs
-
+  const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
 
   const handleNext = (e) => {
     e.preventDefault();
-    navigate('/signupbsq/2'); // Navigate to the next question page
+    setIsAnimating(true);
+    setTimeout(() => {
+      navigate('/signupbsq/2'); // Navigate to the next question page
+    }, 1800); // Adjust the delay time as needed for the animation
   };
 
   return (
-    <div className="bg-rose-200 min-h-screen flex-col flex items-center justify-center">
-      <div className=" rounded px-8 py-6">
+    <div className="bg-rose-200 min-h-screen flex-col flex items-center ">
+      <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
-          <h2 className="text-2xl font-bold mb-4">Question 3</h2>
-          <h2 className="text-2xl font-bold mb-4">Question 4</h2>
-          <label htmlFor="name" className="block mb-2">
-            Name:
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </label>
-          <label htmlFor="age" className="block mb-2">
-            Age:
-            <input
-              type="number"
-              id="age"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </label>
-          {/* Add more form inputs for the current question */}
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Next
-          </button>
+          <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '2'}}>First, choose where you want to work.</h2>
+          
+          <h2 className={`pb-3 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '16', '--out-index': '4'}}>Parents from there will see your profile.</h2>
+         <div className='flex min-w-full justify-center '>
+          <Map/>
+          </div>
         </form>
       </div>
     </div>

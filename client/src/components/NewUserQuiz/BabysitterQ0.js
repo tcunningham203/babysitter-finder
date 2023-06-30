@@ -10,7 +10,7 @@ const BabysitterQ0 = () => {
     setIsAnimating(true);
     setTimeout(() => {
       navigate('/signupbsq/1'); // Navigate to the next question page
-    }, 2000); // Adjust the delay time as needed for the animation
+    }, 1800); // Adjust the delay time as needed for the animation
   };
 
   return (
@@ -23,8 +23,9 @@ const BabysitterQ0 = () => {
           <h2 className={`md:mb-24 mb-16 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '5'}}>Don't worry; you can edit your answers later.</h2>
           <button
             type="submit"
-            className={`my-16 bg-rose-200 hover:bg-rose-500 text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-fade-in-button ${isAnimating ? 'animate-blowup-button hover:bg-rose-200' : ''}`}
+            className={`my-16 bg-rose-200 hover:bg-rose-500 text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-fade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-blowup-button ' : ''}`}
             style={{'--word-index': '18', '--blowup-index': '3'}}
+            disabled={isAnimating} 
           >
            <span className={`button-text ${isAnimating ? 'animate-fade-out-button' : ''}`}
             style={{'--word-index': '18', '--out-index': '0'}}>I'm ready!</span>

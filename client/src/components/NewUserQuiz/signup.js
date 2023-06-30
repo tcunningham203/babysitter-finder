@@ -58,7 +58,7 @@ const Signup = () => {
   };
 
   return (
-    <div className={`  bg-gray-200 min-h-screen flex-col flex items-center justify-center ${isAnimating2 ? 'animate-bg-pnt' : ''
+    <div className={`  bg-slate-200 min-h-screen flex-col flex items-center justify-center ${isAnimating2 ? 'animate-bg-pnt' : ''
 } ${isAnimating ? 'animate-bg-bbs' : ''
 }`}>
       <div
