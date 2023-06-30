@@ -54,11 +54,7 @@ export const babysitterQuiz = [
       question: "What activities do you enjoy doing with kids?",
       desc: ""
     },
-    {
-      question_id: 9,
-      question: "How do you enforce rules?",
-      desc: ""
-    },
+   
     {
       question_id: 10,
       question: "How do you deal with behavioral issues?",

@@ -48,7 +48,25 @@
   0% {
     opacity: 0;
    
-    transform: translateY(40px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    
+    transform: translateY(0px)
+  }
+}
+
+.animate-mapfade-in-word {
+  opacity: 0;
+  animation: fadeAndGrow3 .5s ease-in-out forwards;
+  animation-delay: calc(0.15s * var(--word-index));
+}
+@keyframes fadeAndGrow3 {
+  0% {
+    opacity: 0;
+   
+    transform: translateY(70px);
   }
   100% {
     opacity: 1;
@@ -118,7 +136,22 @@
   }
 }
 
+.animate-mapfade-out-words {
+  opacity: 1;
+  animation: fade-out .6s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--out-index));
+}
 
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
 
 
 @keyframes color-change1 {
