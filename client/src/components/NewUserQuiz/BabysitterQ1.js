@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 const regions = ["map1", "map2", "map3", "map4", "map5", "map6"];
 const displayedNames = ["Lower Manhattan", "Midtown", "Upper East Side", "Upper West Side", "Harlem","Upper Manhattan"];
 
@@ -9,16 +8,20 @@ const BabysitterQ1 = () => {
 
   const [selectedRegion, setSelectedRegion] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimating2, setIsAnimating2] = useState(false);
   const navigate = useNavigate();
 
 
 
   const handlePathClick = (mapName) => {
-    if (selectedRegion !== mapName) {
       hideCurrentMapName();
       showMapName(mapName);
       setSelectedRegion(mapName);
-    }
+      setIsAnimating2(true);
+      setTimeout(() => {
+        setIsAnimating2(false);
+      }, 200); 
+    
   };
 
   const hideCurrentMapName = () => {
@@ -41,16 +44,16 @@ const BabysitterQ1 = () => {
     setIsAnimating(true);
     setTimeout(() => {
       navigate('/signupbsq/2'); // Navigate to the next question page
-    }, 1800); // Adjust the delay time as needed for the animation
+    }, 1500); // Adjust the delay time as needed for the animation
   };
 
   return (
     <div className="bg-rose-200 min-h-screen flex-col flex items-center ">
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
-          <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '2'}}>First, choose where you want to work.</h2>
+          <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>First, choose where you want to work.</h2>
           
-          <h2 className={`pb-3 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '8', '--out-index': '4'}}>Parents from there will see your profile.</h2>
+          <h2 className={`pb-3 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '8', '--out-index': '1'}}>Families in that area will see your profile.</h2>
          <div className='flex min-w-full justify-center '>
      
          <div id="map-container ">
@@ -639,14 +642,13 @@ const BabysitterQ1 = () => {
               clipRule="evenodd"
           ></path>
       </svg>
-      <div className="rounded-xl flex justify-center items-center py-6 my-4 h-11   text-center">
+      <div className={`rounded-xl flex justify-center items-center py-6 my-4 h-11   text-center${isAnimating ? 'animate-fade-out-button' : ''} ${isAnimating2 ? 'pulse-animation' : ''}`} style={{'--word-index': '0', '--out-index': '5'}}>
       {regions.map((region, index) => (
       <div
         id={region}
         key={region}
-        className="map-name"
-        style={{ display: "none" }}
-      >
+        className={`map-name ${isAnimating ? 'animate-fade-out-button' : ''}`}
+        style={{ display: selectedRegion === region ? "flex" : "none" }}>
         {displayedNames[index]}
       </div>
     ))}
@@ -654,10 +656,10 @@ const BabysitterQ1 = () => {
 
     {/* Render confirm button */}
     {selectedRegion && (
-      <button id="toggle-button" className={` bg-slate-500 hover:bg-slate-700 text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-mapfade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-blowup-button ' : ''}`}
-      style={{'--word-index': '0', '--blowup-index': '3'}}
+      <button id="toggle-button" className={` bg-rose-800 hover:bg-rose-900 text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-mapfade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
+      style={{'--word-index': '0', '--blowup-index': '0'}}
       disabled={isAnimating}  onClick={handleNext}>
-       <span className={`button-text ${isAnimating ? 'animate-mapfade-out-button' : ''}`}
+       <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}
           style={{'--word-index': '0', '--out-index': '0'}}>Choose Here</span>
       </button>
     )}

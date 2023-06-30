@@ -118,6 +118,85 @@
   }
 }
 
+.animate-squish-button {
+  opacity: 1;
+  animation: squish-btn .3s ease-in forwards;
+  animation-delay: calc(0.2s * var(--blowup-index));
+}
+
+@keyframes squish-btn {
+  0% {
+    transform: scale3d(1, 1, 1);
+   
+  }
+  20% {
+    transform: scale3d(.8, 1.4, 1);
+    
+  }
+  40% {
+    transform: scale3d(1, 1, 1);
+    
+  }
+  100% {
+    transform: scale3d(0, 1, 1);
+    
+  }
+}
+
+.animate-out-down {
+  -webkit-animation: out-down 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  animation: out-down 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+}
+
+@keyframes out-down {
+  
+    0% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(1000px) scaleY(2) scaleX(0.2);
+              transform: translateY(1000px) scaleY(2) scaleX(0.2);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+  }
+
+.animate-in-up {
+  -webkit-animation: in-up 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: in-up 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@keyframes in-up {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+
+}
+
 
 .animate-fade-out-words {
   opacity: 1;
@@ -171,6 +250,24 @@
   100% {
     background-color: #ff0000;
     
+  }
+}
+
+.pulse-animation {
+  animation-name: pulse;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
