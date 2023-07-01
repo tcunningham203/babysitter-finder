@@ -8,6 +8,9 @@ const BabysitterQ7 = () => {
 
     const [isAnimating, setIsAnimating] = useState(false);
     const [isAnimating2, setIsAnimating2] = useState(false);
+    const [allowPets, setAllowPets] = useState('');
+    const [enforceScreenTime, setEnforceScreenTime] = useState('');
+    const [smoker, setSmoker] = useState('');
 
     const navigate = useNavigate();
 
@@ -35,20 +38,96 @@ const BabysitterQ7 = () => {
                     <form >
 
 
-                        <h2 className="" >Write about any job experience you have specific to babysitting.</h2>
+                        <h2 className="py-4" >Here's a few yes/no questions that parents will want to know.</h2>
 
-                        <h2 className="py-10">Number of kids and their ages are good details to add here.</h2>
+                        <h2 className="py-4">Would you accept clients who have pets?</h2>
 
-                        <div>
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Babysitting Experience:"
-                                rows={4}
-                                required
-                                className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"
-                            />
-                        </div>
+
+                        <div className="flex  justify-center align-center">
+<div className="flex justify-evenly py-2">
+  <button
+    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+      allowPets === true ? ' outline outline-offset-2 outline-rose-500' : ''
+    }`}
+    type="button"
+    onClick={() => setAllowPets(true)}
+  >
+    Yes
+  </button>
+  <button
+    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+      allowPets === false ? ' outline outline-offset-2 outline-rose-500' : ''
+    }`}
+    type="button"
+    onClick={() => setAllowPets(false)}
+  >
+    No
+  </button>
+</div>
+</div>
+<div className="h-px bg-rose-500 w-full my-4"></div>
+
+
+<h2 className="py-4">Would you accept clients who have screen time rules?</h2>
+<div className="flex  justify-center align-center">
+<div className="flex justify-evenly py-2">
+  <button
+    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+      enforceScreenTime === true ? ' outline outline-offset-2 outline-rose-500' : ''
+    }`}
+    type="button"
+    onClick={() => setEnforceScreenTime(true)}
+  >
+    Yes
+  </button>
+  <button
+    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+      enforceScreenTime === false ? ' outline outline-offset-2 outline-rose-500' : ''
+    }`}
+    type="button"
+    onClick={() => setEnforceScreenTime(false)}
+  >
+    No
+  </button>
+</div>
+</div>
+<div className="h-px bg-rose-500 w-full my-4"></div>
+
+
+
+<h2 className="py-4">Are you a smoker?</h2>
+<div className="flex  justify-center align-center">
+<div className="flex justify-evenly py-2">
+  <button
+    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+      smoker === true ? ' outline outline-offset-2 outline-rose-500' : ''
+    }`}
+    type="button"
+    onClick={() => setSmoker(true)}
+  >
+    Yes
+  </button>
+  <button
+    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+      smoker === false ? ' outline outline-offset-2 outline-rose-500' : ''
+    }`}
+    type="button"
+    onClick={() => setSmoker(false)}
+  >
+    No
+  </button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+                        <div className="h-px bg-rose-500 w-full my-4"></div>
 
                         <div className='flex min-w-full justify-center my-2 md:my-6'>
 

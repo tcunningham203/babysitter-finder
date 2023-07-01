@@ -13,6 +13,8 @@ import BabysitterQ4 from './components/NewUserQuiz/BabysitterQ4';
 import BabysitterQ5 from './components/NewUserQuiz/BabysitterQ5';
 import BabysitterQ6 from './components/NewUserQuiz/BabysitterQ6';
 import BabysitterQ7 from './components/NewUserQuiz/BabysitterQ7';
+import BabysitterQ8 from './components/NewUserQuiz/BabysitterQ8';
+import BabysitterQ9 from './components/NewUserQuiz/BabysitterQ9';
 import ParentQ0 from './components/NewUserQuiz/ParentQ0';
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
   <Route path="/signupbsq/5" element={<BabysitterQ5 />}/>
   <Route path="/signupbsq/6" element={<BabysitterQ6 />}/>
   <Route path="/signupbsq/7" element={<BabysitterQ7 />}/>
+  <Route path="/signupbsq/8" element={<BabysitterQ8 />}/>
+  <Route path="/signupbsq/9" element={<BabysitterQ9 />}/>
   <Route path="/signuppq/0" element={<ParentQ0 />}/>
   <Route path="/signup" element={<Signup />}/>
   <Route path="/bookmarks" element={<Bookmarks/>}/>
