@@ -35,20 +35,35 @@ const BabysitterQ6 = () => {
                     <form >
 
 
-                        <h2 className="" >Write about any job experience you have specific to babysitting.</h2>
+                        <h2 className="py-4" >Let's look at your child care style.</h2>
 
-                        <h2 className="py-10">Number of kids and their ages are good details to add here.</h2>
+                        <h2 className="py-4">How do you plan to spend time with the kids?</h2>
 
                         <div>
                             <textarea
                                 id="message"
                                 name="message"
-                                placeholder="Babysitting Experience:"
+                                placeholder="Activities and Games:"
                                 rows={4}
                                 required
                                 className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"
                             />
                         </div>
+
+                        <div className="h-px bg-rose-500 w-full my-4"></div>
+
+<h2 className="py-4">What do you do when things go wrong?</h2>
+
+<div>
+    <textarea
+        id="message"
+        name="message"
+        placeholder="Handling Behavioral Issues:"
+        rows={4}
+        required
+        className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"
+    />
+</div>
 
                         <div className='flex min-w-full justify-center my-2 md:my-6'>
 
