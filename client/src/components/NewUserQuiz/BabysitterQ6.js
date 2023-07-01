@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const BabysitterQ3 = () => {
+const BabysitterQ6 = () => {
 
 
     const [isAnimating, setIsAnimating] = useState(false);
@@ -11,13 +11,19 @@ const BabysitterQ3 = () => {
 
     const navigate = useNavigate();
 
-  
+    const handlePrev = (e) => {
+        e.preventDefault();
+        setIsAnimating2(true);
+        setTimeout(() => {
+            navigate('/signupbsq/5'); // Navigate to the previous question page
+        }, 800); // Adjust the delay time as needed for the animation
+    };
 
     const handleNext = (e) => {
         e.preventDefault();
         setIsAnimating(true);
         setTimeout(() => {
-            navigate('/signupbsq/4'); // Navigate to the next question page
+            navigate('/signupbsq/7'); // Navigate to the next question page
         }, 800); // Adjust the delay time as needed for the animation
     };
 
@@ -46,7 +52,12 @@ const BabysitterQ3 = () => {
 
                         <div className='flex min-w-full justify-center my-2 md:my-6'>
 
-                       
+                            <button className={` mx-4 bg-rose-800 hover:bg-rose-900  text-white font-bold py-3 px-8 md:px-16 rounded-full focus:outline-none focus:shadow-outline  ${isAnimating2 ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
+                                style={{ '--word-index': '12', '--blowup-index': '0' }}
+                                disabled={isAnimating} onClick={handlePrev}>
+                                <span className={`button-text ${isAnimating2 ? 'animate-mapfade-out-words' : ''}`}
+                                    style={{ '--word-index': '0', '--out-index': '0' }}>Back</span>
+                            </button>
 
                             <button className={`mx-4 bg-rose-800 hover:bg-rose-900  text-white font-bold py-3 px-8 md:px-16 rounded-full focus:outline-none focus:shadow-outline  ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
                                 style={{ '--word-index': '12', '--blowup-index': '0' }}
@@ -64,4 +75,4 @@ const BabysitterQ3 = () => {
     );
 };
 
-export default BabysitterQ3;
+export default BabysitterQ6;

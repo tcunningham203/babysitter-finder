@@ -143,12 +143,13 @@
   }
 }
 
-.animate-out-down {
-  -webkit-animation: out-down 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-  animation: out-down 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+.animate-out-up {
+  -webkit-animation: out-up 0.3s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  animation: out-up 0.3s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  animation-delay: calc(0.15s * var(--swoop-index));
 }
 
-@keyframes out-down {
+@keyframes out-up {
   
     0% {
       -webkit-transform: translateY(0) scaleY(1) scaleX(1);
@@ -160,8 +161,8 @@
       opacity: 1;
     }
     100% {
-      -webkit-transform: translateY(1000px) scaleY(2) scaleX(0.2);
-              transform: translateY(1000px) scaleY(2) scaleX(0.2);
+      -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+              transform: translateY(-1000px) scaleY(2) scaleX(0.2);
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-filter: blur(40px);
@@ -170,15 +171,31 @@
     }
   }
 
+.animate-out-down {
+  animation: out-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: calc(0.17s * var(--swoop-index));
+}
+
+@keyframes out-down{
+  0% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+}
+
 .animate-in-up {
-  -webkit-animation: in-up 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-  animation: in-up 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  -webkit-animation: in-up .7s  both;
+  animation: in-up .7s  both;
 }
 
 @keyframes in-up {
   0% {
-    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform: translateY(400px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(400px) scaleY(2.5) scaleX(0.2);
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
     -webkit-filter: blur(40px);
