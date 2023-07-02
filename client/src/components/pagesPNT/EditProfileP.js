@@ -2,7 +2,9 @@ import { useRef, useState } from "react";
 import { app } from "../../Firebase";
 import firebase from "firebase/app";
 import "@firebase/storage";
-function Profile () {
+import HeaderP from "../pagesPNT/HeaderP";
+
+function EditProfileP () {
     const [image, setImage] = useState("https://placehold.co/400")
     const file = useRef(null)
     function pictureUpload(){
@@ -16,7 +18,8 @@ function Profile () {
     }
     return(
         <div>
-          <h1>Profile Page</h1>
+                <HeaderP/>
+          <h1>PNT Profile Page</h1>
           <input type="file" ref={file}/>
           <button onClick={pictureUpload}>Submit</button>
           <img src={image} alt="Profile Picture" />
@@ -24,4 +27,4 @@ function Profile () {
     )
 };
 
-export default Profile;
+export default EditProfileP;
