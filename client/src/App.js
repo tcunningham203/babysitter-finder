@@ -4,6 +4,7 @@ import Map from "./components/pages/Map";
 import {Routes, NavLink, Route} from 'react-router-dom'
 import Signup from "./components/NewUserQuiz/signup";
 import Login from "./components/Login";
+import Profile from "./components/pages/Profile"
 import Bookmarks from "./components/pages/Bookmarked"
 import BabySitterQuestions from './components/NewUserQuiz/BabysitterQ';
 import ParentQuestions from './components/NewUserQuiz/ParentQ';
@@ -23,6 +24,7 @@ function App() {
   <Route path="/signuppq" element={<ParentQuestions />}/>
   <Route path="/signup" element={<Signup />}/>
   <Route path="/bookmarks" element={<Bookmarks/>}/>
+  <Route path="/profile" element={<Profile/>}/>
 </Routes>
       
 
