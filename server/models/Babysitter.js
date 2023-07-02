@@ -7,11 +7,10 @@ const babysitterSchema = new Schema({
         ref: 'User'
     },
     // location
-    city: {
+    location: {
         type: String,
         required: true
     },
-    // ba
     experience: {
         type: String,
         required: false
@@ -20,20 +19,10 @@ const babysitterSchema = new Schema({
         type: String,
         required: false
     },
-    // ageExperience: {
-    //     type: String,
-    //     required: false
-    // },
-    // preferredChildCount: {
-    //     // integer
-    //     type: String,
-    //     required: false
-    // },
     shortNoticeAvailability: {
         type: Boolean,
         required: false
     },
-    //
     transportationOptions: {
         type: String,
         required: false
@@ -42,10 +31,6 @@ const babysitterSchema = new Schema({
         type: String,
         required: false
     },
-    // ruleEnforcement: {
-    //     type: String,
-    //     required: false
-    // },
     behavioralIssueHandling: {
         type: String,
         required: false
@@ -66,10 +51,6 @@ const babysitterSchema = new Schema({
         type: String,
         required: false
     },
-    // profilePicture: {
-    //     type: Boolean,
-    //     required: false
-    // },
     createdAt: {
         type: Date,
         default: Date.now
