@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import HeaderB from "./HeaderB";
 import BearIcon from "../BearIcon";
 function HomeB() {

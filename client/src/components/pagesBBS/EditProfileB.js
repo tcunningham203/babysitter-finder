@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { app } from "../../Firebase";
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 import HeaderB from "./HeaderB";
 import "@firebase/storage";
 function EditProfileB () {
@@ -13,7 +13,7 @@ function EditProfileB () {
         newFile.put(file.current.files[0]).then(function(){
             console.log("done");
         })
-        // setImage(file.current.value);
+       setImage(file.current.value);
     }
     return(
         <div>
@@ -21,7 +21,7 @@ function EditProfileB () {
           <h1>EDIT BABYSITTER PROFILE</h1>
           <input type="file" ref={file}/>
           <button onClick={pictureUpload}>Submit</button>
-          <img src={image} alt="Profile Picture" />
+          <img src={image} alt="" />
         </div>
     )
 };

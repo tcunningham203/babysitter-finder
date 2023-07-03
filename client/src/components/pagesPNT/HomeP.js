@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import HeaderP from "../pagesPNT/HeaderP";
 import BearIcon from "../BearIcon";
 function HomeP() {

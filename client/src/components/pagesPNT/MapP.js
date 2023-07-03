@@ -44,7 +44,7 @@ const MapP = () => {
     e.preventDefault();
     setIsAnimating(true);
     setTimeout(() => {
-      navigate('/home'); // Navigate to the next question page
+      navigate('/homeP'); // Navigate to the next question page
     }, 1500); // Adjust the delay time as needed for the animation
   };
 

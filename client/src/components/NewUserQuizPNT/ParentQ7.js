@@ -10,7 +10,7 @@ const BabysitterQ7 = () => {
     e.preventDefault();
     setIsAnimating(true);
     setTimeout(() => {
-      navigate('/home'); // Navigate to the next question page
+      navigate('/homeP'); // Navigate to the next question page
     }, 1800); // Adjust the delay time as needed for the animation
   };
 

@@ -7,7 +7,7 @@ const BabysitterQ3 = () => {
 
 
     const [isAnimating, setIsAnimating] = useState(false);
-    const [isAnimating2, setIsAnimating2] = useState(false);
+   
 
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ const BabysitterQ3 = () => {
     return (
         <div className="bg-rose-200 min-h-screen flex-col flex justify-center items-center ">
             <span className='animate-in-up rounded p-3 sm:text-3xl text-xl text-center w-11/12 sm:w-3/4 lg:w-1/2'>
-                <div className={`  ${isAnimating2 ? 'animate-out-down cursor-default disabled:pointer-events-none ' : ''}${isAnimating ? 'animate-out-up cursor-default disabled:pointer-events-none  ' : ''}`}
+                <div className={` ${isAnimating ? 'animate-out-up cursor-default disabled:pointer-events-none  ' : ''}`}
                     style={{ '--word-index': '12', '--swoop-index': '3' }}>
                     <form >
 
@@ -50,7 +50,7 @@ const BabysitterQ3 = () => {
 
                             <button className={`mx-4 bg-rose-800 hover:bg-rose-900  text-white font-bold py-3 px-8 md:px-16 rounded-full focus:outline-none focus:shadow-outline  ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
                                 style={{ '--word-index': '12', '--blowup-index': '0' }}
-                                disabled={isAnimating2} onClick={handleNext}>
+                                 onClick={handleNext}>
                                 <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}
                                     style={{ '--word-index': '0', '--out-index': '0' }}>Next</span>
                             </button>
