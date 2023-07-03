@@ -8,7 +8,7 @@
       "screenTime": false,
       "smoker": false,
       "allergies": "Peanut Allergy",
-      "specialRequests": "Use zero profanity or limit innapropriate words when babysitting my three children."
+      "requests": "Use zero profanity or limit innapropriate words when babysitting my three children."
     },
   {
     "zone": "Midtown",
@@ -19,7 +19,7 @@
     "screenTime": false,
     "smoker": true,
     "allergies": "Shellfish",
-    "specialRequests": "Can you reward my child with chocolate chip cookies if he follows ground rules and displays proper behavior?"
+    "requests": "Can you reward my child with chocolate chip cookies if he follows ground rules and displays proper behavior?"
   },
   {
     "zone": "Upper East Side",
@@ -30,6 +30,6 @@
     "screenTime": false,
     "smoker": false,
     "allergies": "No allergies",
-    "specialRequests": "Could you bring my two children to our local park this summer when the weather is nice?"
+    "requests": "Could you bring my two children to our local park this summer when the weather is nice?"
   }
   ]
