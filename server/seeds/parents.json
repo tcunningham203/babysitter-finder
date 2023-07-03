@@ -1,0 +1,38 @@
+[
+    {
+      "city": "NYC",
+      "childrenHowMany": "3",
+      "childrenAge": "2, 1, 5",
+      "childrenActivities": "Watching movies, playing on iPad, solving puzzles",
+      "childrenAllergies": "None",
+      "hasPets": "Yes, one dog and one cat",
+      "hasScreenTimeRules": false,
+      "allowsSmokerBabysitter": false,
+      "additionalConcerns": "Kids have different sleep schedules",
+      "profilePicture": ""
+    },
+  {
+    "city": "NYC",
+    "childrenHowMany": "1",
+    "childrenAge": "3",
+    "childrenActivities": "Playing with building blocks, watch Frozen",
+    "childrenAllergies": "Peanut",
+    "hasPets": "No",
+    "hasScreenTimeRules": false,
+    "allowsSmokerBabysitter": true,
+    "additionalConcerns": "My kid likes playing with furniture and don't want my kid to break this furniture",
+    "profilePicture": ""
+  },
+  {
+    "city": "NYC",
+    "childrenHowMany": "2",
+    "childrenAge": "4, 2",
+    "childrenActivities": "Playing with Playdough, Coloring with crayons",
+    "childrenAllergies": "Shellfish",
+    "hasPets": "Yes, one dog",
+    "hasScreenTimeRules": false,
+    "allowsSmokerBabysitter": false,
+    "additionalConcerns": "I have an erratic work schedule, so will need babysitter at short notice",
+    "profilePicture": ""
+  }
+  ]
