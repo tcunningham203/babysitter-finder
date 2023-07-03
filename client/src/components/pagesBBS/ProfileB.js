@@ -3,13 +3,7 @@ import { app } from "../../Firebase";
 import firebase from "firebase/app";
 import HeaderB from "./HeaderB";
 import "@firebase/storage";
-<<<<<<< HEAD:client/src/components/pages/Profile.js
-import Header from "../Header";
-
-function Profile () {
-=======
 function ProfileB () {
->>>>>>> 1857584d63a81f0a13f83ea30ab69eaf9906bf7c:client/src/components/pagesBBS/ProfileB.js
     const [image, setImage] = useState("https://placehold.co/400")
     const file = useRef(null)
     function pictureUpload(){
@@ -23,13 +17,8 @@ function ProfileB () {
     }
     return(
         <div>
-<<<<<<< HEAD:client/src/components/pages/Profile.js
-            <Header/>
-          <h1>Profile Page</h1>
-=======
             <HeaderB/>
           <h1>BBS Profile Page</h1>
->>>>>>> 1857584d63a81f0a13f83ea30ab69eaf9906bf7c:client/src/components/pagesBBS/ProfileB.js
           <input type="file" ref={file}/>
           <button onClick={pictureUpload}>Submit</button>
           <img src={image} alt="Profile Picture" />

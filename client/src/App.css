@@ -329,33 +329,3 @@
     fill:#ddffc9
   }
 
-  #navbar-default {
-    text-align: center;
-  }
-
-  @media screen and (max-width: 767px) {
-    .home {
-      margin-left: 0;
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .dropDown {
-      margin-right: 0;
-    }
-  }
-
-  .border {
-    border-width: 0;
-  }
-
-  .rounded-lg {
-    border-radius: 0.2rem;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
-

@@ -13,7 +13,7 @@ export default function BearIcon () {
         viewBox="0 0 2048 2048"
         xmlSpace="preserve"
         >
-        <image className="bear"
+        <image
             width="2048"
             height="2048"
             x="0"
