@@ -3,8 +3,21 @@ import './App.css';
 import {Routes, NavLink, Route} from 'react-router-dom'
 import Signup from "./components/NewUserQuizBBS/signup";
 import Login from "./components/Login";
-import Profile from "./components/pages/Profile"
-import Bookmarks from "./components/pages/Bookmarked"
+
+import ClientsB from './components/pagesBBS/ClientsB';
+import HeaderB from './components/pagesBBS/HeaderB';
+import HomeB from './components/pagesBBS/HomeB';
+import MapB from './components/pagesBBS/MapB';
+import ProfileB from './components/pagesBBS/ProfileB';
+import EditProfileB from './components/pagesBBS/EditProfileB';
+
+import BookmarksP from './components/pagesPNT/BookmarksP';
+import HeaderP from './components/pagesPNT/HeaderP';
+import HomeP from './components/pagesPNT/HomeP';
+import MapP from './components/pagesPNT/MapP';
+import ProfileP from './components/pagesPNT/ProfileP';
+import EditProfileP from './components/pagesPNT/EditProfileP';
+
 import BabysitterQ0 from './components/NewUserQuizBBS/BabysitterQ0';
 import BabysitterQ1 from './components/NewUserQuizBBS/BabysitterQ1';
 import BabysitterQ2 from './components/NewUserQuizBBS/BabysitterQ2';
@@ -58,9 +71,21 @@ function App() {
   <Route path="/signuppq/5" element={<ParentQ5 />}/>
   <Route path="/signuppq/6" element={<ParentQ6 />}/>
   <Route path="/signuppq/7" element={<ParentQ7 />}/>
-  <Route path="/signup" element={<Signup />}/>
-  <Route path="/bookmarks" element={<Bookmarks/>}/>
-  <Route path="/profile" element={<Profile/>}/>
+ 
+  <Route path="/bookmarksP" element={<BookmarksP/>}/>
+  <Route path="/profileP" element={<ProfileP/>}/>
+  <Route path="/editprofileP" element={<EditProfileP/>}/>
+  <Route path="/headerP" element={<HeaderP/>}/>
+  <Route path="/mapP" element={<MapP/>}/>
+  <Route path="/homeP" element={<HomeP/>}/>
+
+  <Route path="/clientsB" element={<ClientsB/>}/>
+  <Route path="/profileB" element={<ProfileB/>}/>
+  <Route path="/editprofileB" element={<EditProfileB/>}/>
+  <Route path="/headerB" element={<HeaderB/>}/>
+  <Route path="/mapB" element={<MapB/>}/>
+  <Route path="/homeB" element={<HomeB/>}/>
+
 </Routes>
       
 
