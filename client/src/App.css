@@ -329,3 +329,15 @@
     fill:#ddffc9
   }
 
+.dropDown {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    margin-left: 0;
+  }
+  .dropDown {
+    margin-right: 0;
+  }
+}

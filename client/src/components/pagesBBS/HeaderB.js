@@ -15,7 +15,7 @@ function HeaderB(){
   <div className="max-w-screen flex flex-wrap items-center justify-between p-8">
     
         
-        <NavLink to='/homeB' className="self-center text-2xl ml-20 font-semibold whitespace-nowrap text-white block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">HomeBBS</NavLink>
+        <NavLink to='/homeB' className="home self-center text-2xl ml-20 font-semibold whitespace-nowrap text-white block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">HomeBBS</NavLink>
     
     <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded={isMenuOpen} onClick={toggleMenu}>
       <span className="sr-only">Open main menu</span>
@@ -24,7 +24,7 @@ function HeaderB(){
     <div className={`${
               isMenuOpen ? "block" : "hidden"
             } w-full md:block md:w-auto`}>
-      <ul className="font-medium ml-20 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-20 md:mt-0 md:border-0">
+      <ul className="dropDown font-medium mr-20 flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-20 md:mt-0 md:border-0">
       <li>
           <NavLink to='/profileB' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Profile</NavLink>
         </li>
