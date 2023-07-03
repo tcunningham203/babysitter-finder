@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
-function Header(){
+function HeaderB(){
 
     // setting the burger menu to drop down
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,11 @@ function Header(){
   <div className="max-w-screen flex flex-wrap items-center justify-between p-8">
     
         
+<<<<<<< HEAD:client/src/components/Header.js
         <NavLink to='/home' className="home self-center text-2xl ml-20 order-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Home</NavLink>
+=======
+        <NavLink to='/homeB' className="self-center text-2xl ml-20 font-semibold whitespace-nowrap text-white block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">HomeBBS</NavLink>
+>>>>>>> 1857584d63a81f0a13f83ea30ab69eaf9906bf7c:client/src/components/pagesBBS/HeaderB.js
     
     <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded={isMenuOpen}onClick={toggleMenu}>
       
@@ -26,13 +30,17 @@ function Header(){
     <div className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}id="navbar-default">
       <ul className="dropDown font-medium flex flex-col p-4 mr-20 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-20 md:mt-0 md:border-0">
       <li>
-          <NavLink to='/profile' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Profile</NavLink>
+          <NavLink to='/profileB' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Profile</NavLink>
         </li>
         <li>
+<<<<<<< HEAD:client/src/components/Header.js
           <NavLink to='/clients' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Clients</NavLink>
+=======
+          <NavLink to='/clientsB' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Clients</NavLink>
+>>>>>>> 1857584d63a81f0a13f83ea30ab69eaf9906bf7c:client/src/components/pagesBBS/HeaderB.js
         </li>
         <li>
-          <NavLink to='/map' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Map</NavLink>
+          <NavLink to='/mapB' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Map</NavLink>
         </li>
         <li>
           <NavLink to='/' className="block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Logout</NavLink>
@@ -47,7 +55,7 @@ function Header(){
 }
 
 
-export default Header
+export default HeaderB
 
 {/* <h1 classNameNameName="bg-red-200">BabySitter App Header</h1>
         <nav>NAV BAR PLACEHOLDER LINKS WHICH DISPLAY IF LOGGED IN:

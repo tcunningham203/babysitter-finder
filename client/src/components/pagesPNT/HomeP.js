@@ -1,19 +1,16 @@
 import { useState } from "react";
-import Header from "../Header";
+import HeaderP from "../pagesPNT/HeaderP";
 import BearIcon from "../BearIcon";
-
-
-function Home() {
+function HomeP() {
 
   return (
     <div className="bg-blue-200">
-      <Header/>
-      
-      <h1>Welcome to Babysitter App</h1>
+      <HeaderP/>
+      <h1 >PNT Welcome to Babysitter App</h1>
       <BearIcon/>
     </div>
     
   );
 }
 
-export default Home;
+export default HomeP;

@@ -1,23 +1,39 @@
-import {auth} from '../Firebase'
-import { createContext,useContext, useState,useEffect } from 'react'
+import decode from 'jwt-decode';
 
-const AuthContext = createContext()
+class AuthService {
+  getProfile() {
+    return decode(this.getToken());
+  }
 
-export function useAuth(){
-    return useContext(AuthContext)
+  loggedIn() {
+    const token = this.getToken();
+    return !!token && !this.isTokenExpired(token);
+  }
+
+  isTokenExpired(token) {
+    try {
+      const decoded = decode(token);
+      if (decoded.exp < Date.now() / 1000) {
+        return true;
+      } else return false;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  getToken() {
+    return localStorage.getItem('id_token');
+  }
+
+  login(idToken) {
+    localStorage.setItem('id_token', idToken);
+    window.location.assign('/');
+  }
+
+  logout() {
+    localStorage.removeItem('id_token');
+    window.location.assign('/');
+  }
 }
 
-export function AuthProvider(){
-    const [currentUser, setCurrentUser] = useState()
-    const [loading, setLoading] = useState(false)
-
-    function Signup(email, password){
-        return auth.createUserWithEmailAndPassword(email, password)
-    }
-    function Login(email, password){
-        return auth.signInWithEmailAndPassword(email, password)
-    }
-    function LogOut(){
-        return auth.signOut()
-    }
-}
+export default new AuthService();

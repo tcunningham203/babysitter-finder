@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import HeaderP from "../pagesPNT/HeaderP";
 
 const regions = ["map1", "map2", "map3", "map4", "map5", "map6"];
 const displayedNames = ["Lower Manhattan", "Midtown", "Upper East Side", "Upper West Side", "Harlem","Upper Manhattan"];
 
-const Map = () => {
+const MapP = () => {
 
   const [selectedRegion, setSelectedRegion] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
@@ -49,9 +50,10 @@ const Map = () => {
 
   return (
     <div className="bg-slate-200 min-h-screen flex-col flex items-center ">
+            <HeaderP/>
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
-          <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>Need more options? Try another area.</h2>
+          <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>PNT Need more options? Try another area.</h2>
           
          <div className='flex min-w-full justify-center '>
      
@@ -671,4 +673,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default MapP;

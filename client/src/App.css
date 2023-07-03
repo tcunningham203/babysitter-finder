@@ -21,6 +21,25 @@
 }
 
 
+@keyframes color-change1 {
+  0% {
+    background-color: #e2e8f0;
+  }
+  100% {
+    background-color: #ffe4e6;
+    
+  }
+}
+
+@keyframes color-change2 {
+  0% {
+    background-color: #e2e8f0;
+  }
+  100% {
+    background-color: #dbeafe;
+    
+  }
+}
 
 .animate-fade-in-button {
   opacity: 0;
@@ -250,25 +269,6 @@
 }
 
 
-@keyframes color-change1 {
-  0% {
-    background-color: #e2e8f0;
-  }
-  100% {
-    background-color: #ffe4e6;
-    
-  }
-}
-
-@keyframes color-change2 {
-  0% {
-    background-color: #e2e8f0;
-  }
-  100% {
-    background-color: #ff0000;
-    
-  }
-}
 
 .pulse-animation {
   animation-name: pulse;

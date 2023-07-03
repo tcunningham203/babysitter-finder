@@ -51,7 +51,7 @@ const ParentQ6 = () => {
     <textarea
         id="message"
         name="message"
-        placeholder="Age(s):"
+        placeholder="Special Requests:"
         rows={4}
         required
         className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"

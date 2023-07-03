@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../Header";
+import HeaderP from "./HeaderP";
 
-function Bookmarks () {
+function BookmarksP () {
     return (
         <div className="bg-green-200">
-        <Header/>
-    <h1>Your starred sitters</h1>
+          <HeaderP/>
+    <h1>PNT Your starred sitters</h1>
     {/* create card component
     maybe have cards on home page also used here */}
 
@@ -13,4 +13,4 @@ function Bookmarks () {
     )
 }
 
-export default Bookmarks;
+export default BookmarksP;

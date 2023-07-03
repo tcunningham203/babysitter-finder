@@ -1,11 +1,9 @@
 import './App.css';
-import Home from "./components/pages/Home";
-import Map from "./components/pages/Map";
+
 import {Routes, NavLink, Route} from 'react-router-dom'
 import Signup from "./components/NewUserQuizBBS/signup";
 import Login from "./components/Login";
 import Profile from "./components/pages/Profile"
-import Clients from './components/pages/Clients'
 import Bookmarks from "./components/pages/Bookmarked"
 import BabysitterQ0 from './components/NewUserQuizBBS/BabysitterQ0';
 import BabysitterQ1 from './components/NewUserQuizBBS/BabysitterQ1';
@@ -17,6 +15,7 @@ import BabysitterQ6 from './components/NewUserQuizBBS/BabysitterQ6';
 import BabysitterQ7 from './components/NewUserQuizBBS/BabysitterQ7';
 import BabysitterQ8 from './components/NewUserQuizBBS/BabysitterQ8';
 import BabysitterQ9 from './components/NewUserQuizBBS/BabysitterQ9';
+
 import ParentQ0 from './components/NewUserQuizPNT/ParentQ0';
 import ParentQ1 from './components/NewUserQuizPNT/ParentQ1';
 import ParentQ2 from './components/NewUserQuizPNT/ParentQ2';
@@ -32,11 +31,14 @@ function App() {
 --- TEST LINKS ONLY! --- IGNORE THIS WHITE STRIP WHEN DOING CSS. ---
 <NavLink to='/login'>| Login |</NavLink>
 <NavLink to='/signup'>| Signup |</NavLink>
-<NavLink to='/home'>| Home |</NavLink>
+<NavLink to='/homeB'>| BABY SITTER Home |</NavLink>
+<NavLink to='/homeP'>| PARENT Home |</NavLink>
 <Routes>
-  <Route path="/home" element={<Home/>}/>
+
   <Route path="/login" element={<Login/>}/>
-  <Route path="/map" element={<Map />}/>
+  <Route path="/signup" element={<Signup />}/>
+  
+
   <Route path="/signupbsq/0" element={<BabysitterQ0 />}/>
   <Route path="/signupbsq/1" element={<BabysitterQ1 />}/>
   <Route path="/signupbsq/2" element={<BabysitterQ2 />}/>
@@ -47,6 +49,7 @@ function App() {
   <Route path="/signupbsq/7" element={<BabysitterQ7 />}/>
   <Route path="/signupbsq/8" element={<BabysitterQ8 />}/>
   <Route path="/signupbsq/9" element={<BabysitterQ9 />}/>
+  
   <Route path="/signuppq/0" element={<ParentQ0 />}/>
   <Route path="/signuppq/1" element={<ParentQ1 />}/>
   <Route path="/signuppq/2" element={<ParentQ2 />}/>
@@ -58,7 +61,6 @@ function App() {
   <Route path="/signup" element={<Signup />}/>
   <Route path="/bookmarks" element={<Bookmarks/>}/>
   <Route path="/profile" element={<Profile/>}/>
-  <Route path="clients" element={<Clients/>}/>
 </Routes>
       
 
