@@ -5,6 +5,7 @@ import {Routes, NavLink, Route} from 'react-router-dom'
 import Signup from "./components/NewUserQuizBBS/signup";
 import Login from "./components/Login";
 import Profile from "./components/pages/Profile"
+import Clients from './components/pages/Clients'
 import Bookmarks from "./components/pages/Bookmarked"
 import BabysitterQ0 from './components/NewUserQuizBBS/BabysitterQ0';
 import BabysitterQ1 from './components/NewUserQuizBBS/BabysitterQ1';
@@ -57,6 +58,7 @@ function App() {
   <Route path="/signup" element={<Signup />}/>
   <Route path="/bookmarks" element={<Bookmarks/>}/>
   <Route path="/profile" element={<Profile/>}/>
+  <Route path="clients" element={<Clients/>}/>
 </Routes>
       
 

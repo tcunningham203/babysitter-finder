@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { app } from "../../Firebase";
 import firebase from "firebase/app";
 import "@firebase/storage";
+import Header from "../Header";
+
 function Profile () {
     const [image, setImage] = useState("https://placehold.co/400")
     const file = useRef(null)
@@ -16,6 +18,7 @@ function Profile () {
     }
     return(
         <div>
+            <Header/>
           <h1>Profile Page</h1>
           <input type="file" ref={file}/>
           <button onClick={pictureUpload}>Submit</button>
