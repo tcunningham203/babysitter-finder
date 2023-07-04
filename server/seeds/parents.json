@@ -5,7 +5,6 @@
       "age": "2, 1, 5",
       "activities": "Watching movies, playing on iPad, solving puzzles",
       "pets": true,
-      "screenTime": false,
       "smoker": false,
       "allergies": "Peanut Allergy",
       "requests": "Use zero profanity or limit innapropriate words when babysitting my three children."
@@ -16,7 +15,6 @@
     "age": "3",
     "activities": "Playing with building blocks, watching Frozen on Disney+",
     "pets": false,
-    "screenTime": false,
     "smoker": true,
     "allergies": "Shellfish",
     "requests": "Can you reward my child with chocolate chip cookies if he follows ground rules and displays proper behavior?"
@@ -27,7 +25,6 @@
     "age": "4, 2",
     "activities": "Playing with Playdough, coloring with crayola crayons",
     "pets": false,
-    "screenTime": false,
     "smoker": false,
     "allergies": "No allergies",
     "requests": "Could you bring my two children to our local park this summer when the weather is nice?"
