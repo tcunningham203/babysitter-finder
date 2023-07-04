@@ -12,7 +12,7 @@ export default function ProfileB() {
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     return (
-        <div className="bg-rose-100 h-screen ">
+        <div className="bg-rose-200 h-screen ">
             <HeaderB />
             <div className='grid 2xl:grid-cols-12 xl:grid-cols-12  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-between'>
                 <div

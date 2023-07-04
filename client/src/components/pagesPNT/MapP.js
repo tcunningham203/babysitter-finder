@@ -49,8 +49,11 @@ const MapP = () => {
   };
 
   return (
+    <div>
+        <HeaderP/>
+    
     <div className="bg-slate-200 min-h-screen flex-col flex items-center ">
-            <HeaderP/>
+            
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>PNT Need more options? Try another area.</h2>
@@ -669,6 +672,7 @@ const MapP = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 };

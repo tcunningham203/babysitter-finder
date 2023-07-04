@@ -12,7 +12,7 @@ function HeaderB(){
     return <div>
 
 <nav className="bg-fuchsia-900 border-gray-200 light:bg-gray-900">
-  <div className="max-w-screen flex flex-wrap items-center justify-between p-8">
+  <div className="max-w-screen flex flex-wrap items-center justify-between py-2 px-4 md:px-0 md:py-6">
     
         
         <NavLink to='/homeB' className="home self-center text-2xl ml-20 font-semibold whitespace-nowrap text-white block py-2 pl-3 pr-4 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white mdhover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">HomeBBS</NavLink>

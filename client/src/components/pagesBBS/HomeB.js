@@ -1,15 +1,31 @@
 import React from "react";
 import HeaderB from "./HeaderB";
-import BearIcon from "../BearIcon";
+import ProfileTemplate from "../ProfileTemplate";
 function HomeB() {
 
   return (
-    <div className="bg-blue-200">
+    <div className="bg-rose-200 ">
       <HeaderB/>
-      <h1 >Welcome to Babysitter App BABYSITTER</h1>
-      <BearIcon/>
-    </div>
+      <div className="bg-rose-200 min-h-screen grid grid-cols-12 justify-center gap-4  ">
     
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+      <ProfileTemplate/>
+     
+      </div>
+    </div>
   );
 }
 

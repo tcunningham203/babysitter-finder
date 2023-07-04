@@ -1,3 +1,11 @@
+
+
+/* hide scrollbar for chrome, safari and opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 @keyframes slide-up {
   0% {
     transform: translateY(0);
