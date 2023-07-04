@@ -49,18 +49,18 @@ const BabysitterQ1 = () => {
 
   return (
     <div className="bg-rose-200 min-h-screen flex-col flex items-center ">
-      <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
+      <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2 ">
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>First, choose where you want to work.</h2>
           
           <h2 className={`pb-3 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '8', '--out-index': '1'}}>Families in that area will see your profile.</h2>
          <div className='flex min-w-full justify-center '>
      
-         <div id="map-container ">
+         <div id="map-container " className='md:w-2/3 w-full'>
       
       <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="384"
+          
          
           x="0"
           y="0"

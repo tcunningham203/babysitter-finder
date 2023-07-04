@@ -36,18 +36,21 @@ const BabysitterQ8 = () => {
                     <form >
 
 
-                        <h2 className="" >Final question: how much will you be charging for your services?</h2>
+                        <h2 className="py-7 text-xl md:text-4xl" >Final question: how much will you be charging for your services?</h2>
 
-                        <h2 className="py-10">Average rates are about 20 dollars, adding an extra dollar per child. If you're just starting out, you can get an edge on the competition by posting a rate lower than the average. You can also type "Negotiable" if you're unsure.</h2>
+                        <h2 className=" md:text-xl text-sm">2023 Average: 20 dollars, +1 dollar per child.</h2>
+
+                        <h2 className="py-2 md:text-xl text-sm">If you're just starting, you can get an edge by posting a rate lower than the average. </h2>
+                        <h2 className="py-2 md:text-xl text-sm">You can also type "Negotiable" if you're unsure.</h2>
 
                         <div>
                             <textarea
                                 id="message"
                                 name="message"
-                                placeholder="Other Experience:"
+                                placeholder="Rates:"
                                 rows={4}
                                 required
-                                className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"
+                                className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-24 h-32 text-lg border-gray-300 rounded-md"
                             />
                         </div>
 

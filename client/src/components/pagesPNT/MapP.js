@@ -58,20 +58,20 @@ const MapP = () => {
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>PNT Need more options? Try another area.</h2>
           
-         <div className='flex min-w-full justify-center '>
+          <div className='flex min-w-full justify-center '>
      
-         <div id="map-container ">
+     <div id="map-container " className='md:w-2/3 w-full'>
+  
+  <svg
+      xmlns="http://www.w3.org/2000/svg"
       
-      <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="384"
-         
-          x="0"
-          y="0"
-          version="1.1"
-          viewBox="0 0 987.1 939"
-          xmlSpace="preserve"
-      >
+     
+      x="0"
+      y="0"
+      version="1.1"
+      viewBox="0 0 987.1 939"
+      xmlSpace="preserve"
+  >
           <path
               fill="#0E4774"
               fillRule="evenodd"

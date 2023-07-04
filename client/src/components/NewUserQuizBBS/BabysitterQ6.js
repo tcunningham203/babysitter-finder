@@ -35,9 +35,9 @@ const BabysitterQ6 = () => {
                     <form >
 
 
-                        <h2 className="py-4" >Let's look at your child care style.</h2>
+                        <h2 className="py-7  md:text-4xl text-xl" >Let's look at your child care style.</h2>
 
-                        <h2 className="py-4">How do you plan to spend time with the kids?</h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg">What activities and games do you use?</h2>
 
                         <div>
                             <textarea
@@ -46,22 +46,22 @@ const BabysitterQ6 = () => {
                                 placeholder="Activities and Games:"
                                 rows={4}
                                 required
-                                className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"
+                                className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-36 text-lg border-gray-300 rounded-md"
                             />
                         </div>
 
-                        <div className="h-px bg-rose-500 w-full my-4"></div>
+                        <div className="h-px bg-rose-500 w-full my-4 md:my-7"></div>
 
-<h2 className="py-4">What do you do when things go wrong?</h2>
+<h2 className=" py-1 md:py-4 md:text-2xl text-lg">How do you handle behavioral issues and control situations?</h2>
 
 <div>
     <textarea
         id="message"
         name="message"
-        placeholder="Handling Behavioral Issues:"
+        placeholder="Handling Behavior:"
         rows={4}
         required
-        className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-64 text-lg border-gray-300 rounded-md"
+        className="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 resize-none md:w-4/5 w-full md:h-44 h-36 text-lg border-gray-300 rounded-md"
     />
 </div>
 

@@ -39,7 +39,8 @@ const BabysitterQ5 = () => {
                     <form className=' '>
 
 
-                        <h2 className="py-3 " >Describe your transportation options. Parents might like to know if you can drive, even if you don't have a car.</h2>
+                        <h2 className="py-7  md:text-4xl text-xl " >Share your transportation options.</h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg" >Having a driver's license is a plus, even if you don't have a car.</h2>
 
                        
 
@@ -54,37 +55,7 @@ const BabysitterQ5 = () => {
                             />
                         </div>
 
-                        <div className="h-px bg-rose-500 w-full my-4"></div>
-                        <h2 className="py-1" >Add "Available on Short Notice" to your profile? </h2>
-                    
-                        <div className="flex  justify-center align-center">
-
- 
- 
-          
-            <div className="flex justify-evenly py-2">
-              <button
-                className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-                  shortNotice === true ? ' outline outline-offset-2 outline-rose-500' : ''
-                }`}
-                type="button"
-                onClick={() => setShortNotice(true)}
-              >
-                Yes
-              </button>
-              <button
-                className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-                  shortNotice === false ? ' outline outline-offset-2 outline-rose-500' : ''
-                }`}
-                type="button"
-                onClick={() => setShortNotice(false)}
-              >
-                No
-              </button>
-            </div>
-           
-</div>
-<h2 className=" text-lg" >If you're just starting out, being available on short notice can give you an edge over other babysitters.</h2> 
+             
 
                         <div className='flex min-w-full justify-center mt-8'>
 

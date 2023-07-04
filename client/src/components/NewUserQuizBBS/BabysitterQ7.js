@@ -9,7 +9,7 @@ const BabysitterQ7 = () => {
     const [isAnimating, setIsAnimating] = useState(false);
     const [isAnimating2, setIsAnimating2] = useState(false);
     const [allowPets, setAllowPets] = useState('');
-    const [enforceScreenTime, setEnforceScreenTime] = useState('');
+    const [shortNotice, setShortNotice] = useState('');
     const [smoker, setSmoker] = useState('');
 
     const navigate = useNavigate();
@@ -38,9 +38,9 @@ const BabysitterQ7 = () => {
                     <form >
 
 
-                        <h2 className="py-4" >Here's a few yes/no questions that parents will want to know.</h2>
+                        <h2 className="py-7  md:text-4xl text-xl" >Add these badges to your profile:</h2>
 
-                        <h2 className="py-4">Would you accept clients who have pets?</h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg">Are you OK with pets?</h2>
 
 
                         <div className="flex  justify-center align-center">
@@ -68,34 +68,11 @@ const BabysitterQ7 = () => {
 <div className="h-px bg-rose-500 w-full my-4"></div>
 
 
-<h2 className="py-4">Would you accept clients who have screen time rules?</h2>
-<div className="flex  justify-center align-center">
-<div className="flex justify-evenly py-2">
-  <button
-    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      enforceScreenTime === true ? ' outline outline-offset-2 outline-rose-500' : ''
-    }`}
-    type="button"
-    onClick={() => setEnforceScreenTime(true)}
-  >
-    Yes
-  </button>
-  <button
-    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      enforceScreenTime === false ? ' outline outline-offset-2 outline-rose-500' : ''
-    }`}
-    type="button"
-    onClick={() => setEnforceScreenTime(false)}
-  >
-    No
-  </button>
-</div>
-</div>
-<div className="h-px bg-rose-500 w-full my-4"></div>
 
 
 
-<h2 className="py-4">Are you a smoker?</h2>
+
+<h2 className="py-1 md:py-4 md:text-2xl text-lg">Are you a smoker?</h2>
 <div className="flex  justify-center align-center">
 <div className="flex justify-evenly py-2">
   <button
@@ -119,6 +96,36 @@ const BabysitterQ7 = () => {
 </div>
 </div>
 
+<div className="h-px bg-rose-500 w-full my-4"></div>
+                        <h2 className="pt-1 md:pt-4 md:text-2xl text-lg" >Are you available on short notice?</h2>
+                        <h2 className="pb-1 md:pb-4 md:text-lg text-sm" >&#40;Can give you an edge over other babysitters if you're starting out.&#41;</h2> 
+                        <div className="flex  justify-center align-center">
+
+ 
+ 
+          
+            <div className="flex justify-evenly py-2">
+              <button
+                className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+                  shortNotice === true ? ' outline outline-offset-2 outline-rose-500' : ''
+                }`}
+                type="button"
+                onClick={() => setShortNotice(true)}
+              >
+                Yes
+              </button>
+              <button
+                className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
+                  shortNotice === false ? ' outline outline-offset-2 outline-rose-500' : ''
+                }`}
+                type="button"
+                onClick={() => setShortNotice(false)}
+              >
+                No
+              </button>
+            </div>
+           
+</div>
 
 
 

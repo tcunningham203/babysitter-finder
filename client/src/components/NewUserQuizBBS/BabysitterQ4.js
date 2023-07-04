@@ -36,9 +36,10 @@ const BabysitterQ4 = () => {
                     <form >
 
 
-                        <h2 className="" >Next, put any other child care experience you have. Nursing, teaching, or coaching are common examples.</h2>
+                        <h2 className="py-7  md:text-4xl text-xl" >Next, put any other child care experience you have. </h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg" >Nursing, teaching, or coaching are common examples.</h2>
 
-                        <h2 className="py-10">Don't forget those details like time worked, age of kids, and number of kids.</h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg">Don't forget those details like time worked, age of kids, and number of kids.</h2>
 
                         <div>
                             <textarea

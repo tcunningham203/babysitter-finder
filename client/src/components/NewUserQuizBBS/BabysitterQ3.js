@@ -29,9 +29,9 @@ const BabysitterQ3 = () => {
                     <form >
 
 
-                        <h2 className="" >Write about any job experience you have specific to babysitting.</h2>
+                        <h2 className="py-7  md:text-4xl text-xl" >Write about any work history specific to babysitting.</h2>
 
-                        <h2 className="py-10">Number of kids and their ages are good details to add here.</h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg">Number of kids and their ages are good details to add here.</h2>
 
                         <div>
                             <textarea
