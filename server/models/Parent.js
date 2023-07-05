@@ -5,39 +5,39 @@ const parentSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    location: {
+    zone: {
         type: String,
         required: true
     },
-    childrenHowMany: {
+    howMany: {
         type: String,
         required: false
     },
-    childrenAge: {
+    age: {
         type: String,
         required: false
     },
-    childrenActivities: {
+    activities: {
         type: String,
         required: false
     },
-    childrenAllergies: {
+    allergies: {
         type: String,
         required: false
     },
-    hasPets: {
+    pets: {
         type: Boolean,
         required: true
     },
-    hasScreenTimeRules: {
+    screenTime: {
         type: Boolean,
         required: true
     },
-    allowsSmokerBabysitter: {
+    smoker: {
         type: Boolean,
         required: true
     },
-    additionalConcerns: {
+    requests: {
         type: String,
         required: false
     },

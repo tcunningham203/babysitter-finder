@@ -1,29 +1,27 @@
 const { Schema, model } = require('mongoose');
 
 const babysitterSchema = new Schema({
-    // entire schema
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    // location
-    location: {
+    zone: {
         type: String,
         required: true
     },
-    experience: {
+    jobExp: {
         type: String,
         required: false
     },
-    otherExperience: {
+    otherExp: {
         type: String,
         required: false
     },
-    shortNoticeAvailability: {
+    shortNotice: {
         type: Boolean,
         required: false
     },
-    transportationOptions: {
+    transportation: {
         type: String,
         required: false
     },
@@ -31,15 +29,15 @@ const babysitterSchema = new Schema({
         type: String,
         required: false
     },
-    behavioralIssueHandling: {
+    issueHandling: {
         type: String,
         required: false
     },
-    allowPets: {
+    pets: {
         type: Boolean,
         required: true
     },
-    enforceScreenTime: {
+    screenTime: {
         type: Boolean,
         required: true
     },
