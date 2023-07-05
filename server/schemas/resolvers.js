@@ -10,14 +10,14 @@ const resolvers = {
     user: async (parent, args) => {
       return User.findById(args.id);
     },
-    parents: async () => {
-        return Parent.find({}).populate('user');
+    parents: async (parent, { zone }) => {
+        return Parent.find({ zone }).populate('user');
     },
     parent: async (parent, args) => {
         return Parent.findById(args.id).populate('user');
     },
-    babysitters: async () => {
-        return Babysitter.find({}).populate('user');
+    babysitters: async (parent, { zone }) => {
+        return Babysitter.find({ zone }).populate('user');
     },
     babysitter: async (parent, args) => {
         return Babysitter.findById(args.id).populate('user');
