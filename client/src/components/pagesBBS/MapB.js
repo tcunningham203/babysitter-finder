@@ -56,6 +56,7 @@ const MapB = () => {
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>BBS Need more options? Try another area.</h2>
+          <h2 className={`text-center text-lg my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '8', '--out-index': '0'}}>&#40;This does not change the displayed area on your profile.&#41;</h2>
           
           <div className='flex min-w-full justify-center '>
      

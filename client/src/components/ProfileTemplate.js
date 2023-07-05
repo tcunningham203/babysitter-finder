@@ -2,16 +2,37 @@ import { MdPets } from "react-icons/md";
 import { VscMail } from "react-icons/vsc";
 import { MdSmokeFree } from "react-icons/md";
 import { TfiTimer } from "react-icons/tfi";
-import { Modal } from 'flowbite-react';
-import React, { useState } from 'react'
+import { Modal, Button, } from 'flowbite-react';
+import React, { useState, useEffect } from 'react'
 import ProfilePic from "./ProfilePic";
 
 export default function ProfileTemplate() {
+    const [showToast, setShowToast] = useState(false);
+
+    const showToastMessage = () => {
+      setShowToast(true);
+    };
+  
+    const hideToast = () => {
+      setShowToast(false);
+    };
+  
+    useEffect(() => {
+      let timer;
+      if (showToast) {
+        timer = setTimeout(() => {
+          setShowToast(false);
+        }, 16000);
+      }
+      return () => clearTimeout(timer);
+    }, [showToast]);
+
+    
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     return (
 
-        <div className=" bg-rose-200 2xl:col-span-2  xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 ">
+        <div className="m-4 bg-rose-200 2xl:col-span-2  xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 ">
 <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
     <div
         className=" flex  flex-col  align-center justify-between  ">
@@ -33,6 +54,35 @@ export default function ProfileTemplate() {
         </div>
 
     </div>
+
+
+
+    <div className="relative">
+        <div className="absolute bottom-2 right-0">
+          {showToast && (
+            <div className="bg-rose-900 text-white px-6 py-2 rounded-lg">
+              <div className="flex text-justify items-center justify-between pb-4 ">
+                <div>You sent this babysitter your family profile! If they're free, they will respond by email.</div></div>
+                <div className="h-px bg-rose-500 w-full mb-2"></div>
+                <div className="flex items-center justify-between">
+                <button className="text-gray-100 hover:text-white" onClick={hideToast}>
+                  Confirm
+                </button>
+              
+              <div className="flex items-center text-gray-400 ">
+                <Button onClick={hideToast} color="primary" size="small">
+                 Undo
+                </Button>
+              </div></div>
+            </div>
+          )}
+        </div>
+      
+      </div>
+
+
+
+
     <div className="flex justify-between align-center text-center items-center ">
 
 
@@ -40,7 +90,7 @@ export default function ProfileTemplate() {
         <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-rose-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
             View Profile
         </button>
-        <button type="button" className="items-center flex-col rounded-full bg-rose-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+        <button type="button" onClick={showToastMessage} className="items-center flex-col rounded-full bg-rose-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
         <VscMail size={22}/>
         </button>
 

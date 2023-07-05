@@ -2,34 +2,63 @@ import { MdPets } from "react-icons/md";
 import { VscMail } from "react-icons/vsc";
 import { MdSmokeFree } from "react-icons/md";
 import { TfiTimer } from "react-icons/tfi";
-import { Modal } from 'flowbite-react';
-import React, { useState } from 'react'
+import { Modal, Button } from 'flowbite-react';
+import { NavLink } from "react-router-dom"
+import React, { useState, useEffect } from 'react'
 import HeaderB from "./HeaderB";
 import ProfilePic from "../ProfilePic";
 import "@firebase/storage";
 
 export default function ProfileB() {
+    const [showToast, setShowToast] = useState(false);
+
+    const showToastMessage = () => {
+      setShowToast(true);
+    };
+  
+    const hideToast = () => {
+      setShowToast(false);
+    };
+  
+    useEffect(() => {
+      let timer;
+      if (showToast) {
+        timer = setTimeout(() => {
+          setShowToast(false);
+        }, 16000);
+      }
+      return () => clearTimeout(timer);
+    }, [showToast]);
+
+
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     return (
-        <div className="bg-rose-200 h-screen ">
+        <div className="bg-rose-200 min-h-screen ">
             <HeaderB />
+
             <div className='grid 2xl:grid-cols-12 xl:grid-cols-12  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-between'>
                 <div
                     className="2xl:col-start-4 2xl:col-span-6 xl:col-start-4 xl:col-span-6 lg:col-start-3 lg:col-span-8 md:col-start-2 md:col-span-9 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 flex flex-row  rounded-lg align-center bg-white md:my-5 my-2 justify-evenly  items-center">
                     <h1 className="md:my-5 my-2 md:text-3xl text-lg text-center">
                         Here's what people see.
                     </h1>
-                    <button type="button" className="flex-col rounded bg-rose-700 px-2 sm:px-12 pb-2 pt-2.5  m-2 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 xs:text-sm">
+                    <NavLink to='/EditProfileB' type="button" className="flex-col rounded bg-rose-700 px-2 sm:px-12 pb-2 pt-2.5  m-2 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 xs:text-sm">
                         Edit Profile
-                    </button>
+                    </NavLink>
+                   
                 </div>
             </div>
-            <div className="grid 2xl:grid-cols-12 xl:grid-cols-11  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-center  ">
+            <div className="m-4 grid 2xl:grid-cols-12 xl:grid-cols-11  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-center  ">
                 <div className="2xl:col-start-6 2xl:col-span-2 xl:col-start-5 xl:col-span-3 lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-5 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
                     <div
                         className=" flex  flex-col  align-center justify-between  ">
-                        <div className="flex justify-between  pb-2">
+
+
+
+
+
+                        <div className="flex justify-between h-64  pb-2">
                             <ProfilePic />
 
                         </div>
@@ -47,6 +76,30 @@ export default function ProfileB() {
                         </div>
 
                     </div>
+                    <div className="relative">
+        <div className="absolute bottom-2 right-0">
+          {showToast && (
+            <div className="bg-rose-900 text-white px-6 py-2 rounded-lg">
+              <div className="flex text-justify items-center justify-between pb-4 ">
+                <div>You sent this babysitter your family profile! If they're free, they will respond by email.</div></div>
+                <div className="h-px bg-rose-500 w-full mb-2"></div>
+                <div className="flex items-center justify-between">
+                <button className="text-gray-100 hover:text-white" onClick={hideToast}>
+                  Confirm
+                </button>
+              
+              <div className="flex items-center text-gray-400 ">
+                <Button onClick={hideToast} color="primary" size="small">
+                 Undo
+                </Button>
+              </div></div>
+            </div>
+          )}
+        </div>
+      
+      </div>
+    
+
                     <div className="flex justify-between align-center text-center items-center ">
 
 
@@ -54,7 +107,7 @@ export default function ProfileB() {
                         <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-rose-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
                             View Profile
                         </button>
-                        <button type="button" className="items-center flex-col rounded-full bg-rose-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+                        <button type="button"  onClick={showToastMessage}className="items-center flex-col rounded-full bg-rose-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
                         <VscMail size={22}/>
                         </button>
 
