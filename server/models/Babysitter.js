@@ -37,10 +37,6 @@ const babysitterSchema = new Schema({
         type: Boolean,
         required: true
     },
-    screenTime: {
-        type: Boolean,
-        required: true
-    },
     smoker: {
         type: Boolean,
         required: true
