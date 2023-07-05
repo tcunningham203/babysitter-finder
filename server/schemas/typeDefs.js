@@ -19,7 +19,6 @@ const typeDefs = gql`
     activities: String
     allergies: String
     pets: Boolean
-    screenTime: Boolean
     smoker: Boolean
     requests: String
   }
@@ -35,7 +34,6 @@ const typeDefs = gql`
     activities: String
     issueHandling: String
     pets: Boolean
-    screenTime: Boolean
     smoker: Boolean
     rates: String
   }
@@ -43,9 +41,9 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(id: ID!): User
-    parents: [Parent]
+    parents(zone: String!): [Parent]
     parent(id: ID!): Parent
-    babysitters: [Babysitter]
+    babysitters(zone: String!): [Babysitter]
     babysitter(id: ID!): Babysitter
   }
 
