@@ -1,14 +1,14 @@
 [
-    {
-      "zone": "Upper Manhattan",
-      "howMany": "3",
-      "age": "2, 1, 5",
-      "activities": "Watching movies, playing on iPad, solving puzzles",
-      "pets": true,
-      "smoker": false,
-      "allergies": "Peanut Allergy",
-      "requests": "Use zero profanity or limit innapropriate words when babysitting my three children."
-    },
+  {
+    "zone": "Upper Manhattan",
+    "howMany": "3",
+    "age": "2, 1, 5",
+    "activities": "Watching movies, playing on iPad, solving puzzles",
+    "pets": true,
+    "smoker": false,
+    "allergies": "Peanut Allergy",
+    "requests": "Use zero profanity or limit innapropriate words when babysitting my three children."
+  },
   {
     "zone": "Midtown",
     "howMany": "1",
@@ -29,4 +29,4 @@
     "allergies": "No allergies",
     "requests": "Could you bring my two children to our local park this summer when the weather is nice?"
   }
-  ]
+]

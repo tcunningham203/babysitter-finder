@@ -1,0 +1,170 @@
+[
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "Jane_Doe@gmail.com",
+      "password": "wXWA2uuBP3",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Adam",
+      "lastName": "Jones",
+      "email": "Adam_Jones@gmail.com",
+      "password": "yU3Hk6NQqe",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Lucy",
+      "lastName": "Sky",
+      "email": "Lucy_Sky@gmail.com",
+      "password": "AE9A4uns2p",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Josiah",
+      "lastName": "Oneill",
+      "email": "Josiah_Oneill@gmail.com",
+      "password": "EfEgsMYr72",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Lilli",
+      "lastName": "Hansen",
+      "email": "Lilli_Hansen@gmail.com",
+      "password": "8R9iQ3CYZr",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Willard",
+      "lastName": "Brennan",
+      "email": "Willard_Brennan@gmail.com",
+      "password": "XuroovW2Lr",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Samara",
+      "lastName": "Church",
+      "email": "Samara_Church@gmail.com",
+      "password": "pYwQ4viaQg",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Lexi",
+      "lastName": "Maldonado",
+      "email": "Lexi_Maldonado@gmail.com",
+      "password": "9K1LHFRcQN",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Mina",
+      "lastName": "Mayer",
+      "email": "Mina_Mayer@gmail.com",
+      "password": "1RQFdk82Bf",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Frankie",
+      "lastName": "Reeves",
+      "email": "Frankie_Reeves@gmail.com",
+      "password": "0hBLW0miQ1",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Jason",
+      "lastName": "Ortiz",
+      "email": "Jason_Ortiz@gmail.com",
+      "password": "wftGyG6xCc",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Nikolas",
+      "lastName": "Olson",
+      "email": "Nikolas_Olson@gmail.com",
+      "password": "B6dGXG8WbE",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Jed",
+      "lastName": "Duke",
+      "email": "Jed_Duke@gmail.com",
+      "password": "aLtvKTs0ag",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Dan",
+      "lastName": "Ferguson",
+      "email": "Dan_Ferguson@gmail.com",
+      "password": "uF7ZnoReEr",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Guy",
+      "lastName": "Clark",
+      "email": "Guy_Clark@gmail.com",
+      "password": "KYri2sZy5u",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Marley",
+      "lastName": "Goodman",
+      "email": "Marley_Goodman@gmail.com",
+      "password": "ppsqB2L3LT",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Devon",
+      "lastName": "Harmon",
+      "email": "Devon_Harmon@gmail.com",
+      "password": "G8hqPf2DWP",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Lily-Mae",
+      "lastName": "Cisneros",
+      "email": "Lily-Mae_Cisneros@gmail.com",
+      "password": "0ubQ8eCmpw",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Liliana",
+      "lastName": "Perkins",
+      "email": "Liliana_Perkins@gmail.com",
+      "password": "ypBchUW8pA",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Brooke",
+      "lastName": "Reed",
+      "email": "Brooke_Reed@gmail.com",
+      "password": "gzuiccv4TY",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Sufyaan",
+      "lastName": "Perry",
+      "email": "Sufyaan_Perry@gmail.com",
+      "password": "g3rF1Jvkqi",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Lilian",
+      "lastName": "Mcdowell",
+      "email": "Lilian_Mcdowell@gmail.com",
+      "password": "hCan1KJiyK",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Oliwier",
+      "lastName": "Gilbert",
+      "email": "Oliwier_Gilbert@gmail.com",
+      "password": "tLLzu9CetE",
+      "userType": "Babysitter"
+    },
+    {
+      "firstName": "Garfield",
+      "lastName": "Landry",
+      "email": "Garfield_Landry@gmail.com",
+      "password": "9oCAnKFrMq",
+      "userType": "Babysitter"
+    }
+]

@@ -1,11 +1,11 @@
 [
-    {
-      "firstName": "Jane",
-      "lastName": "Doe",
-      "email": "Jane_Doe@gmail.com",
-      "password": "wXWA2uuBP3",
-      "userType": "Babysitter"
-    },
+  {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "Jane_Doe@gmail.com",
+    "password": "wXWA2uuBP3",
+    "userType": "Babysitter"
+  },
   {
     "firstName": "Adam",
     "lastName": "Jones",
@@ -188,5 +188,4 @@
     "password": "KYVL20natJ",
     "userType": "Parent"
   }
-
-  ]
+]
