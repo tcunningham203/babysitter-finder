@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom"
 import React, { useState, useEffect } from 'react'
 import HeaderB from "./HeaderB";
 import ProfilePic from "../ProfilePic";
-import "@firebase/storage";
+
 
 export default function ProfileB() {
     const [showToast, setShowToast] = useState(false);
@@ -41,15 +41,15 @@ export default function ProfileB() {
                 <div
                     className="2xl:col-start-4 2xl:col-span-6 xl:col-start-4 xl:col-span-6 lg:col-start-3 lg:col-span-8 md:col-start-2 md:col-span-9 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 flex flex-row  rounded-lg align-center bg-white md:my-5 my-2 justify-evenly  items-center">
                     <h1 className="md:my-5 my-2 md:text-3xl text-lg text-center">
-                        Here's what people see.
+                        Here's how people see you.
                     </h1>
                     <NavLink to='/EditProfileB' type="button" className="flex-col rounded bg-rose-700 px-2 sm:px-12 pb-2 pt-2.5  m-2 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 xs:text-sm">
-                        Edit Profile
+                        Edit
                     </NavLink>
                    
                 </div>
             </div>
-            <div className="m-4 grid 2xl:grid-cols-12 xl:grid-cols-11  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-center  ">
+            <div className="my-2 sm:m-4 grid 2xl:grid-cols-12 xl:grid-cols-11  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-center  ">
                 <div className="2xl:col-start-6 2xl:col-span-2 xl:col-start-5 xl:col-span-3 lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-5 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
                     <div
                         className=" flex  flex-col  align-center justify-between  ">
