@@ -11,6 +11,7 @@ import MapB from './components/pagesBBS/MapB';
 import ProfileB from './components/pagesBBS/ProfileB';
 import EditProfileB from './components/pagesBBS/EditProfileB';
 
+import LandingPage from './components/Landing';
 import BookmarksP from './components/pagesPNT/BookmarksP';
 import HeaderP from './components/pagesPNT/HeaderP';
 import HomeP from './components/pagesPNT/HomeP';
@@ -48,6 +49,7 @@ function App() {
 <NavLink to='/homeP'>| PARENT Home |</NavLink>
 <Routes>
 
+  <Route path="/" element={<LandingPage/>}/>
   <Route path="/login" element={<Login/>}/>
   <Route path="/signup" element={<Signup />}/>
   

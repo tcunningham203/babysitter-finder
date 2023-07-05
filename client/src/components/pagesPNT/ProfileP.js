@@ -1,19 +1,33 @@
-import { useRef, useState } from "react";
-import { app } from "../../Firebase";
-// import firebase from "firebase/app";
+import { useRef, useState, useEffect } from "react";
+//Import graphql and the model 
 import HeaderP from "../pagesPNT/HeaderP";
-import "@firebase/storage";
+import {getStorage, ref, uploadBytes, getDownloadURL} from "@firebase/storage";
 function ProfileP () {
+    // useQuery to grab the current user
+    // Grab their name from the database and store in a variable
+    const name = ''
     const [image, setImage] = useState("https://placehold.co/400")
+    const storage = getStorage()
+    const profileRef = ref(storage, `users/profile_${name}.jpg`)
+    useEffect(()=> {
+        getDownloadURL(profileRef).then(url => {
+            console.log(url)
+            setImage(url)
+        })
+    }, [])
     const file = useRef(null)
     function pictureUpload(){
         console.log(file.current.files[0]);
-        const storage = app.storage().ref("users/profile.jpg")
-        const newFile = storage.child(file.current.files[0].name)
-        newFile.put(file.current.files[0]).then(function(){
-            console.log("done");
+
+        uploadBytes(profileRef,file.current.files[0] ).then(snapshot => {
+            console.log('File was added');
+            getDownloadURL(profileRef).then(url => {
+                console.log(url)
+                setImage(url)
+            })
         })
-        setImage(file.current.value);
+
+
     }
     return(
         <div>
