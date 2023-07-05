@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "Shayla",
+    "lastName": "Burke",
+    "email": "Shayla_Burke@gmail.com",
+    "password": "hwg03iw9ED",
+    "userType": "Parent"
+  },
+  {
+    "firstName": "Jorge",
+    "lastName": "Roach",
+    "email": "Jorge_Roach@gmail.com",
+    "password": "2LJ7pLo2VJ",
+    "userType": "Parent"
+  },
+  {
+    "firstName": "Hussein",
+    "lastName": "Bowen",
+    "email": "Hussein_Bowen@gmail.com",
+    "password": "KYVL20natJ",
+    "userType": "Parent"
+  }
+]
