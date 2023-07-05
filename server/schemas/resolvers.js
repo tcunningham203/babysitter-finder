@@ -1,8 +1,7 @@
-// const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError } = require('apollo-server-express');
 const { User, Parent, Babysitter } = require('../models');
-const bcrypt=require('bcrypt')
-const jwt=require('jsonwebtoken')
-// const { signToken } = require('../utils/auth');
+const bcrypt = require('bcrypt');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -26,23 +25,48 @@ const resolvers = {
     }
   },
   Mutation: {
-    createUser: async (parent, { firstName,lastName,email,password,userType, }) => {
-      return await User.create({firstName,lastName,email,password,userType,});
+    // createUser: async (parent, { firstName,lastName,email,password,userType, }) => {
+    //   return await User.create({firstName,lastName,email,password,userType,});
+    // },
+    // sign up ▼
+    createUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user); 
+
+      return { token, user };
     },
-    login:async(parent,{ email, password }) => {
+    // login: async (parent,{ email, password }) => {
+    //   const user =await User.findOne({email})
+    //   if (!user) {
+    //     throw new Error('User not found!');
+    //   }
+    //   const passwordMatch = bcrypt.compareSync(password, user.password);
+    //   if (!passwordMatch) {
+    //     throw new Error('Invalid password!');
+    //   }
+    //   // Generate a JSON Web Token (JWT)
+    //   const token = jwt.sign({ userId: user.id }, 'your-secret-key', {
+    //     expiresIn: '1h',
+    //   });
+    //   return token;
+    // },
+    login: async (parent,{ email, password }) => {
       const user =await User.findOne({email})
+
       if (!user) {
-        throw new Error('User not found!');
+        throw new AuthenticationError('User not found!');
       }
+
       const passwordMatch = bcrypt.compareSync(password, user.password);
+
       if (!passwordMatch) {
-        throw new Error('Invalid password!');
+        throw new AuthenticationError('Invalid password!');
       }
+
       // Generate a JSON Web Token (JWT)
-      const token = jwt.sign({ userId: user.id }, 'your-secret-key', {
-        expiresIn: '1h',
-      });
-      return token;
+      const token = signToken(user);
+
+      return { token, user };
     },
   }
 }
