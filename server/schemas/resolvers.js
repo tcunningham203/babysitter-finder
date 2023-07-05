@@ -1,5 +1,7 @@
 // const { AuthenticationError } = require('apollo-server-express');
 const { User, Parent, Babysitter } = require('../models');
+const bcrypt=require('bcrypt')
+const jwt=require('jsonwebtoken')
 // const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -22,6 +24,26 @@ const resolvers = {
     babysitter: async (parent, args) => {
         return Babysitter.findById(args.id).populate('user');
     }
+  },
+  Mutation: {
+    createUser: async (parent, { firstName,lastName,email,password,userType, }) => {
+      return await User.create({firstName,lastName,email,password,userType,});
+    },
+    login:async(parent,{ email, password }) => {
+      const user =await User.findOne({email})
+      if (!user) {
+        throw new Error('User not found!');
+      }
+      const passwordMatch = bcrypt.compareSync(password, user.password);
+      if (!passwordMatch) {
+        throw new Error('Invalid password!');
+      }
+      // Generate a JSON Web Token (JWT)
+      const token = jwt.sign({ userId: user.id }, 'your-secret-key', {
+        expiresIn: '1h',
+      });
+      return token;
+    },
   }
 }
 
