@@ -8,9 +8,9 @@ const BabysitterQ7 = () => {
 
     const [isAnimating, setIsAnimating] = useState(false);
     const [isAnimating2, setIsAnimating2] = useState(false);
-    const [allowPets, setAllowPets] = useState('');
-    const [shortNotice, setShortNotice] = useState('');
-    const [smoker, setSmoker] = useState('');
+    const [allowPets, setAllowPets] = useState(false);
+    const [shortNotice, setShortNotice] = useState(false);
+    const [smoker, setSmoker] = useState(false);
 
     const navigate = useNavigate();
 

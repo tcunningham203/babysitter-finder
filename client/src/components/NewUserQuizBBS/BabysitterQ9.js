@@ -21,8 +21,9 @@ const BabysitterQ9 = () => {
      <h2 className={`flex items-center justify-center  animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '2'}}> <BearIcon/></h2>
           <h2 className={`text-center md:mb-24 my-8 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '2'}}>You're all set.</h2>
           <h2 className={`animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '6', '--out-index': '3'}}>Let's head to the listings, where you can compare yourself against other babysitters in your area.</h2>
-          <h2 className={`md:mt-24 mt-8 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '4'}}>You can initiate contact with parents if they've starred your profile.</h2>
-          <h2 className={`md:mb-24  animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '5'}}>Good luck, and have fun!</h2>
+          <h2 className={`md:mt-16 mt-8 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '4'}}>Parents who like your profile can request contact.</h2>
+          <h2 className={` animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '4'}}>You can then email them back.</h2>
+          <h2 className={`md:my-12  animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '11', '--out-index': '5'}}>Good luck, and have fun!</h2>
           <button
             type="submit"
             className={`my-8 bg-rose-200 hover:bg-rose-300 active:bg-rose-200  text-black font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-fade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-blowup-button bg-rose-200 hover:bg-rose-200 active:bg-rose-200' : ''}`}

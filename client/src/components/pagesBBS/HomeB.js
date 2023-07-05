@@ -4,7 +4,7 @@ import ProfileTemplate from "../ProfileTemplate";
 function HomeB() {
 
   return (
-    <div className="bg-rose-200 ">
+    <div className="bg-rose-200 min-h-screen">
       <HeaderB/>
 
       <div className='grid 2xl:grid-cols-12 xl:grid-cols-12  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-between'>
@@ -25,10 +25,12 @@ function HomeB() {
 
 
 
+            <div className="bg-rose-200   lg:grid lg:grid-cols-12  justify-center  ">
 
 
+            <div className="bg-rose-200   sm:grid col-start-0 col-span-12 lg:col-start-2 lg:col-span-10  justify-center  ">
 
-      <div className="bg-rose-200 min-h-screen grid grid-cols-12 justify-center  ">
+<div className="bg-rose-200  grid grid-cols-12  justify-center  ">
     
       <ProfileTemplate/>
       <ProfileTemplate/>
@@ -45,9 +47,9 @@ function HomeB() {
       <ProfileTemplate/>
       <ProfileTemplate/>
       <ProfileTemplate/>
-     
       </div>
-    </div>
+      </div>
+    </div></div>
   );
 }
 

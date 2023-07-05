@@ -31,9 +31,9 @@ const ParentQ5 = () => {
                     <form >
 
 
-                        <h2 className="py-4" >Some yes/no questions babysitters may ask:</h2>
+                    <h2 className="py-7  md:text-4xl text-xl" >Some quick yes or no questions:</h2>
 
-                        <h2 className="py-4">Do you have any pets?</h2>
+                        <h2 className="py-1 md:py-4 md:text-2xl text-lg">Do you have any pets?</h2>
 
 
                         <div className="flex  justify-center align-center">
@@ -61,34 +61,11 @@ const ParentQ5 = () => {
 <div className="h-px bg-blue-500 w-full my-4"></div>
 
 
-<h2 className="py-4">Does your family enforce screen time rules?</h2>
-<div className="flex  justify-center align-center">
-<div className="flex justify-evenly py-2">
-  <button
-    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      enforceScreenTime === true ? ' outline outline-offset-2 outline-blue-500' : ''
-    }`}
-    type="button"
-    onClick={() => setEnforceScreenTime(true)}
-  >
-    Yes
-  </button>
-  <button
-    className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      enforceScreenTime === false ? ' outline outline-offset-2 outline-blue-500' : ''
-    }`}
-    type="button"
-    onClick={() => setEnforceScreenTime(false)}
-  >
-    No
-  </button>
-</div>
-</div>
-<div className="h-px bg-blue-500 w-full my-4"></div>
 
 
 
-<h2 className="py-4">Are you OK with babysitters who smoke?</h2>
+
+<h2 className="py-1 md:py-4 md:text-2xl text-lg">Are you OK with babysitters who smoke?</h2>
 <div className="flex  justify-center align-center">
 <div className="flex justify-evenly py-2">
   <button

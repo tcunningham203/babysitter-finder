@@ -6,6 +6,12 @@
 }
 
 
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #c55a5a;
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(0);

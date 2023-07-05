@@ -642,27 +642,24 @@ const BabysitterQ1 = () => {
               clipRule="evenodd"
           ></path>
       </svg>
-      <div className={`rounded-xl flex justify-center items-center py-6 my-4 h-11   text-center${isAnimating ? 'animate-fade-out-button' : ''} ${isAnimating2 ? 'pulse-animation' : ''}`} style={{'--word-index': '0', '--out-index': '5'}}>
-      {regions.map((region, index) => (
-      <div
-        id={region}
-        key={region}
-        className={`map-name ${isAnimating ? 'animate-fade-out-button' : ''}`}
-        style={{ display: selectedRegion === region ? "flex" : "none" }}>
-        {displayedNames[index]}
-      </div>
-    ))}
-    </div>
-
-    {/* Render confirm button */}
-    {selectedRegion && (
-      <button id="toggle-button" className={` bg-rose-800 hover:bg-rose-900 text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-mapfade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
-      style={{'--word-index': '0', '--blowup-index': '0'}}
-      disabled={isAnimating}  onClick={handleNext}>
-       <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}
-          style={{'--word-index': '0', '--out-index': '0'}}>Choose Here</span>
-      </button>
-    )}
+      {selectedRegion && (
+                                    <button id="toggle-button" className={` bg-rose-800 hover:bg-rose-900 text-white font-bold py-1 w-72 rounded-full focus:outline-none focus:shadow-outline animate-mapfade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
+                                        style={{ '--word-index': '0', '--blowup-index': '0' }}
+                                        disabled={isAnimating} onClick={handleNext}>
+                                        <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}
+                                            style={{ '--word-index': '0', '--out-index': '0' }}>  <div className={`rounded-xl flex justify-center items-center  h-11   text-center${isAnimating ? 'animate-fade-out-button' : ''} ${isAnimating2 ? 'pulse-animation' : ''}`} style={{ '--word-index': '0', '--out-index': '5' }}>
+                                            {regions.map((region, index) => (
+                                                <div
+                                                    id={region}
+                                                    key={region}
+                                                    className={`map-name ${isAnimating ? 'animate-fade-out-button' : ''}`}
+                                                    style={{ display: selectedRegion === region ? "flex" : "none" }}>
+                                                    {displayedNames[index]}
+                                                </div>
+                                            ))}
+                                        </div> </span>
+                                    </button>
+                                )}
 
           </div>
           </div>

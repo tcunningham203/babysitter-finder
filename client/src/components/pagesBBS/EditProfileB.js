@@ -5,6 +5,10 @@ import { app } from "../../Firebase";
 import HeaderB from "./HeaderB";
 import { BsCloudUpload } from "react-icons/bs";
 import { NavLink } from "react-router-dom"
+import { GiCancel } from "react-icons/gi";
+import { MdPets } from "react-icons/md";
+import { MdSmokeFree, MdSmokingRooms } from "react-icons/md";
+import { LuTimerOff, LuTimer  } from "react-icons/lu";
 import "@firebase/storage";
 function EditProfileB() {
     const [image, setImage] = useState("https://placehold.co/400")
@@ -255,7 +259,7 @@ function EditProfileB() {
 
                                 <h5
                                     className=" text-center md:text-xl text-lg   ">
-                                    Activities and Games:
+                                    Activities and Games
                                 </h5>
 
                                 <div className="h-px mb-3 bg-rose-500 w-full "></div>
@@ -309,7 +313,140 @@ function EditProfileB() {
                     </div>
 
 
+                    <div className=" bg-rose-200   xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 ">
+                        <div className="flex justify-evenly rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] h-72 p-4 ">
+                            <div
+                                className=" flex  flex-col  content-evenly   ">
 
+                                <h5
+                                    className=" text-center md:text-xl text-lg   ">
+                                    Badges
+                                </h5>
+
+                                <div className="h-px mb-3 bg-rose-500 w-full "></div>
+
+
+                                <div className="grid grid-cols-3">                         
+<div className="flex flex-col justify-evenly text-center items-center ">
+<p className="  flex text-base/6 text-neutral-600 ">
+<LuTimer size={33}/>
+</p>
+<p className=" xs:text-xs text-lg flex text-base/6 text-neutral-600 " style={{ fontSize: 12 }}>
+Short Notice OK
+</p>
+</div>
+
+<div className="flex items-center justify-center w-full mb-4">
+  
+  <label for="toggleA" className="flex items-center cursor-pointer">
+ 
+    <div class="relative">
+   
+      <input type="checkbox" id="toggleA" className="sr-only"/>
+   
+      <div className="block bg-slate-300 w-14 h-8 rounded-full"></div>
+   
+      <div className="dot absolute left-1 top-1 bg-green-500 w-6 h-6 rounded-full transition"></div>
+    </div>
+  </label>
+</div>
+
+<div className="flex flex-col justify-evenly text-center items-center ">
+<p className="  flex text-base/6 text-neutral-600 ">
+<LuTimerOff size={33}/>
+</p>
+<p className=" xs:text-xs text-lg flex text-base/6 text-neutral-600 " style={{ fontSize: 12 }}>
+No Short Notice
+</p>
+</div>
+
+
+
+
+<div className="flex flex-col justify-evenly text-center items-center ">
+<p className="  flex text-base/6 text-neutral-600 " >
+<MdPets size={33}/>
+</p>
+<p className=" xs:text-xs text-lg flex text-base/6 text-neutral-600 " style={{ fontSize: 12 }}>
+Pets OK
+</p>
+</div>
+
+<div className="flex items-center justify-center w-full mb-4">
+  
+  <label for="toggleB" className="flex items-center cursor-pointer">
+ 
+    <div class="relative">
+   
+      <input type="checkbox" id="toggleB" className="sr-only"/>
+   
+      <div className="block bg-slate-300 w-14 h-8 rounded-full"></div>
+   
+      <div className="dot absolute left-1 top-1 bg-green-500 w-6 h-6 rounded-full transition"></div>
+    </div>
+  </label>
+</div>
+
+<div className="flex flex-col justify-evenly text-center items-center ">
+<p className="  flex text-base/6 text-neutral-600 " >
+<GiCancel size={33}/>
+</p>
+<p className=" xs:text-xs text-lg flex text-base/6 text-neutral-600 " style={{ fontSize: 12 }}>
+No Pets
+</p>
+</div>
+
+
+
+<div className="flex flex-col justify-evenly text-center items-center ">
+<p className="  flex text-base/6 text-neutral-600 " >
+<MdSmokingRooms size={33}/>
+</p>
+<p className=" xs:text-xs text-lg flex text-base/6 text-neutral-600 " style={{ fontSize: 12 }}>
+Smoker
+</p>
+</div>
+
+<div className="flex items-center justify-center w-full mb-4">
+  
+  <label for="toggleC" className="flex items-center cursor-pointer">
+ 
+    <div class="relative">
+   
+      <input type="checkbox" id="toggleC" className="sr-only"/>
+   
+      <div className="block bg-slate-300 w-14 h-8 rounded-full"></div>
+   
+      <div className="dot absolute left-1 top-1 bg-green-500 w-6 h-6 rounded-full transition"></div>
+    </div>
+  </label>
+</div>
+
+<div className="flex flex-col justify-evenly text-center items-center ">
+<p className="  flex text-base/6 text-neutral-600 " >
+<MdSmokeFree size={33}/>
+</p>
+<p className=" xs:text-xs text-lg flex text-base/6 text-neutral-600 " style={{ fontSize: 12 }}>
+Non Smoker
+</p>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
 
 
 
