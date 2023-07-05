@@ -47,6 +47,10 @@ const typeDefs = gql`
     babysitter(id: ID!): Babysitter
   }
 
+  type Mutation {
+    createUser(firstName:String!,lastName: String!,email: String!,password: String!,userType: String!,): User
+    login(email: String!,password: String!): String
+  }
 
 `;
 
