@@ -45,6 +45,16 @@ const babysitterSchema = new Schema({
         type: String,
         required: false
     },
+    profilePic: {
+        type: String,
+        required: false
+    },
+    interestedParents: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Parent'
+        }
+    ],
     createdAt: {
         type: Date,
         default: Date.now
