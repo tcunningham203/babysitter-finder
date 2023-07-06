@@ -51,21 +51,35 @@ const resolvers = {
     },
     // look at solved folder in unit 22 activity 26 
     // resolvers and typeDefs files for reference
-    createBabysitter: async () => {
+    createBabysitter: async (parent, args) => {
       // babysitter model
       // associate with user who is babysitter thru user field
+      let babysitter= await Babysitter.create(args);
+      return babysitter;
     },
-    createParent: async () => {
+    createParent: async (parent, args) => {
       // parent model
       // associate with user who is parent thru user field
+      let parentObj=await Parent.create(args)
+      return parentObj;
     },
-    updateBabysitter: async () => {
+    updateBabysitter: async (parent,args) => {
       // babysitter model
+      let {_id}=args;
+      delete args["_id"];
+      console.log(args,_id)
+      let babySitter=await Babysitter.findOneAndUpdate({_id},args)
+      console.log(babySitter);
+      return babySitter;
     },
-    updateParent: async () => {
+    updateParent: async (parent,args) => {
       // parent model
+      let {_id}=args;
+      delete args["_id"];
+      let parentObj=await Parent.findOneAndUpdate({_id},args)
+      return parentObj;
     },
-    addToStarred: async () => {
+    addToStarred: async (parent,args) => {
       // this one's a bit more complicated 
       // new fields have been added to babysitter and parent models
       // and im thinking about getting rid of Starred model all together
@@ -75,6 +89,8 @@ const resolvers = {
       // and the parent that starred the babysitter should be added to their interested parents list
 
       // babysitter and parent models
+      //const {user,babySitter}=args;
+
     },
   }
 }
