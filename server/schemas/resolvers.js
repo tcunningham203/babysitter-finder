@@ -25,9 +25,6 @@ const resolvers = {
     }
   },
   Mutation: {
-    // createUser: async (parent, { firstName,lastName,email,password,userType, }) => {
-    //   return await User.create({firstName,lastName,email,password,userType,});
-    // },
     // sign up ▼
     createUser: async (parent, args) => {
       const user = await User.create(args);
@@ -35,21 +32,6 @@ const resolvers = {
 
       return { token, user };
     },
-    // login: async (parent,{ email, password }) => {
-    //   const user =await User.findOne({email})
-    //   if (!user) {
-    //     throw new Error('User not found!');
-    //   }
-    //   const passwordMatch = bcrypt.compareSync(password, user.password);
-    //   if (!passwordMatch) {
-    //     throw new Error('Invalid password!');
-    //   }
-    //   // Generate a JSON Web Token (JWT)
-    //   const token = jwt.sign({ userId: user.id }, 'your-secret-key', {
-    //     expiresIn: '1h',
-    //   });
-    //   return token;
-    // },
     login: async (parent,{ email, password }) => {
       const user =await User.findOne({email})
 
@@ -63,10 +45,36 @@ const resolvers = {
         throw new AuthenticationError('Invalid password!');
       }
 
-      // Generate a JSON Web Token (JWT)
       const token = signToken(user);
 
       return { token, user };
+    },
+    // look at solved folder in unit 22 activity 26 
+    // resolvers and typeDefs files for reference
+    createBabysitter: async () => {
+      // babysitter model
+      // associate with user who is babysitter thru user field
+    },
+    createParent: async () => {
+      // parent model
+      // associate with user who is parent thru user field
+    },
+    updateBabysitter: async () => {
+      // babysitter model
+    },
+    updateParent: async () => {
+      // parent model
+    },
+    addToStarred: async () => {
+      // this one's a bit more complicated 
+      // new fields have been added to babysitter and parent models
+      // and im thinking about getting rid of Starred model all together
+
+      // when a parent saves a babysitter to starred, 
+      // the babysitter's profile should be added to the parents starredBabysitters list,
+      // and the parent that starred the babysitter should be added to their interested parents list
+
+      // babysitter and parent models
     },
   }
 }

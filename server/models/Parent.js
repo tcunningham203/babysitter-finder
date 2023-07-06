@@ -37,6 +37,16 @@ const parentSchema = new Schema({
         type: String,
         required: false
     },
+    profilePic: {
+        type: String,
+        required: false
+    },
+    starredBabysitters: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Babysitter'
+        }
+    ],
     createdAt: {
         type: Date,
         default: Date.now
