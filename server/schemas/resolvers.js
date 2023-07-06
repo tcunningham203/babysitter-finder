@@ -1,6 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Parent, Babysitter } = require('../models');
-const bcrypt = require('bcrypt');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -22,6 +21,14 @@ const resolvers = {
     },
     babysitter: async (parent, args) => {
         return Babysitter.findById(args.id).populate('user');
+    },
+    starredBabysitters: async () => {
+      // Parent model
+      // findById({ starredBabysitters })
+    },
+    interestedParents: async () => {
+      // Babysitter model
+      // findById(args.id)
     }
   },
   Mutation: {
@@ -32,17 +39,17 @@ const resolvers = {
 
       return { token, user };
     },
-    login: async (parent,{ email, password }) => {
-      const user =await User.findOne({email})
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({email})
 
       if (!user) {
         throw new AuthenticationError('User not found!');
       }
 
-      const passwordMatch = bcrypt.compareSync(password, user.password);
+      const correctPw = await user.isCorrectPassword(password);
 
-      if (!passwordMatch) {
-        throw new AuthenticationError('Invalid password!');
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
       }
 
       const token = signToken(user);
@@ -52,34 +59,32 @@ const resolvers = {
     // look at solved folder in unit 22 activity 26 
     // resolvers and typeDefs files for reference
     createBabysitter: async (parent, args) => {
-      // babysitter model
-      // associate with user who is babysitter thru user field
-      let babysitter= await Babysitter.create(args);
+      // perfect
+      let babysitter = await Babysitter.create(args);
       return babysitter;
     },
     createParent: async (parent, args) => {
-      // parent model
-      // associate with user who is parent thru user field
-      let parentObj=await Parent.create(args)
+      // perfect
+      let parentObj = await Parent.create(args)
       return parentObj;
     },
-    updateBabysitter: async (parent,args) => {
+    updateBabysitter: async (parent, args, context) => {
       // babysitter model
-      let {_id}=args;
-      delete args["_id"];
-      console.log(args,_id)
-      let babySitter=await Babysitter.findOneAndUpdate({_id},args)
-      console.log(babySitter);
-      return babySitter;
+      if (context.babysitter) {
+        return await Babysitter.findByIdAndUpdate(context.babysitter._id, args, { new: true });
+      }
+
+      throw new AuthenticationError('Not logged in');
     },
-    updateParent: async (parent,args) => {
+    updateParent: async (parent, args, context) => {
       // parent model
-      let {_id}=args;
-      delete args["_id"];
-      let parentObj=await Parent.findOneAndUpdate({_id},args)
-      return parentObj;
+      if (context.parent) {
+        return await Babysitter.findByIdAndUpdate(context.parents._id, args, { new: true });
+      }
+
+      throw new AuthenticationError('Not logged in');
     },
-    addToStarred: async (parent,args) => {
+    addToStarred: async (parent, args) => {
       // this one's a bit more complicated 
       // new fields have been added to babysitter and parent models
       // and im thinking about getting rid of Starred model all together
@@ -92,6 +97,9 @@ const resolvers = {
       //const {user,babySitter}=args;
 
     },
+    // removeFromStarred: async (parents, args) => {
+
+    // }
   }
 }
 
