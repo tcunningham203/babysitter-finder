@@ -361,3 +361,20 @@ input:checked ~ .dot {
     margin-right: 0;
   }
 }
+
+.welcome {
+  color: #6b7bd1;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.message {
+  color: #826ec7;
+  font-size: 2rem;
+  margin: 50px auto;
+  text-align: center;
+  width: 70%;
+}
+
