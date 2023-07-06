@@ -12,9 +12,9 @@ function HomeB() {
       <div className=' justify-between z-10'>
                 <div
                     className="flex sm:flex-row flex-col rounded-lg align-center  md:mt-5 mt-2 justify-center  items-center md:py-5 py-2 font-neat">
-                    <h1 className=" lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium ">
+                    <h1 className=" xl:text-7xl lg:text-6xl px-1 md:text-4xl text-3xl text-center font-medium ">
                         Babysitters in
-                    </h1>  <h1 className=" lg:text-5xl px-1 md:text-4xl text-3xl text-center font-bold">
+                    </h1>  <h1 className="xl:text-7xl lg:text-6xl px-1 md:text-4xl text-3xl text-center font-bold">
                         Upper Manhattan
                     </h1>
 
@@ -34,7 +34,7 @@ function HomeB() {
 
         <div className="   sm:grid col-start-0 col-span-12 lg:col-start-2 lg:col-span-10  justify-center  ">
 
-          <div className="  grid grid-cols-12  justify-center z-10 ">
+          <div className="  grid grid-cols-12 xl:grid-cols-8  justify-center z-10 2xl:mx-24">
 
             <ProfileTemplate />
             <ProfileTemplate />

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
 import BearIconSmall from "../BearIconSmall";
+import Clouds from "../clouds";
 function HeaderB(){
 
     const[isMenuOpen, setMenuOpen] = useState(false);
@@ -11,11 +12,12 @@ function HeaderB(){
 
     return <div>
 
-<nav className="bg-slate-800  ">
+<nav className="bg-slate-600  "> 
+<div className="relative"><Clouds/></div>
       <div className="max-w-screen flex flex-row flex-wrap items-center justify-between py-2 px-4 md:px-0 md:py-6">
         <NavLink to='/homeB' className="  flex flex-row md:px-4 ">
           <BearIconSmall />
-      
+     
         <div className=" home align-center font-smart items-center text-center justify-center flex ps-2 pb-1 text-6xl   text-blue-200 "> Cub</div>
         <div className=" home align-center font-smart items-center text-center justify-center flex pb-1 text-6xl   text-pink-200 "> Care</div>
         </NavLink>
@@ -27,16 +29,16 @@ function HeaderB(){
           } w-full md:block md:w-auto`}>
           <ul className="dropDown  font-medium mr-20 flex flex-col font-neat p-4 md:p-0 mt-4 md:flex-row md:space-x-16 md:mt-0 md:border-0">
             <li>
-              <NavLink to='/profileB' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl items-center justify-center flex align-center">Profile</NavLink>
+              <NavLink to='/profileB' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Profile</NavLink>
             </li>
             <li>
-              <NavLink to='/clientsB' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl items-center justify-center flex align-center">Clients</NavLink>
+              <NavLink to='/clientsB' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Clients</NavLink>
             </li>
             <li>
-              <NavLink to='/mapB' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl items-center justify-center flex align-center">Map</NavLink>
+              <NavLink to='/mapB' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Map</NavLink>
             </li>
             <li>
-              <NavLink to='/' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl items-center justify-center flex align-center">Logout</NavLink>
+              <NavLink to='/' className="text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Logout</NavLink>
             </li>
           </ul>
         </div>
