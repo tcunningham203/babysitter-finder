@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'smart';
+    src: url(./fonts/SmartKid.otf) ;
+  
+  }
+
+  @font-face {
+    font-family: 'neat';
+    src: url(./fonts/KGNeatlyPrinted.ttf) ;
+  
+  }
+
+  @font-face {
+    font-family: 'resume';
+    src: url(./fonts/libre-baskerville.regular.ttf) ;
+  
+  }
+
+  @font-face {
+    font-family: 'cool';
+    src: url(./fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) ;
+  
+  }
+
+  @font-face {
+    font-family: 'thin';
+    src: url(./fonts/thin\ lines\ and\ curves.ttf) ;
+  
+  }
+
+  @font-face {
+    font-family: 'evo';
+    src: url(./fonts/MADE\ Evolve\ Sans\ Regular\ \(PERSONAL\ USE\).otf) ;
+  
+  }

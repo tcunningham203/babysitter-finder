@@ -5,10 +5,15 @@
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ['"PT Sans"', 'sans-serif']
-    }
+      smart: ['smart', "sans-serif"],
+      neat: ['neat', "sans-serif"],
+      resume: ['resume', "sans-serif"],
+      cool: ['cool', "sans-serif"],
+      thin: ['thin', "sans-serif"],
+      evo: ['evo', "sans-serif"],
+    },
+    extend: {},
   },
-
 
   content: [
     "./src/**/*.{html,js}",

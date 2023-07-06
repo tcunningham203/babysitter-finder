@@ -37,10 +37,10 @@ export default function ParentContactInfo () {
             
     
              
-            <div className="m-4 mx-7 bg-rose-200   xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 ">
-<div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
+            <div className="m-4 mx-7 font-cool  xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 z-10">
+<div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4 z-10">
                         <div
-                            className=" flex  flex-col  align-center justify-between  ">
+                            className=" flex  flex-col  align-center justify-between  z-10">
     
     
     
@@ -51,7 +51,7 @@ export default function ParentContactInfo () {
                                     className=" text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                                     The Lastname Family
                                 </h5>
-                                <div className="h-px bg-rose-500 w-full mb-2"></div>
+                                <div className="h-px bg-slate-500 w-full mb-2"></div>
     
                                 <p className=" text-lg pb-2 text-base/6">
                                     Number of Kids: 2 boys
@@ -66,18 +66,18 @@ export default function ParentContactInfo () {
                         <div className="relative">
             <div className="absolute bottom-2 right-0">
               {showToast && (
-                <div className="bg-rose-900 text-white px-6 py-2 rounded-lg">
+                <div className="bg-slate-900 text-white px-6 py-2 rounded-lg">
                   <div className="flex text-justify items-center justify-between pb-4 ">
-                    <div>Do you want to delete this family from your list? This cannot be undone!</div></div>
-                    <div className="h-px bg-rose-500 w-full mb-2"></div>
+                    <div>Delete this family from your list? This cannot be undone!</div></div>
+                    <div className="h-px bg-slate-500 w-full mb-2"></div>
                     <div className="flex items-center justify-between">
                     <button className="text-gray-400 hover:text-white" onClick={hideToast}>
-                      Yes, Delete
+                     Delete
                     </button>
                   
                   <div className="flex items-center text-gray-100 ">
                     <Button onClick={hideToast} color="primary" size="small">
-                     Never Mind
+                     Keep
                     </Button>
                   </div></div>
                 </div>
@@ -91,10 +91,10 @@ export default function ParentContactInfo () {
     
     
     
-                            <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-rose-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+                            <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-slate-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-800  focus:outline-none focus:ring-0 active:bg-slate-950 ">
                                 More Details
                             </button>
-                            <button type="button"  onClick={showToastMessage}className="items-center flex-col rounded-lg bg-gray-400 p-2 w-9 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+                            <button type="button"  onClick={showToastMessage}className="items-center flex-col rounded-lg bg-gray-400 p-2 w-9 leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-800  focus:outline-none focus:ring-0 active:bg-slate-950 ">
                             <ImCancelCircle size={18}/>
                             </button>
     
@@ -103,7 +103,7 @@ export default function ParentContactInfo () {
                             {/* Model from https://www.flowbite-react.com/docs/components/modal */}
     
     
-                            <Modal className="h-screen pt-6" dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
+                            <Modal className="font-cool h-screen pt-6" dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
                                 <div
                                         className=" flex  p-2 items-center justify-center align-center  ">
                                      
@@ -112,7 +112,7 @@ export default function ParentContactInfo () {
                                                 className=" sm:text-4xl xs:text-3xl font-medium leading-tight text-neutral-800 dark:text-neutral-50" style={{ fontSize: 20 }}>
                                                 The Lastname Family
                                             </h5>
-                                            <div className="h-px bg-rose-500 w-full "></div>
+                                            <div className="h-px bg-slate-500 w-full "></div>
                                             <p className=" sm:text-xl xs:text-sm text-slate-500">
                                                 Upper Manhattan
                                             </p>
@@ -165,7 +165,7 @@ export default function ParentContactInfo () {
     </p>
 
 </div>
-                                    <div className="h-px bg-rose-500 mb-3 w-full "></div>
+                                    <div className="h-px bg-slate-500 mb-3 w-full "></div>
         <div className="grid grid-cols-2">                         
   <div className="flex flex-col justify-evenly text-center items-center ">
     <p className="  flex text-base/6 text-neutral-600 " >

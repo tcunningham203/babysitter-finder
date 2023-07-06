@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom"
 import React, { useState, useEffect } from 'react'
 import HeaderB from "./HeaderB";
 import ProfilePic from "../ProfilePic";
-
+import Skyline from "../Skyline";
 
 export default function ProfileB() {
     const [showToast, setShowToast] = useState(false);
@@ -34,25 +34,26 @@ export default function ProfileB() {
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     return (
-        <div className="bg-rose-200 min-h-screen ">
+        <div className="bg-slate-200 min-h-screen z-10 font-cool">
             <HeaderB />
-
-            <div className='grid 2xl:grid-cols-12 xl:grid-cols-12  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-between'>
+<Skyline/>
+            <div className='justify-between z-10'>
                 <div
-                    className="2xl:col-start-4 2xl:col-span-6 xl:col-start-4 xl:col-span-6 lg:col-start-3 lg:col-span-8 md:col-start-2 md:col-span-9 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 flex flex-row  rounded-lg align-center bg-white md:my-5 my-2 justify-evenly  items-center">
-                    <h1 className="md:my-5 my-2 md:text-3xl text-lg text-center">
+                    className="flex sm:flex-row flex-col rounded-lg align-center  md:mt-5 mt-2 justify-center  items-center md:py-5 py-2 ">
+                    <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-neat font-medium">
                         Here's how people see you.
                     </h1>
-                    <NavLink to='/EditProfileB' type="button" className="flex-col rounded bg-rose-700 px-2 sm:px-12 pb-2 pt-2.5  m-2 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 xs:text-sm">
-                        Edit
-                    </NavLink>
+                  
                    
                 </div>
             </div>
-            <div className="my-2 sm:m-4 grid 2xl:grid-cols-12 xl:grid-cols-11  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-center  ">
-                <div className="2xl:col-start-6 2xl:col-span-2 xl:col-start-5 xl:col-span-3 lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-5 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
+           
+            <div className="mb-2 sm:m-4 grid 2xl:grid-cols-12 xl:grid-cols-11  lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 justify-center z-10 ">
+
+                
+                <div className="2xl:col-start-6 2xl:col-span-2 xl:col-start-5 xl:col-span-3 lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-5 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4 z-10">
                     <div
-                        className=" flex  flex-col  align-center justify-between  ">
+                        className=" flex  flex-col  align-center justify-between  z-10">
 
 
 
@@ -67,7 +68,7 @@ export default function ProfileB() {
                                 className=" text-4xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                                 Firstname
                             </h5>
-                            <div className="h-px bg-rose-500 w-full mb-2"></div>
+                            <div className="h-px bg-slate-500 w-full mb-2"></div>
 
                             <p className=" text-lg pb-2 text-base/6">
                                 Rate: 20 per hour for 1 child, +1 dollar for each additional child
@@ -79,10 +80,10 @@ export default function ProfileB() {
                     <div className="relative">
         <div className="absolute bottom-2 right-0">
           {showToast && (
-            <div className="bg-rose-900 text-white px-6 py-2 rounded-lg">
+            <div className="bg-slate-900 text-white px-6 py-2 rounded-lg">
               <div className="flex text-justify items-center justify-between pb-4 ">
-                <div>You sent this babysitter your family profile! If they're free, they will respond by email.</div></div>
-                <div className="h-px bg-rose-500 w-full mb-2"></div>
+                <div>Press confirm to send your profile and email. If they're free, they will email you back.</div></div>
+                <div className="h-px bg-slate-500 w-full mb-2"></div>
                 <div className="flex items-center justify-between">
                 <button className="text-gray-100 hover:text-white" onClick={hideToast}>
                   Confirm
@@ -90,7 +91,7 @@ export default function ProfileB() {
               
               <div className="flex items-center text-gray-400 ">
                 <Button onClick={hideToast} color="primary" size="small">
-                 Undo
+                 Cancel
                 </Button>
               </div></div>
             </div>
@@ -104,10 +105,10 @@ export default function ProfileB() {
 
 
 
-                        <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-rose-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+                        <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-slate-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-800  focus:outline-none focus:ring-0 active:bg-slate-950 ">
                             View Profile
                         </button>
-                        <button type="button"  onClick={showToastMessage}className="items-center flex-col rounded-full bg-rose-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+                        <button type="button"  onClick={showToastMessage}className="items-center flex-col rounded-full bg-slate-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-800  focus:outline-none focus:ring-0 active:bg-slate-950 ">
                         <VscMail size={22}/>
                         </button>
 
@@ -116,7 +117,7 @@ export default function ProfileB() {
                         {/* Model from https://www.flowbite-react.com/docs/components/modal */}
 
 
-                        <Modal className="h-screen pt-6" dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
+                        <Modal className="h-screen pt-6 font-cool" dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
                             <div
                                     className=" flex  p-2 items-center justify-center align-center  ">
                                     <div className="flex justify-between w-1/4 pb-2">
@@ -128,7 +129,7 @@ export default function ProfileB() {
                                             className=" sm:text-4xl xs:text-3xl font-medium leading-tight text-neutral-800 dark:text-neutral-50" style={{ fontSize: 40 }}>
                                             Firstname
                                         </h5>
-                                        <div className="h-px bg-rose-500 w-full "></div>
+                                        <div className="h-px bg-slate-500 w-full "></div>
                                         <p className=" sm:text-xl xs:text-sm text-slate-500">
                                             Upper Manhattan
                                         </p>
@@ -187,7 +188,7 @@ export default function ProfileB() {
                                     </p>
 
                                 </div>
-                                <div className="h-px bg-rose-500 mb-3 w-full "></div>
+                                <div className="h-px bg-slate-500 mb-3 w-full "></div>
     <div className="grid grid-cols-3">                         
 <div className="flex flex-col justify-evenly text-center items-center ">
 <p className="  flex text-base/6 text-neutral-600 ">
@@ -228,7 +229,14 @@ Non Smoker
                     </div>
                 </div>
             </div>
+            <div className=" grid 2xl:grid-cols-12 xl:grid-cols-11 mt-1 lg:grid-cols-12 md:grid-cols-11 sm:grid-cols-11 grid-cols-12 align-center text-center justify-center z-10 ">
 
+                
+<div className="2xl:col-start-6 2xl:col-span-2 xl:col-start-5 xl:col-span-3 lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-5 sm:col-start-3 sm:col-span-7 col-start-2 col-span-10  bg-white rounded-lg  z-10">
+            <NavLink to='/EditProfileB' type="button" className="flex-col rounded bg-red-700 px-2 sm:px-12 pb-2 pt-2.5  m-1 leading-normal font-medium text-white transition duration-150 ease-in-out hover:bg-red-800  focus:outline-none focus:ring-0 active:bg-red-950 text-xl xs:text-sm z-10">
+                        Edit Profile
+                    </NavLink>
+                    </div></div>
         </div>
     )
 };

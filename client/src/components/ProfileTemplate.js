@@ -32,7 +32,7 @@ export default function ProfileTemplate() {
     const props = { openModal, setOpenModal };
     return (
 
-        <div className="sm:m-4 m-7 bg-rose-200   xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 ">
+        <div className=" font-cool sm:m-4 mx-7 my-2 bg-slate-200   xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 z-10">
 <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
     <div
         className=" flex  flex-col  align-center justify-between  ">
@@ -45,7 +45,7 @@ export default function ProfileTemplate() {
                 className=" text-4xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                 Firstname
             </h5>
-            <div className="h-px bg-rose-500 w-full mb-2"></div>
+            <div className="h-px bg-slate-500 w-full mb-2"></div>
 
             <p className=" text-lg pb-2 text-base/6">
                 Rate: 20 per hour for 1 child, +1 dollar for each additional child
@@ -60,10 +60,10 @@ export default function ProfileTemplate() {
     <div className="relative">
         <div className="absolute bottom-2 right-0">
           {showToast && (
-            <div className="bg-rose-900 text-white px-6 py-2 rounded-lg">
+            <div className="bg-slate-900 text-white px-6 py-2 rounded-lg">
               <div className="flex text-justify items-center justify-between pb-4 ">
-                <div>You sent this babysitter your family profile! If they're free, they will respond by email.</div></div>
-                <div className="h-px bg-rose-500 w-full mb-2"></div>
+                <div>Press confirm to send your profile and email. If they're free, they will email you back.</div></div>
+                <div className="h-px bg-slate-500 w-full mb-2"></div>
                 <div className="flex items-center justify-between">
                 <button className="text-gray-100 hover:text-white" onClick={hideToast}>
                   Confirm
@@ -71,7 +71,7 @@ export default function ProfileTemplate() {
               
               <div className="flex items-center text-gray-400 ">
                 <Button onClick={hideToast} color="primary" size="small">
-                 Undo
+                Cancel
                 </Button>
               </div></div>
             </div>
@@ -87,10 +87,10 @@ export default function ProfileTemplate() {
 
 
 
-        <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-rose-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+        <button type="button"  onClick={() => props.setOpenModal('dismissible')} className=" items-center  flex-col w-32 rounded bg-slate-700  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-800  focus:outline-none focus:ring-0 active:bg-slate-950 ">
             View Profile
         </button>
-        <button type="button" onClick={showToastMessage} className="items-center flex-col rounded-full bg-rose-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-rose-800  focus:outline-none focus:ring-0 active:bg-rose-950 ">
+        <button type="button" onClick={showToastMessage} className="items-center flex-col rounded-full bg-slate-700 pb-3 pt-3 w-11 leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-800  focus:outline-none focus:ring-0 active:bg-slate-950 ">
         <VscMail size={22}/>
         </button>
 
@@ -99,7 +99,7 @@ export default function ProfileTemplate() {
         {/* Model from https://www.flowbite-react.com/docs/components/modal */}
 
 
-        <Modal className="h-screen pt-6" dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
+        <Modal className="h-screen pt-6 font-cool" dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
             <div
                     className=" flex  p-2 items-center justify-center align-center  ">
                     <div className="flex justify-between w-1/4 pb-2">
@@ -111,7 +111,7 @@ export default function ProfileTemplate() {
                             className=" sm:text-4xl xs:text-3xl font-medium leading-tight text-neutral-800 dark:text-neutral-50" style={{ fontSize: 40 }}>
                             Firstname
                         </h5>
-                        <div className="h-px bg-rose-500 w-full "></div>
+                        <div className="h-px bg-slate-500 w-full "></div>
                         <p className=" sm:text-xl xs:text-sm text-slate-500">
                             Upper Manhattan
                         </p>
@@ -170,7 +170,7 @@ export default function ProfileTemplate() {
                     </p>
 
                 </div>
-                <div className="h-px bg-rose-500 mb-3 w-full "></div>
+                <div className="h-px bg-slate-500 mb-3 w-full "></div>
 <div className="grid grid-cols-3">                         
 <div className="flex flex-col justify-evenly text-center items-center ">
 <p className="  flex text-base/6 text-neutral-600 ">
@@ -197,8 +197,8 @@ Non Smoker
 </div>
 </div>
             </Modal.Body>
-            <Modal.Footer className="p-2 ">
-            <button type="button"  onClick={() => props.setOpenModal(undefined)} className=" items-center  flex-col w-16 rounded bg-gray-400  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-gray-800  focus:outline-none focus:ring-0 active:bg-gray-950 ">
+            <Modal.Footer className="p-2 font-cool">
+            <button type="button"  onClick={() => props.setOpenModal(undefined)} className="font-cool items-center  flex-col w-16 rounded bg-gray-400  pb-2 pt-2.5   leading-normal text-white transition duration-150 ease-in-out hover:bg-gray-800  focus:outline-none focus:ring-0 active:bg-gray-950 ">
             Back
         </button>
             </Modal.Footer>

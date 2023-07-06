@@ -95,6 +95,12 @@ input:checked ~ .dot {
   animation: fadeAndGrow3 .5s ease-in-out forwards;
   animation-delay: calc(0.15s * var(--word-index));
 }
+
+.animate-mapfade2-in-word {
+  opacity: 0;
+  animation: fadeAndGrow3 .5s ease-in-out forwards;
+  animation-delay: calc(0.05s * var(--word-index));
+}
 @keyframes fadeAndGrow3 {
   0% {
     opacity: 0;
