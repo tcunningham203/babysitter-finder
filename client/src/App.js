@@ -43,6 +43,7 @@ function App() {
   return (
     <div className="App">
 --- TEST LINKS ONLY! --- IGNORE THIS WHITE STRIP WHEN DOING CSS. ---
+<NavLink to='/landing'>| Landing |</NavLink>
 <NavLink to='/login'>| Login |</NavLink>
 <NavLink to='/signup'>| Signup |</NavLink>
 <NavLink to='/homeB'>| BABY SITTER Home |</NavLink>
