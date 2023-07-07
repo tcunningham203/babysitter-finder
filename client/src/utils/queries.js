@@ -116,3 +116,19 @@ export const QUERY_BABYSITTERS = gql`
     }
   }
 `;
+
+export const QUERY_STARREDBABYSITTERS = gql`
+query Parent($parentId: ID!) {
+  parent(id: $parentId) {
+    starredBabysitters
+  }
+}
+`;
+
+export const QUERY_INTERESTEDPARENTS = gql`
+query Babysitter($babysitterId: ID!) {
+  babysitter(id: $babysitterId) {
+    interestedParents
+  }
+}
+`;
