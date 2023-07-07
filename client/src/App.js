@@ -1,7 +1,6 @@
 import './App.css';
 
 import {Routes, NavLink, Route} from 'react-router-dom'
-import Signup from "./components/NewUserQuizBBS/signup";
 import Login from "./components/Login";
 
 import ClientsB from './components/pagesBBS/ClientsB';
@@ -43,16 +42,16 @@ function App() {
   return (
     <div className="App">
 --- TEST LINKS ONLY! --- IGNORE THIS WHITE STRIP WHEN DOING CSS. ---
-<NavLink to='/landing'>| Landing |</NavLink>
+
 <NavLink to='/login'>| Login |</NavLink>
-<NavLink to='/signup'>| Signup |</NavLink>
+<NavLink to='/'>| Landing Page |</NavLink>
 <NavLink to='/homeB'>| BABY SITTER Home |</NavLink>
 <NavLink to='/homeP'>| PARENT Home |</NavLink>
 <Routes>
 
   <Route path="/" element={<LandingPage/>}/>
   <Route path="/login" element={<Login/>}/>
-  <Route path="/signup" element={<Signup />}/>
+
   
 
   <Route path="/signupbsq/0" element={<BabysitterQ0 />}/>
