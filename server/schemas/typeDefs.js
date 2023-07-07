@@ -20,7 +20,8 @@ const typeDefs = gql`
     allergies: String
     pets: Boolean
     smoker: Boolean
-    requests: String
+    requests: String,
+    starredBabysitters:[Babysitter]
   }
   
   type Babysitter {
@@ -36,6 +37,7 @@ const typeDefs = gql`
     pets: Boolean
     smoker: Boolean
     rates: String
+    interestedParents:[Parent]
   }
 
   type Auth {
@@ -50,8 +52,8 @@ const typeDefs = gql`
     parent(id: ID!): Parent
     babysitters(zone: String!): [Babysitter]
     babysitter(id: ID!): Babysitter
-    starredBabysitters ...
-    interestedParents ...
+    starredBabysitters(id: ID!): Parent
+    interestedParents(id: ID!): Babysitter  
   }
 
   type Mutation {

@@ -11,16 +11,16 @@ const resolvers = {
       return User.findById(args.id);
     },
     parents: async (parent, { zone }) => {
-        return Parent.find({ zone }).populate('user');
+        return Parent.find({ zone }).populate('user','starredBabysitters');
     },
     parent: async (parent, args) => {
-        return Parent.findById(args.id).populate('user');
+        return Parent.findById(args.id).populate('user','starredBabysitters');
     },
     babysitters: async (parent, { zone }) => {
-        return Babysitter.find({ zone }).populate('user');
+        return Babysitter.find({ zone }).populate('user','interestedParents');
     },
     babysitter: async (parent, args) => {
-        return Babysitter.findById(args.id).populate('user');
+        return Babysitter.findById(args.id).populate('user','interestedParents');
     },
     starredBabysitters: async () => {
       // Parent model
@@ -70,21 +70,36 @@ const resolvers = {
     },
     updateBabysitter: async (parent, args, context) => {
       // babysitter model
-      if (context.babysitter) {
-        return await Babysitter.findByIdAndUpdate(context.babysitter._id, args, { new: true });
+      if (context.user) {
+        return await Babysitter.findByIdAndUpdate(context.user._id, args, { new: true });
       }
 
       throw new AuthenticationError('Not logged in');
     },
     updateParent: async (parent, args, context) => {
       // parent model
-      if (context.parent) {
-        return await Babysitter.findByIdAndUpdate(context.parents._id, args, { new: true });
+      if (context.user) {
+        return await Parent.findByIdAndUpdate(context.user._id, args, { new: true });
       }
 
       throw new AuthenticationError('Not logged in');
     },
-    addToStarred: async (parent, args) => {
+    addToStarred: async (parent, args,context) => {
+      if (context.user) {
+        let parent=await Parent.findOne({user:context.user._id})
+        let prev_starredBabysitters=parent.starredBabysitters;
+        prev_starredBabysitters.push(args.babySitter);
+
+        let babysitter=await Babysitter.findOne({user:args.babySitter})
+        let prev_interestedParents=babysitter.interestedParents;
+        prev_interestedParents.push(context.user._id)
+        await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
+        
+        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true });
+      }
+      
+      throw new AuthenticationError('Not logged in');
+    },
       // this one's a bit more complicated 
       // new fields have been added to babysitter and parent models
       // and im thinking about getting rid of Starred model all together
@@ -101,6 +116,6 @@ const resolvers = {
 
     // }
   }
-}
+
 
 module.exports = resolvers;
