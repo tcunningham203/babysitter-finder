@@ -12,6 +12,10 @@ input:checked ~ .dot {
   background-color: #c55a5a;
 }
 
+.animate-slide-up {
+  animation: slide-up 1.3s ease forwards;
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(0);
@@ -23,37 +27,24 @@ input:checked ~ .dot {
   }
 }
 
-.animate-slide-up {
-  animation: slide-up 1.3s ease forwards;
+.animate-fade-out {
+  animation: fade-out-landing .3s ease forwards;
 }
 
-.animate-bg-bbs {
-  animation: color-change1 1.3s ease forwards;
-}
-.animate-bg-pnt {
-  animation: color-change2 1.3s ease forwards;
-}
-
-
-@keyframes color-change1 {
+@keyframes fade-out-landing {
   0% {
-    background-color: #e2e8f0;
+
   }
   100% {
-    background-color: #ffe4e6;
+    
+    opacity: 0;
     
   }
 }
 
-@keyframes color-change2 {
-  0% {
-    background-color: #e2e8f0;
-  }
-  100% {
-    background-color: #dbeafe;
-    
-  }
-}
+
+
+
 
 .animate-fade-in-button {
   opacity: 0;
