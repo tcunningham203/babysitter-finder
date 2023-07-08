@@ -34,7 +34,7 @@ export default function ProfileB() {
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     return (
-        <div className="bg-slate-200 min-h-screen z-10 font-cool">
+        <div className="bg-slate-200 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
             <HeaderB />
 <Skyline/>
             <div className='justify-between z-10'>

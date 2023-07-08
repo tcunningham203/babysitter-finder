@@ -8,7 +8,7 @@ export default function ClientsB() {
 
 
     return (
-        <div className="bg-slate-200 min-h-screen z-10 ">
+        <div className="bg-slate-200 min-h-screen  pt-16 sm:pt-20 md:pt-24 z-10 ">
             <HeaderB />
 <Skyline/>
             <div className=' justify-between z-10'>

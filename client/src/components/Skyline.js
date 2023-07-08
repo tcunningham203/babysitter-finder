@@ -8,7 +8,7 @@ function Skyline() {
      
       preserveAspectRatio="none"
       viewBox="140 0 400 380"
-      className="w-full h-full opacity-40"
+      className="w-full h-full opacity-40 z-0"
     >
       
       <g>

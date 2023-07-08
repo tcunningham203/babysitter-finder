@@ -1,7 +1,7 @@
 import './App.css';
 
 import {Routes, NavLink, Route} from 'react-router-dom'
-import Login from "./components/Login";
+
 
 import ClientsB from './components/pagesBBS/ClientsB';
 import HeaderB from './components/pagesBBS/HeaderB';
@@ -41,16 +41,11 @@ import ParentQ7 from './components/NewUserQuizPNT/ParentQ7';
 function App() {
   return (
     <div className="App">
---- TEST LINKS ONLY! --- IGNORE THIS WHITE STRIP WHEN DOING CSS. ---
 
-<NavLink to='/login'>| Login |</NavLink>
-<NavLink to='/'>| Landing Page |</NavLink>
-<NavLink to='/homeB'>| BABY SITTER Home |</NavLink>
-<NavLink to='/homeP'>| PARENT Home |</NavLink>
 <Routes>
 
   <Route path="/" element={<LandingPage/>}/>
-  <Route path="/login" element={<Login/>}/>
+
 
   
 

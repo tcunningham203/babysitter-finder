@@ -2,8 +2,8 @@ import React from "react";
 
 function Clouds() {
   return (
-    <div className="relative">
-    <div className="absolute top-0 left-0 z-2 w-full h-full pointer-events-none">
+    <div className="relative z-0">
+    <div className="absolute top-0 left-0 z-0 w-full h-full pointer-events-none ">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style={{ WebkitTransition: "0.3s", transition: "0.3s" }}

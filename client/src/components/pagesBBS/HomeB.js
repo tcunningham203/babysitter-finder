@@ -5,7 +5,7 @@ import Skyline from "../Skyline";
 function HomeB() {
 
   return (
-    <div className="bg-slate-200 min-h-screen">
+    <div className="bg-slate-200 min-h-screen pt-16 sm:pt-20 md:pt-24 ">
       <HeaderB />
       <Skyline/>
 
