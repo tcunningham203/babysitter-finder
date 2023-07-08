@@ -37,7 +37,7 @@ export default function ParentContactInfo () {
             
     
              
-            <div className="m-4 mx-7 font-cool  xl:col-span-3  lg:col-span-4  md:col-span-4  sm:col-span-6  col-span-12 z-10">
+            <div className="m-4 mx-7 font-cool w-64 z-10">
 <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4 z-10">
                         <div
                             className=" flex  flex-col  align-center justify-between  z-10">

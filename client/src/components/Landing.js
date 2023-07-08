@@ -107,7 +107,7 @@ const LandingPage = () => {
 
     return (
         <div className="bg-slate-700 min-h-screen pb-10 z-10 font-cool">
-            <div className={`justify-between z-10 xl:pt-16 ${isAnimating ? 'animate-fade-out' : ''
+            <div className={`justify-between z-10  ${isAnimating ? 'animate-fade-out' : ''
                 }`}>
 
                 <div className="justify-between z-10 xl:pt-16">

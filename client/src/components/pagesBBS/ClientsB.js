@@ -32,9 +32,9 @@ export default function ClientsB() {
 
 
 
-            <div className="  sm:grid sm:col-start-2 sm:col-span-4  justify-center z-10 ">
+            <div className="    justify-center z-10 ">
 
-                <div className="  grid grid-cols-12  justify-center z-10 ">
+                <div className="  flex flex-wrap justify-center 2xl:mx-72 z-10 ">
 
                     <ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo />
                     <ParentContactInfo />

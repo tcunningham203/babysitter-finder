@@ -9,11 +9,11 @@ function Clouds() {
       style={{ WebkitTransition: "0.3s", transition: "0.3s" }}
       transform="rotate(180)"
       version="1.1"
-      viewBox="0 0 1440 130"
+      viewBox="10 0 1200 100"
     >
       <defs>
         <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-          <stop offset="0%" stopColor="rgba(0, 0, 0, 0.47)"></stop>
+          <stop offset="0%" stopColor="rgba(0, 0, 0, 0.17)"></stop>
           <stop offset="100%" stopColor="rgba(0, 0, 0, 0)"></stop>
         </linearGradient>
       </defs>
