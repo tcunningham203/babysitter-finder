@@ -61,9 +61,9 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     createBabysitter(user: ID!, zone: String!, jobExp: String!, otherExp: String!, shortNotice: Boolean!, transportation: String!, activities: String!, issueHandling: String!, pets: Boolean!, smoker: Boolean!, rates: String!): Babysitter
     createParent(user: ID!, zone: String!, howMany: String!, age: String!, activities: String!, allergies: String!, pets: Boolean!, smoker: Boolean!, requests: String!): Parent
-    updateBabysitter(_id: ID!, user: ID, zone: String, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, issueHandling: String, pets: Boolean, smoker: Boolean, rates: String): Babysitter
-    updateParent(_id: ID!, user: ID, zone: String,howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
-    addToStarred(user:ID!, babySitter:ID!):Parent
+    updateBabysitter(zone: String, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, issueHandling: String, pets: Boolean, smoker: Boolean, rates: String): Babysitter
+    updateParent(zone: String,howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
+    addToStarred(babySitter:ID!):Parent
 
   }
 

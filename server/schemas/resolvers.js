@@ -1,4 +1,4 @@
-const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError,ValidationError } = require('apollo-server-express');
 const { User, Parent, Babysitter } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -20,6 +20,7 @@ const resolvers = {
         return Babysitter.find({ zone }).populate('user','interestedParents');
     },
     babysitter: async (parent, args) => {
+      console.log(args.id)
         return Babysitter.findById(args.id).populate('user','interestedParents');
     },
     starredBabysitters: async () => {
@@ -34,6 +35,10 @@ const resolvers = {
   Mutation: {
     // sign up ▼
     createUser: async (parent, args) => {
+      let exists=await User.findOne({email:args.email});
+      if(exists){
+        throw new ValidationError("User Already Exists !!")
+      }
       const user = await User.create(args);
       const token = signToken(user); 
 
@@ -71,15 +76,24 @@ const resolvers = {
     updateBabysitter: async (parent, args, context) => {
       // babysitter model
       if (context.user) {
-        return await Babysitter.findByIdAndUpdate(context.user._id, args, { new: true });
+        let babysitter=await Babysitter.findOne({user:context.user._id});
+        if(!babysitter){
+          throw new ValidationError("User is not assosite with any babysitter")
+        }
+        return await Babysitter.findOneAndUpdate({user:context.user._id}, args, { new: true });
       }
 
       throw new AuthenticationError('Not logged in');
     },
+
     updateParent: async (parent, args, context) => {
       // parent model
       if (context.user) {
-        return await Parent.findByIdAndUpdate(context.user._id, args, { new: true });
+        let parent=await Parent.findOne({user:context.user._id});
+        if(!parent){
+          throw new ValidationError("User is not assosite with any parent")
+        }
+        return await Parent.findOneAndUpdate({user:context.user._id}, args, { new: true });
       }
 
       throw new AuthenticationError('Not logged in');
@@ -90,7 +104,7 @@ const resolvers = {
         let prev_starredBabysitters=parent.starredBabysitters;
         prev_starredBabysitters.push(args.babySitter);
 
-        let babysitter=await Babysitter.findOne({user:args.babySitter})
+        let babysitter=await Babysitter.findOne({_id:args.babySitter})
         let prev_interestedParents=babysitter.interestedParents;
         prev_interestedParents.push(context.user._id)
         await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
