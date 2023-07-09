@@ -12,9 +12,9 @@ function HeaderB(){
 
     return <div>
 
-<nav className="bg-slate-600 z-20 fixed top-0 left-0 w-full "> 
+<nav className=" z-20 fixed top-0 left-0 w-full "> 
 <div className="relative z-10 "><Clouds/></div>
-      <div className="bg-slate-600 max-w-screen flex flex-row flex-wrap items-center justify-between pt-2  md:px-0 md:py-6 z-10">
+      <div className="bg-slate-700 max-w-screen flex flex-row flex-wrap items-center justify-between pt-2  md:px-0 md:py-6 z-10">
         <NavLink to='/homeB' className=" transition duration-150 hover:scale-105 active:scale-105  flex flex-row md:px-4 z-10 ms-4">
           <BearIconSmall />
      

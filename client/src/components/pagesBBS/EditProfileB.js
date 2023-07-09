@@ -24,7 +24,7 @@ function EditProfileB() {
         setImage(file.current.value);
     }
     return (
-        <div className="bg-slate-200 min-h-screen pt-16 sm:pt-20 md:pt-24  font-cool">
+        <div className="bg-slate-300 min-h-screen pt-16 sm:pt-20 md:pt-24  font-cool">
             <HeaderB />
 
             <div className=' justify-between z-10'>

@@ -48,7 +48,7 @@ const ParentQ1 = () => {
     };
   
     return (
-      <div className="bg-slate-200 min-h-screen flex-col flex items-center ">
+      <div className="bg-slate-300 font-cool min-h-screen flex-col flex items-center ">
         <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2 ">
           <form onSubmit={handleNext}>
             <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>First, select the area you live in.</h2>

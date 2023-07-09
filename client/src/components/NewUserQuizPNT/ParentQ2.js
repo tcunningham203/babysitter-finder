@@ -23,7 +23,7 @@ const ParentQ2 = () => {
   };
 
   return (
-    <div className="bg-slate-200 min-h-screen flex-col flex items-center justify-center">
+    <div className="bg-slate-300 font-cool min-h-screen flex-col flex items-center justify-center">
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>Great! OK, just a few more questions babysitters want to know.</h2>

@@ -270,6 +270,36 @@ input:checked ~ .dot {
   }
 }
 
+
+
+.animate-nav-down {
+  visibility: visible;
+  animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation-delay: calc(0.1s * var(--word-index));
+}
+
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) ;
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) ;
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
 /* HOVER EFFECTS TO CHANGE MAP COLOR */
 .map0 {
   fill: #414141;
@@ -348,31 +378,3 @@ input:checked ~ .dot {
   fill: #b0cd8b;
 } */
 
-.dropDown {
-  text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .home {
-    margin-left: 0;
-  }
-  .dropDown {
-    margin-right: 0;
-  }
-}
-
-.welcome {
-  color: #6b7bd1;
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 70px auto;
-  text-align: center;
-}
-
-.message {
-  color: #826ec7;
-  font-size: 2rem;
-  margin: 50px auto;
-  text-align: center;
-  width: 70%;
-}

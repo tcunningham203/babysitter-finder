@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'flowbite-react';
 import BearIconSmall from "./BearIconSmall"
+import HeaderB from './pagesBBS/HeaderB';
 
 
 
@@ -14,6 +15,7 @@ const LandingPage = () => {
     const [userType, setUserType] = useState('');
     const [showAlert, setShowAlert] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isAnimating2, setIsAnimating2] = useState(false);
     const navigate = useNavigate();
     const [showSignupForm, setShowSignupForm] = useState(true);
 
@@ -45,10 +47,10 @@ const LandingPage = () => {
 
 
 
-        setIsAnimating(true);
+        setIsAnimating2(true);
         setTimeout(() => {
             navigate('/homeB');
-        }, 1500);// Navigate to /home
+        }, 1000);// Navigate to /home
 
 
         // } else {
@@ -83,12 +85,12 @@ const LandingPage = () => {
             setIsAnimating(true);
             setTimeout(() => {
                 navigate('/signupbsq/0');
-            }, 800);// Navigate to /signupbsq for babysitters
+            }, 400);// Navigate to /signupbsq for babysitters
         } else if (userType === 'parent') {
             setIsAnimating(true);
             setTimeout(() => {
                 navigate('/signuppq/0');
-            }, 800);// Navigate to /signuppq for parents
+            }, 400);// Navigate to /signuppq for parents
         }
 
         // } else {
@@ -106,9 +108,21 @@ const LandingPage = () => {
 
 
     return (
-        <div className="bg-slate-700 min-h-screen pb-10 z-10 font-cool">
-            <div className={`justify-between z-10  ${isAnimating ? 'animate-fade-out' : ''
+        <div
+  className={`${
+    isAnimating2
+      ? 'transition-all duration-1000 ease-in-out bg-slate-300'
+      : 'bg-slate-700'
+  } `}
+>
+        <div className=" min-h-screen pb-10 z-10 font-cool"> 
+            <div className={`invisible ${isAnimating2 ? 'animate-nav-down' : '' }`}> 
+            <HeaderB/>
+            </div>
+            <div className={` justify-between z-10 ${isAnimating2 ? 'animate-fade-out' : ''
+                } ${isAnimating ? 'animate-fade-out' : ''
                 }`}>
+                     
 
                 <div className="justify-between z-10 xl:pt-16">
                     <div
@@ -411,7 +425,7 @@ const LandingPage = () => {
 
             </div>
 
-        </div>
+        </div></div>
     )
 };
 

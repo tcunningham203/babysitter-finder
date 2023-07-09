@@ -50,7 +50,7 @@ const MapB = () => {
     };
 
     return (
-        <div className='bg-slate-200 min-h-screen pt-16 sm:pt-20 md:pt-24  '>
+        <div className='bg-slate-300 min-h-screen pt-16 sm:pt-20 md:pt-24  '>
             <HeaderB />
     
             <div className="flex-col flex items-center z-10 ">

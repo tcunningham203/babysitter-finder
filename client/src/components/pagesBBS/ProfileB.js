@@ -10,7 +10,7 @@ import ProfileTemplate from "../ProfileTemplate";
 export default function ProfileB() {
  
     return (
-        <div className="bg-slate-200 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
+        <div className="bg-slate-300 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
             <HeaderB />
           
             <div className='justify-between z-10'>

@@ -29,7 +29,7 @@ const BabysitterQ4 = () => {
     };
 
     return (
-        <div className="bg-slate-200 min-h-screen flex-col flex justify-center items-center ">
+        <div className="bg-slate-300 font-cool min-h-screen flex-col flex justify-center items-center ">
             <span className='animate-in-up rounded p-3 sm:text-3xl text-xl text-center w-11/12 sm:w-3/4 lg:w-1/2'>
                 <div className={`  ${isAnimating2 ? 'animate-out-down cursor-default disabled:pointer-events-none ' : ''}${isAnimating ? 'animate-out-up cursor-default disabled:pointer-events-none  ' : ''}`}
                     style={{ '--word-index': '12', '--swoop-index': '3' }}>
