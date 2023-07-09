@@ -1,13 +1,13 @@
 import React from "react";
 import HeaderB from "./HeaderB";
 import ProfileTemplate from "../ProfileTemplate";
-import Skyline from "../Skyline";
+
 function HomeB() {
 
   return (
     <div className="bg-slate-200 min-h-screen pt-16 sm:pt-20 md:pt-24 ">
       <HeaderB />
-      <Skyline />
+    
 
       <div className=' justify-between z-10'>
         <div

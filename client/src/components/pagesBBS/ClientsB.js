@@ -2,7 +2,7 @@
 import React from 'react'
 import HeaderB from "./HeaderB";
 import ParentContactInfo from '../ParentInfoTemplate';
-import Skyline from '../Skyline';
+
 
 export default function ClientsB() {
 
@@ -10,7 +10,7 @@ export default function ClientsB() {
     return (
         <div className="bg-slate-200 min-h-screen  pt-16 sm:pt-20 md:pt-24 z-10 ">
             <HeaderB />
-<Skyline/>
+
             <div className=' justify-between z-10'>
                 <div
                     className="flex sm:flex-row flex-col rounded-lg align-center  md:mt-5 mt-2 justify-center  items-center md:py-5 py-2 font-neat">

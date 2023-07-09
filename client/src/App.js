@@ -38,11 +38,11 @@ import ParentQ5 from './components/NewUserQuizPNT/ParentQ5';
 import ParentQ6 from './components/NewUserQuizPNT/ParentQ6';
 import ParentQ7 from './components/NewUserQuizPNT/ParentQ7';
 import ParentQ8 from './components/NewUserQuizPNT/ParentQ8';
-
+import SkylineWrapper from './components/SkylineWrapper';
 function App() {
   return (
     <div className="App">
-
+<SkylineWrapper></SkylineWrapper>
 <Routes>
 
   <Route path="/" element={<LandingPage/>}/>

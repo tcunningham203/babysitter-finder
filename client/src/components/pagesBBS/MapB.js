@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeaderB from "./HeaderB";
-import Skyline from '../Skyline';
+
 
 const regions = ["map1", "map2", "map3", "map4", "map5", "map6", "map7", "map8", "map9", "map10", "map11", "map12"];
-const displayedNames = ["Tribeca", "Lower East Side", "Greeenwich Village", "Chelsea", "Midtown", "Midtown East", "Upper West Side", "Upper East Side", "Morningside Heights", "Central Harlem", "East Harlem", "Washington Heights"];
+const displayedNames = ["Tribeca", "Lower East Side", "Greenwich Village", "Chelsea", "Midtown", "Midtown East", "Upper West Side", "Upper East Side", "Morningside Heights", "Central Harlem", "East Harlem", "Washington Heights"];
 
 const MapB = () => {
 
@@ -52,7 +52,7 @@ const MapB = () => {
     return (
         <div className='bg-slate-200 min-h-screen pt-16 sm:pt-20 md:pt-24  '>
             <HeaderB />
-            <Skyline/>
+    
             <div className="flex-col flex items-center z-10 ">
 
                 <div className="rounded  sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">

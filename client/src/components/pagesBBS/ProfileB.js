@@ -2,15 +2,17 @@
 import { NavLink } from "react-router-dom"
 import React from 'react'
 import HeaderB from "./HeaderB";
-import Skyline from "../Skyline";
+
 import ProfileTemplate from "../ProfileTemplate";
 
-export default function ProfileB() {
 
+
+export default function ProfileB() {
+ 
     return (
         <div className="bg-slate-200 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
             <HeaderB />
-            <Skyline />
+          
             <div className='justify-between z-10'>
                 <div
                     className="flex sm:flex-row flex-col rounded-lg align-center  md:mt-5 mt-2 justify-center  items-center md:py-5 py-2 ">

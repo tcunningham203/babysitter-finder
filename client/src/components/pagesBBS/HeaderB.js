@@ -15,7 +15,7 @@ function HeaderB(){
 <nav className="bg-slate-600 z-20 fixed top-0 left-0 w-full "> 
 <div className="relative z-10 "><Clouds/></div>
       <div className="bg-slate-600 max-w-screen flex flex-row flex-wrap items-center justify-between pt-2  md:px-0 md:py-6 z-10">
-        <NavLink to='/homeB' className="  flex flex-row md:px-4 z-10 ms-4">
+        <NavLink to='/homeB' className=" transition duration-150 hover:scale-105 active:scale-105  flex flex-row md:px-4 z-10 ms-4">
           <BearIconSmall />
      
         <div className=" home align-center font-smart items-center  justify-center flex ps-2 pb-1 text-6xl  z-10 text-blue-200 "> Cub</div>
@@ -29,16 +29,16 @@ function HeaderB(){
           } z-10 md:bg-transparent bg-slate-600 w-full md:block md:w-auto`}>
           <ul className="z-10    font-medium grid grid-cols-2 md:grid-cols-4 md:pe-7 flex flex-col font-neat md:p-0 my-1 md:flex-row   md:border-0">
             <li>
-              <NavLink to='/profileB' className="md:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Profile</NavLink>
+              <NavLink to='/profileB' className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Profile</NavLink>
             </li>
             <li>
-              <NavLink to='/clientsB' className="md:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Clients</NavLink>
+              <NavLink to='/clientsB' className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Clients</NavLink>
             </li>
             <li>
-              <NavLink to='/mapB' className="md:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Map</NavLink>
+              <NavLink to='/mapB' className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Map</NavLink>
             </li>
             <li>
-              <NavLink to='/' className="md:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-100 active:text-blue-200 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Logout</NavLink>
+              <NavLink to='/' className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center">Logout</NavLink>
             </li>
           </ul>
         </div>
