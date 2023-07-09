@@ -1,11 +1,7 @@
-
-
 /* hide scrollbar for chrome, safari and opera */
 ::-webkit-scrollbar {
   display: none;
 }
-
-
 
 input:checked ~ .dot {
   transform: translateX(100%);
@@ -23,102 +19,90 @@ input:checked ~ .dot {
   100% {
     transform: translateY(-40%);
     opacity: 0;
-    
   }
 }
 
 .animate-fade-out {
-  animation: fade-out-landing .3s ease forwards;
+  animation: fade-out-landing 0.3s ease forwards;
 }
 
 @keyframes fade-out-landing {
   0% {
-
   }
   100% {
-    
     opacity: 0;
-    
   }
 }
 
-
-
-
-
 .animate-fade-in-button {
   opacity: 0;
-  animation: fadeAndGrow1 .8s ease-in-out forwards;
+  animation: fadeAndGrow1 0.8s ease-in-out forwards;
   animation-delay: calc(0.3s * var(--word-index));
 }
 @keyframes fadeAndGrow1 {
   0% {
     opacity: 0;
-    transform: scale(.7);
-    
+    transform: scale(0.7);
   }
   100% {
     opacity: 1;
     transform: scale(1);
-   
   }
 }
 .animate-fade-in-word {
   opacity: 0;
-  animation: fadeAndGrow2 .8s ease-in-out forwards;
+  animation: fadeAndGrow2 0.8s ease-in-out forwards;
   animation-delay: calc(0.3s * var(--word-index));
 }
 @keyframes fadeAndGrow2 {
   0% {
     opacity: 0;
-   
+
     transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    
-    transform: translateY(0px)
+
+    transform: translateY(0px);
   }
 }
 
 .animate-mapfade-in-word {
   opacity: 0;
-  animation: fadeAndGrow3 .5s ease-in-out forwards;
+  animation: fadeAndGrow3 0.5s ease-in-out forwards;
   animation-delay: calc(0.15s * var(--word-index));
 }
 
 .animate-mapfade2-in-word {
   opacity: 0;
-  animation: fadeAndGrow3 .5s ease-in-out forwards;
+  animation: fadeAndGrow3 0.5s ease-in-out forwards;
   animation-delay: calc(0.05s * var(--word-index));
 }
 @keyframes fadeAndGrow3 {
   0% {
     opacity: 0;
-   
+
     transform: translateY(70px);
   }
   100% {
     opacity: 1;
-    
-    transform: translateY(0px)
+
+    transform: translateY(0px);
   }
 }
 
 .animate-fade-out-button {
   opacity: 1;
-  animation: fade-out-btn .6s ease-in-out forwards;
+  animation: fade-out-btn 0.6s ease-in-out forwards;
   animation-delay: calc(0.1s * var(--out-index));
 }
 
 @keyframes fade-out-btn {
   0% {
     opacity: 1;
-   
   }
   100% {
     opacity: 0;
-    
   }
 }
 
@@ -131,82 +115,73 @@ input:checked ~ .dot {
 @keyframes blowup-btn {
   0% {
     transform: scale3d(1, 1, 1);
-   
   }
   55% {
     transform: scale3d(13, 1.1, 1);
-   
   }
   70% {
     transform: scale3d(13, 1.1, 1);
-   
   }
- 
+
   100% {
     transform: scale3d(13, 42, 1);
-    
   }
 }
 
 .animate-squish-button {
   opacity: 1;
-  animation: squish-btn .3s ease-in forwards;
+  animation: squish-btn 0.3s ease-in forwards;
   animation-delay: calc(0.2s * var(--blowup-index));
 }
 
 @keyframes squish-btn {
   0% {
     transform: scale3d(1, 1, 1);
-   
   }
   20% {
-    transform: scale3d(.8, 1.4, 1);
-    
+    transform: scale3d(0.8, 1.4, 1);
   }
   40% {
     transform: scale3d(1, 1, 1);
-    
   }
   100% {
     transform: scale3d(0, 1, 1);
-    
   }
 }
 
 .animate-out-up {
-  -webkit-animation: out-up 0.3s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-  animation: out-up 0.3s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  -webkit-animation: out-up 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+  animation: out-up 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
   animation-delay: calc(0.15s * var(--swoop-index));
 }
 
 @keyframes out-up {
-  
-    0% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
-              transform: translateY(-1000px) scaleY(2) scaleX(0.2);
-      -webkit-transform-origin: 50% 100%;
-              transform-origin: 50% 100%;
-      -webkit-filter: blur(40px);
-              filter: blur(40px);
-      opacity: 0;
-    }
+  0% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
   }
+  100% {
+    -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
 
 .animate-out-down {
-  animation: out-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: out-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: calc(0.17s * var(--swoop-index));
 }
 
-@keyframes out-down{
+@keyframes out-down {
   0% {
     transform: translateZ(0);
     opacity: 1;
@@ -218,32 +193,30 @@ input:checked ~ .dot {
 }
 
 .animate-in-up {
-  -webkit-animation: in-up .7s  both;
-  animation: in-up .7s  both;
+  -webkit-animation: in-up 0.7s both;
+  animation: in-up 0.7s both;
 }
 
 @keyframes in-up {
   0% {
     -webkit-transform: translateY(400px) scaleY(2.5) scaleX(0.2);
-            transform: translateY(400px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(400px) scaleY(2.5) scaleX(0.2);
     -webkit-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
     -webkit-filter: blur(40px);
-            filter: blur(40px);
+    filter: blur(40px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-            transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     -webkit-filter: blur(0);
-            filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
-
 }
-
 
 .animate-fade-out-words {
   opacity: 1;
@@ -264,7 +237,7 @@ input:checked ~ .dot {
 
 .animate-mapfade-out-words {
   opacity: 1;
-  animation: fade-out .6s ease-in-out forwards;
+  animation: fade-out 0.6s ease-in-out forwards;
   animation-delay: calc(0.1s * var(--out-index));
 }
 
@@ -279,11 +252,9 @@ input:checked ~ .dot {
   }
 }
 
-
-
 .pulse-animation {
   animation-name: pulse;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-iteration-count: 1;
 }
 
@@ -300,45 +271,82 @@ input:checked ~ .dot {
 }
 
 /* HOVER EFFECTS TO CHANGE MAP COLOR */
-.map0{
-  fill:#414141
-  }
-.map1{
-  fill:#9961b3
-  }
-  .map2{
-  fill:#826ec7
-  }
-  .map3{
-  fill:#6b7bd1
-  }
-  .map4{
-    fill:#61b0b6
-  }
-  .map5{
-    fill:#72c494
-  }
-  .map6{
-  fill:#819b60
-  }
-  .map1:hover {
-    fill:#efc7ff
-  }
-  .map2:hover {
-    fill:#cfc6ff
-  }
-  .map3:hover {
-    fill:#bacaff
-  }
-  .map4:hover {
-    fill:#c2fdff
-  }
-  .map5:hover {
-    fill:#c9ffde
-  }
-  .map6:hover {
-    fill:#ddffc9
-  }
+.map0 {
+  fill: #414141;
+}
+/* .map1 {
+  fill: #9961b3;
+}
+.map2 {
+  fill: #9961b3;
+}
+.map3 {
+  fill: #9961b3;
+}
+.map4 {
+  fill: #61b0b6;
+}
+.map5 {
+  fill: #61b0b6;
+}
+.map6 {
+  fill: #61b0b6;
+}
+.map7 {
+  fill: #6f90f3;
+}
+.map8 {
+  fill: #6f90f3;
+}
+.map9 {
+  fill: #cadd18;
+}
+.map10 {
+  fill: #cadd18;
+}
+.map11 {
+  fill: #cadd18;
+}
+.map12 {
+  fill: #819b60;
+}
+
+.map1:hover {
+  fill: #efc7ff;
+}
+.map2:hover {
+  fill: #cfc6ff;
+}
+.map3:hover {
+  fill: #bacaff;
+}
+.map4:hover {
+  fill: #97f4f7;
+}
+.map5:hover {
+  fill: #97f4f7;
+}
+.map6:hover {
+  fill: #97f4f7;
+}
+.map7:hover {
+  fill: #97c2fa;
+}
+.map8:hover {
+  fill: #97c2fa;
+}
+.map9:hover {
+  fill: #ddffc9;
+}
+.map10:hover {
+  fill: #ddffc9;
+}
+.map11:hover {
+  fill: #ddffc9;
+}
+.map12:hover {
+  fill: #b0cd8b;
+} */
 
 .dropDown {
   text-align: center;
@@ -368,4 +376,3 @@ input:checked ~ .dot {
   text-align: center;
   width: 70%;
 }
-
