@@ -23,7 +23,7 @@ const ParentQ2 = () => {
   };
 
   return (
-    <div className="bg-blue-200 min-h-screen flex-col flex items-center justify-center">
+    <div className="bg-slate-200 min-h-screen flex-col flex items-center justify-center">
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2">
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>Great! OK, just a few more questions babysitters want to know.</h2>
@@ -36,7 +36,7 @@ const ParentQ2 = () => {
 
     {/* Render confirm button */}
     
-      <button  className={` bg-blue-800 hover:bg-blue-900  text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-fade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
+      <button  className={` bg-slate-800 hover:bg-slate-900  text-white font-bold py-3 px-16 rounded-full focus:outline-none focus:shadow-outline animate-fade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
       style={{'--word-index': '5', '--blowup-index': '0'}}
       disabled={isAnimating}  onClick={handleNext}>
        <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}

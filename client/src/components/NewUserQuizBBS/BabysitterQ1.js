@@ -48,7 +48,7 @@ const BabysitterQ1 = () => {
   };
 
   return (
-    <div className="bg-rose-200 min-h-screen flex-col flex items-center ">
+    <div className="bg-slate-200 min-h-screen flex-col flex items-center ">
       <div className="rounded p-3 sm:text-3xl text-xl text-center sm:w-3/4 lg:w-1/2 ">
         <form onSubmit={handleNext}>
           <h2 className={`text-center  my-4 animate-fade-in-word ${isAnimating ? 'animate-fade-out-words' : ''}`} style={{'--word-index': '1', '--out-index': '0'}}>First, choose where you want to work.</h2>
@@ -643,7 +643,7 @@ const BabysitterQ1 = () => {
           ></path>
       </svg>
       {selectedRegion && (
-                                    <button id="toggle-button" className={` bg-rose-800 hover:bg-rose-900 text-white font-bold py-1 w-72 rounded-full focus:outline-none focus:shadow-outline animate-mapfade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
+                                    <button id="toggle-button" className={` bg-slate-800 hover:bg-slate-900 text-white font-bold py-1 w-72 rounded-full focus:outline-none focus:shadow-outline animate-mapfade-in-button ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
                                         style={{ '--word-index': '0', '--blowup-index': '0' }}
                                         disabled={isAnimating} onClick={handleNext}>
                                         <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}
