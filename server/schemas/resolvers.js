@@ -106,7 +106,7 @@ const resolvers = {
 
         let babysitter=await Babysitter.findOne({_id:args.babySitter})
         let prev_interestedParents=babysitter.interestedParents;
-        prev_interestedParents.push(context.user._id)
+        prev_interestedParents.push(parent._id)
         await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
         
         return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true });
