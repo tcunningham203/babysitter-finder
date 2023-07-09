@@ -37,6 +37,7 @@ import ParentQ4 from './components/NewUserQuizPNT/ParentQ4';
 import ParentQ5 from './components/NewUserQuizPNT/ParentQ5';
 import ParentQ6 from './components/NewUserQuizPNT/ParentQ6';
 import ParentQ7 from './components/NewUserQuizPNT/ParentQ7';
+import ParentQ8 from './components/NewUserQuizPNT/ParentQ8';
 
 function App() {
   return (
@@ -45,9 +46,6 @@ function App() {
 <Routes>
 
   <Route path="/" element={<LandingPage/>}/>
-
-
-  
 
   <Route path="/signupbsq/0" element={<BabysitterQ0 />}/>
   <Route path="/signupbsq/1" element={<BabysitterQ1 />}/>
@@ -68,6 +66,7 @@ function App() {
   <Route path="/signuppq/5" element={<ParentQ5 />}/>
   <Route path="/signuppq/6" element={<ParentQ6 />}/>
   <Route path="/signuppq/7" element={<ParentQ7 />}/>
+  <Route path="/signuppq/8" element={<ParentQ8 />}/>
  
   <Route path="/bookmarksP" element={<BookmarksP/>}/>
   <Route path="/profileP" element={<ProfileP/>}/>
