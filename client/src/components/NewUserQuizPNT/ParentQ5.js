@@ -24,7 +24,7 @@ const ParentQ5 = () => {
     };
 
     return (
-        <div className="bg-blue-200 min-h-screen flex-col flex justify-center items-center ">
+        <div className="bg-slate-200 min-h-screen flex-col flex justify-center items-center ">
             <span className='animate-in-up rounded p-3 sm:text-3xl text-xl text-center w-11/12 sm:w-3/4 lg:w-1/2'>
                 <div className={`  ${isAnimating ? 'animate-out-up cursor-default disabled:pointer-events-none  ' : ''}`}
                     style={{ '--word-index': '12', '--swoop-index': '3' }}>
@@ -40,7 +40,7 @@ const ParentQ5 = () => {
 <div className="flex justify-evenly py-2">
   <button
     className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      allowPets === true ? ' outline outline-offset-2 outline-blue-500' : ''
+      allowPets === true ? ' outline outline-offset-2 outline-slate-500' : ''
     }`}
     type="button"
     onClick={() => setAllowPets(true)}
@@ -49,7 +49,7 @@ const ParentQ5 = () => {
   </button>
   <button
     className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      allowPets === false ? ' outline outline-offset-2 outline-blue-500' : ''
+      allowPets === false ? ' outline outline-offset-2 outline-slate-500' : ''
     }`}
     type="button"
     onClick={() => setAllowPets(false)}
@@ -58,7 +58,7 @@ const ParentQ5 = () => {
   </button>
 </div>
 </div>
-<div className="h-px bg-blue-500 w-full my-4"></div>
+<div className="h-px bg-slate-500 w-full my-4"></div>
 
 
 
@@ -70,7 +70,7 @@ const ParentQ5 = () => {
 <div className="flex justify-evenly py-2">
   <button
     className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      smoker === true ? ' outline outline-offset-2 outline-blue-500' : ''
+      smoker === true ? ' outline outline-offset-2 outline-slate-500' : ''
     }`}
     type="button"
     onClick={() => setSmoker(true)}
@@ -79,7 +79,7 @@ const ParentQ5 = () => {
   </button>
   <button
     className={`mx-4 text-center bg-purple-100   py-2  w-24 rounded-full  ${
-      smoker === false ? ' outline outline-offset-2 outline-blue-500' : ''
+      smoker === false ? ' outline outline-offset-2 outline-slate-500' : ''
     }`}
     type="button"
     onClick={() => setSmoker(false)}
@@ -97,13 +97,13 @@ const ParentQ5 = () => {
 
 
 
-                        <div className="h-px bg-blue-500 w-full my-4"></div>
+                        <div className="h-px bg-slate-500 w-full my-4"></div>
 
                         <div className='flex min-w-full justify-center my-2 md:my-6'>
 
                          
 
-                            <button className={`mx-4 bg-blue-800 hover:bg-blue-900  text-white font-bold py-3 px-8 md:px-16 rounded-full focus:outline-none focus:shadow-outline  ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
+                            <button className={`mx-4 bg-slate-800 hover:bg-slate-900  text-white font-bold py-3 px-8 md:px-16 rounded-full focus:outline-none focus:shadow-outline  ${isAnimating ? 'cursor-default disabled:pointer-events-none animate-squish-button ' : ''}`}
                                 style={{ '--word-index': '12', '--blowup-index': '0' }}
                                onClick={handleNext}>
                                 <span className={`button-text ${isAnimating ? 'animate-mapfade-out-words' : ''}`}
