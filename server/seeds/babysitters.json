@@ -383,4 +383,52 @@
     "smoker": false,
     "rates": "$25 per hour"
   },
+    {
+    "zone": "Lower East Side",
+    "jobExp": "I have 2 years experience in babysitting, and have experience babysitting children ages 1 to 5",
+    "otherExp": "Camp Assistant Teacher (2 years) and Dog Walking (3 years)",
+    "transportation": "I have a monthly MetroCard",
+    "shortNotice": true,
+    "activities": "I plan to engage the kids in dance",
+    "issueHandling": "I give warnings during tough circumstances, and if the kids exceed their warnings, I take away certain privileges and make sure they learn their lesson",
+    "pets": true,
+    "smoker": false,
+    "rates": "$20/hour"
+  },
+  {
+    "zone": "Tribeca",
+    "jobExp": "I have 2 years experience in babysitting children ages 1 to 6.  I am also CPR/AED certified as of February 2023.",
+    "otherExp": "I am a lifeguard at the YMCA in Tribeca.",
+    "transportation": "I have access to the MTA Subway and can walk",
+    "shortNotice": false,
+    "activities": "I have a strong Hulu movie playlist for children to enjoy",
+    "issueHandling": "I am able to hold children accountable of their actions and notify parents of their kids' behavior.",
+    "pets": true,
+    "smoker": true,
+    "rates": "$20/hour (and $1 on top of flat rate per child ages under 8)"
+  },
+  {
+    "zone": "Greenwich Village",
+    "jobExp": "I have < 4 year experience babysitting a 6 year old.",
+    "otherExp": "I babysit cats and kittens for 2 years.",
+    "transportation": "Taxis, Ubers, Subway",
+    "shortNotice": true,
+    "activities": "I am an aspiring pre-school teacher and can help teach kids the basics of reading, writing and math.",
+    "issueHandling": "I will enforce a screen time limit as a first strike. After the second and third strike, screen time privileges are taken away until kids hold themselves accountable.",
+    "pets": true,
+    "smoker": true,
+    "rates": "$23/hour"
+  },
+  {
+    "zone": "East Harlem",
+    "jobExp": "I have no experience in babysitting, but am willing to learn on the job and receive guidance from parents.",
+    "otherExp": "I am a P.E. instructor for schoolchildren ages 6 to 10.",
+    "transportation": "I have access to Citi Bike and can walk/jog.",
+    "shortNotice": true,
+    "activities": "Bring kids outdoors and engage in activities at the playground and in museums.",
+    "issueHandling": "To help enforce rules, I will make kids do a certain physical activity (such as a pushup or a jumping jack) if they break a rule.",
+    "pets": false,
+    "smoker": false,
+    "rates": "Negotiable"
+  },
 ]
