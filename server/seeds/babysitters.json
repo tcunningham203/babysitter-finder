@@ -274,7 +274,7 @@
     "pets": true,
     "smoker": false,
     "rates": "$40 per hour"
-  }
+  },
   {
     "zone": "Morningside Heights",
     "jobExp": "I have 5 years experience in babysitting, and have experience babysitting children ages 2 to 7",
@@ -297,7 +297,7 @@
     "issueHandling": "I am able to hold children accountable of their actions and notify parents of their kids' behavior.",
     "pets": true,
     "smoker": false,
-    "rates": "$20/hour”
+    "rates": "$20/hour"
   },
   {
     "zone": "Midtown East",
@@ -430,5 +430,5 @@
     "pets": false,
     "smoker": false,
     "rates": "Negotiable"
-  },
+  }
 ]

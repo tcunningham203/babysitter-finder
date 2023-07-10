@@ -166,7 +166,7 @@
       "email": "Garfield_Landry@gmail.com",
       "password": "9oCAnKFrMq",
       "userType": "Babysitter"
-    }
+    },
       {
     "firstName": "Ivan",
     "lastName": "Moses",
@@ -250,5 +250,5 @@
     "email": "Keely_Riddle@gmail.com",
     "password": "unfVPyFFrEr44eVdRvpo",
     "userType": "Babysitter"
-  },
+  }
 ]
