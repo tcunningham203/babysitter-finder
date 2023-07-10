@@ -34,7 +34,7 @@ const resolvers = {
   },
   Mutation: {
     // sign up ▼
-    createUser: async (parent, args) => {
+    signup: async (parent, args) => {
       let exists=await User.findOne({email:args.email});
       if(exists){
         throw new ValidationError("User Already Exists !!")
