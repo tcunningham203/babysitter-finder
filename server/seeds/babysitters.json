@@ -24,7 +24,7 @@
     "rates": "$30/hour (and $1 on top of flat rate per child ages under 8)"
   },
   {
-    "zone": "Midtown",
+    "zone": "Midtown East",
     "jobExp": "I have < 1 year experience babysitting a 6 year old.",
     "otherExp": "I babysit cats and kittens for 4 years.",
     "transportation": "Taxis, Ubers, Subway",
@@ -36,7 +36,7 @@
     "rates": "$18/hour"
   },
   {
-    "zone": "Midtown",
+    "zone": "Midtown East",
     "jobExp": "I have no experience in babysitting, but am willing to learn on the job and receive guidance from parents.  I am also CPR/AED certified as of November 2022.",
     "otherExp": "I am a P.E. instructor for schoolchildren ages 6 to 10.",
     "transportation": "I have access to Citi Bike and can walk/jog.",
@@ -48,7 +48,7 @@
     "rates": "Negotiable"
   },
   {
-    "zone": "Lower Manhattan",
+    "zone": "Chelsea",
     "jobExp": "I have 6 years babysitting my 2 nephews and 3 nieces, currently ages 3 to 7",
     "otherExp": "I do not have other child care experiences.",
     "transportation": "I own a monthly MetroCard.",
@@ -60,7 +60,7 @@
     "rates": "$35 per hour"
   },
   {
-    "zone": "Lower Manhattan",
+    "zone": "Chelsea",
     "jobExp": "I have 4+ years of experience caring for children on weekends, evenings and summer/winter breaks.",
     "otherExp": "I have 2+ years experience fascilitating arts & crafts activities for pre-schoolers.",
     "transportation": "I own a Driver's License (NY State).  I also have access to subway and walking.",
@@ -72,7 +72,7 @@
     "rates": "$30 per hour"
   },
   {
-    "zone": "Lower Manhattan",
+    "zone": "Lower East Side",
     "jobExp": "7+ years babysitting kids living in different kinds of households, from single-parent to multi-family households.",
     "otherExp": "I do not have other child care experience except babysitting.",
     "transportation": "Access to the MTA Subway and Citi Bike.",
@@ -84,7 +84,7 @@
     "rates": "$35 per hour"
   },
   {
-    "zone": "Lower Manhattan",
+    "zone": "Tribeca",
     "jobExp": "Less than 2 years babysitting for families. Also, eldest sibling of 5 kids and babysat all of my siblings growing up for my parents when they were away.",
     "otherExp": "Special needs teacher for 4+ years",
     "transportation": "Subway and Walking",
@@ -96,7 +96,7 @@
     "rates": "$23 per hour"
   },
   {
-    "zone": "Upper East Side",
+    "zone": "Greenwich Village",
     "jobExp": "I have 1 year of babysitting experience for 2 children below the ages of 4",
     "otherExp": "I don't have any other child care experience",
     "transportation": "I own a Driver's License (NJ State).  I also have access to subway and walking.",
@@ -132,7 +132,7 @@
     "rates": "$21 per hour"
   },
   {
-    "zone": "Upper East Side",
+    "zone": "Upper West Side",
     "jobExp": "I have no experience",
     "otherExp": "I do not have other child care experience.",
     "transportation": "Bicycle",
@@ -156,7 +156,7 @@
     "rates": "$19 per hour"
   },
   {
-    "zone": "Upper West Side",
+    "zone": "East Harlem",
     "jobExp": "2 years of babysitting experience for a 3 year old",
     "otherExp": "I currently have no other experience",
     "transportation": "I ride a bicycle to commute and I also own a Driver's License (CT)",
@@ -168,7 +168,7 @@
     "rates": "$24 per hour"
   },
   {
-    "zone": "Upper West Side",
+    "zone": "East Harlem",
     "jobExp": "2 years of babysitting experience for a 3 year old",
     "otherExp": "I currently have no other experience",
     "transportation": "I ride a bicycle to commute and I also own a Driver's License (CT)",
@@ -180,7 +180,7 @@
     "rates": "$24 per hour"
   },
   {
-    "zone": "Upper West Side",
+    "zone": "Morningside Heights",
     "jobExp": "I have no years of experience babysitting, but I love children and am willing to learn on the job if given the opportunity",
     "otherExp": "I currently have no other experience",
     "transportation": "I own a Driver's License (NY State)",
@@ -192,7 +192,7 @@
     "rates": "$18 per hour"
   },
   {
-    "zone": "Harlem",
+    "zone": "Morningside Heights",
     "jobExp": "I currently have 10+ years babysitting kids ages 2-9 on weeknights, weekends and summer vacation.",
     "otherExp": "I work as a TA at CUNY Baruch College and have experience teaching college students.",
     "transportation": "I own a Driver's License (CT State) as well as own a monthly subway MetroCard",
@@ -204,7 +204,7 @@
     "rates": "$35 per hour"
   },
   {
-    "zone": "Harlem",
+    "zone": "Central Harlem",
     "jobExp": "I currently have 1 year of babysitting experience for 4 year old twins.",
     "otherExp": "I currently work at LEGOLAND New York Resort as a theme park worker and know how to entertain children.",
     "transportation": "I own a monthly subway MetroCard as well as own a Driver's License (issued in NJ state).",
@@ -216,7 +216,7 @@
     "rates": "$20 per hour"
   },
   {
-    "zone": "Harlem",
+    "zone": "Central Harlem",
     "jobExp": "I currently have 6 years of babysitting experience for a family with 5 children.",
     "otherExp": "I currently have no other experience.",
     "transportation": "I have a Citi Bike Annual Membership.",
@@ -228,7 +228,7 @@
     "rates": "$28 per hour"
   },
   {
-    "zone": "Harlem",
+    "zone": "Washington Heights",
     "jobExp": "I currently have 0 years of babysitting experience, but I am willing to learn on the job.",
     "otherExp": "I currently have no other child care experience (I work as an Accounts Payable for a Commercial Real Estate firm based in Midtown and have a business background).",
     "transportation": "I have a monthly MetroCard to commute throughout Manhattan.",
@@ -240,7 +240,7 @@
     "rates": "$15 per hour"
   },
   {
-    "zone": "Upper Manhattan",
+    "zone": " Washington Heights ",
     "jobExp": "I currently have 7+ years of babysitting experience for two families with three children each, based in Astoria, Queens",
     "otherExp": "I have worked as a Physical Therapist Assistant for 4 years",
     "transportation": "I have a monthly MetroCard to commute throughout Manhattan/Queens/Brooklyn, as well as have an annual monthly Citi Bike subscription",
@@ -252,7 +252,7 @@
     "rates": "$20 per hour"
   },
   {
-    "zone": "Upper Manhattan",
+    "zone": "Washington Heights",
     "jobExp": "I currently have 2 years babysitting for a family with kids ages 3 and 5.",
     "otherExp": "I work as a referee for childrens' basketball at the Chelsea Piers on the West Side",
     "transportation": "I have a monthly MetroCard.",
@@ -264,7 +264,7 @@
     "rates": "$22 per hour"
   },
   {
-    "zone": "Upper Manhattan",
+    "zone": "Central Harlem",
     "jobExp": "I currently have 7+ years babysitting for three families based in Woodside, Queens.",
     "otherExp": "I am fluent in Spanish and Tagalog, and can communicate/teach your kids these langauges.",
     "transportation": "I have a monthly MetroCard.",
@@ -276,7 +276,7 @@
     "rates": "$30 per hour"
   },
   {
-    "zone": "Upper Manhattan",
+    "zone": "East Harlem",
     "jobExp": "I worked as an in-house nanny for a family with two children (currently ages 7 and 10) for 7 years.",
     "otherExp": "I have also babysat for other families for 5 years prior to working as an in-house nanny.",
     "transportation": "I have access to the Subway.",
@@ -287,4 +287,112 @@
     "smoker": false,
     "rates": "$40 per hour"
   }
+  {
+    "zone": "Morningside Heights",
+    "jobExp": "I have 5 years experience in babysitting, and have experience babysitting children ages 2 to 7",
+    "otherExp": "Dog Walking (2 years), Camp Assistant Teacher (4 years)",
+    "transportation": "I have a monthly MetroCard ",
+    "shortNotice": true,
+    "activities": "I plan to engage the kids in sing-a-long melodies and dances",
+    "issueHandling": "I give warnings during tough circumstances, and if the kids exceed their warnings, I take away certain privileges and make sure they learn their lesson",
+    "pets": true,
+    "smoker": false,
+    "rates": "$45/hour"
+  },
+  {
+    "zone": "Upper West Side",
+    "jobExp": "I have 2 years experience in babysitting children ages 1 to 6.  I am also CPR/AED certified as of February 2023.",
+    "otherExp": "I am a lifeguard at the YMCA in Upper West Side.",
+    "transportation": "I can walk",
+    "shortNotice": true,
+    "activities": "Can bring the kids swimming",
+    "issueHandling": "I am able to hold children accountable of their actions and notify parents of their kids' behavior.",
+    "pets": true,
+    "smoker": false,
+    "rates": "$20/hour”
+  },
+  {
+    "zone": "Midtown East",
+    "jobExp": "I have < 1 year experience babysitting a 3 year old.",
+    "otherExp": "I babysit cats and kittens for 2 years.",
+    "transportation": "Taxis, Ubers, Subway",
+    "shortNotice": false,
+    "activities": "I can tutor kids the basics of reading, writing and math.",
+    "issueHandling": "I will enforce a screen time limit as a first strike. After the second and third strike, screen time privileges are taken away until kids hold themselves accountable.",
+    "pets": true,
+    "smoker": true,
+    "rates": "$20/hour"
+  },
+  {
+    "zone": "Midtown",
+    "jobExp": "I have no experience in babysitting, but am willing to learn on the job and receive guidance from parents.  I am also CPR/AED certified as of November 2022.",
+    "otherExp": "I am a P.E. instructor for schoolchildren ages 4 to 8.",
+    "transportation": "I have access to Citi Bike and can walk/jog.",
+    "shortNotice": false,
+    "activities": "Bring kids outdoors and engage in activities at the playground and in museums.",
+    "issueHandling": "To help enforce rules, I will make kids do a certain physical activity (such as a pushup or a jumping jack) if they break a rule.",
+    "pets": false,
+    "smoker": false,
+    "rates": "Negotiable"
+  },
+  {
+    "zone": "Chelsea",
+    "jobExp": "I have 3 years babysitting my nephew and 3 nieces, currently ages 3 to 6",
+    "otherExp": "I do not have other child care experiences.",
+    "transportation": "I own a monthly MetroCard.",
+    "shortNotice": true,
+    "activities": "I plan on taking the kids to various recreational events, such as Broadway shows and frequest visits to the Bronx zoo.",
+    "issueHandling": "Effective rule enforcer",
+    "pets": true,
+    "smoker": true,
+    "rates": "$19 per hour"
+  },
+  {
+    "zone": "Lower East Side",
+    "jobExp": "I have 4+ years of experience caring for children on weekends, evenings and summer/winter breaks.",
+    "otherExp": "I have 2+ years experience fascilitating arts & crafts activities for pre-schoolers.",
+    "transportation": "I own a Driver's License (NY State).  I also have access to subway and walking.",
+    "shortNotice": true,
+    "activities": "I plan on teaching kids on how to create art in many different forms.",
+    "issueHandling": "I have created different rule charts for past kids that I have babysat, and am effective in explaining rules to children. I also provide rewards/incentives for children who folow the rules.",
+    "pets": true,
+    "smoker": false,
+    "rates": "$25 per hour"
+  },
+  {
+    "zone": "Greenwich Village",
+    "jobExp": "4+ years babysitting kids living in different kinds of households, from single-parent to multi-family households.",
+    "otherExp": "I do not have other child care experience except babysitting.",
+    "transportation": "Access to Citi Bike.",
+    "shortNotice": true,
+    "activities": "I plan to spend time with the kids depending on their specific needs, wants and interests.",
+    "issueHandling": "When resolving tough circumstances and issues involving babysitting kids, I do my best in being fair and setting reasonable expectations. I also enforce time outs with the hope of kids learning their lesson.",
+    "pets": true,
+    "smoker": true,
+    "rates": "$23 per hour"
+  },
+  {
+    "zone": "Tribeca",
+    "jobExp": "Less than 2 years babysitting for families.",
+    "otherExp": "Special needs teacher for 2+ years",
+    "transportation": "Access to MTA Monthly Metrocard",
+    "shortNotice": true,
+    "activities": "Will play kid-friendly video games and can do character impersonations.",
+    "issueHandling": "I enforce a time out after the first strike.",
+    "pets": true,
+    "smoker": true,
+    "rates": "$18 per hour"
+  },
+  {
+    "zone": "Upper East Side",
+    "jobExp": "I have 4 years of babysitting experience for 2 children below the ages of 4",
+    "otherExp": "I don't have any other child care experience",
+    "transportation": "I own a Driver's License (NY State).  I also have access to subway and walking.",
+    "shortNotice": true,
+    "activities": "Play sports and host team bonding experiences for children",
+    "issueHandling": "When kids get into fist fights and arguments, I know how to separate the kids in opposite corners and diffuse the situation",
+    "pets": true,
+    "smoker": false,
+    "rates": "$25 per hour"
+  },
 ]
