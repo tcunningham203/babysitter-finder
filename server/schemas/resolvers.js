@@ -109,7 +109,7 @@ const resolvers = {
         prev_interestedParents.push(parent._id)
         await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
         
-        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true });
+        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true }).populate('starredBabysitters');
       }
       
       throw new AuthenticationError('Not logged in');
