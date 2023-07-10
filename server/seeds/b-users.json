@@ -167,4 +167,88 @@
       "password": "9oCAnKFrMq",
       "userType": "Babysitter"
     }
+      {
+    "firstName": "Ivan",
+    "lastName": "Moses",
+    "email": "Ivan_Moses@gmail.com",
+    "password": "ZKsH5tsV7iadLuyNyB5Q",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Cheyenne",
+    "lastName": "Bartlett",
+    "email": "Cheyenne_Bartlett@gmail.com",
+    "password": "mvj6oVTH2JE6FVC7Uzuf",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Rylan",
+    "lastName": "Stein",
+    "email": "Rylan_Stein@gmail.com",
+    "password": "HbideV6pA7QjtLN4pGsA",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Marina",
+    "lastName": "Hill",
+    "email": "Marina_Hill@gmail.com",
+    "password": "ezn8jT3LtKrfFfPCsYAo",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Rashad",
+    "lastName": "Leonard",
+    "email": "Rashad_Leonard@gmail.com",
+    "password": "abf64miJaUrxaiT8T67v",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Dominick",
+    "lastName": "Monroe",
+    "email": "Dominick_Monroe@gmail.com",
+    "password": "69gUhZBMKWqwhWvweo9t",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Ali",
+    "lastName": "Bird",
+    "email": "Ali_Bird@gmail.com",
+    "password": "VW4wYt8B0L9vAmdCKtfA",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Karissa",
+    "lastName": "Crosby",
+    "email": "Karissa_Crosby@gmail.com",
+    "password": "Pg6fRJHDTiBJXZ0DgMsp",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Gerardo",
+    "lastName": "Lynn",
+    "email": "Gerardo_Lynn@gmail.com",
+    "password": "2k3WYxvN2vbAfVPur3Qo",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Danica",
+    "lastName": "Reilly",
+    "email": "Danica_Reilly@gmail.com",
+    "password": "kT3jHG25XXXir99L6ZU9",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Addison",
+    "lastName": "Waller",
+    "email": "Addison_Waller@gmail.com",
+    "password": "KmWqfYEReFm71Kprbex4",
+    "userType": "Babysitter"
+  },
+  {
+    "firstName": "Keely",
+    "lastName": "Riddle",
+    "email": "Keely_Riddle@gmail.com",
+    "password": "unfVPyFFrEr44eVdRvpo",
+    "userType": "Babysitter"
+  },
 ]
