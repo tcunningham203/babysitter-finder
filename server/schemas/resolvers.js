@@ -1,6 +1,9 @@
-const { AuthenticationError,ValidationError } = require('apollo-server-express');
-const { User, Parent, Babysitter } = require('../models');
-const { signToken } = require('../utils/auth');
+const {
+  AuthenticationError,
+  ValidationError,
+} = require("apollo-server-express");
+const { User, Parent, Babysitter } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -11,155 +14,178 @@ const resolvers = {
       return User.findById(args.id);
     },
     parents: async (parent, { zone }) => {
-        return Parent.find({ zone }).populate('user','starredBabysitters');
+      return Parent.find({ zone })
+      .populate("user")
+      .populate({path: 'starredBabysitters', model: Babysitter,
+      populate: {path: "user", select: "firstName lastName email"}})
     },
     parent: async (parent, args) => {
-        return Parent.findById(args.id).populate('user','starredBabysitters');
+      return Parent.findById(args.id)
+      .populate("user")
+      .populate({path: 'starredBabysitters', model: Babysitter, 
+      populate: {path: "user", select: "firstName lastName email"}});
     },
     babysitters: async (parent, { zone }) => {
-        return Babysitter.find({ zone }).populate('user','interestedParents');
+      return Babysitter.find({ zone })
+      .populate("user")
+      .populate({path: 'interestedParents', model: Parent,
+      populate: {path: "user", select: "firstName lastName email"}});
     },
     babysitter: async (parent, args) => {
-      console.log(args.id)
-        return Babysitter.findById(args.id).populate('user','interestedParents');
+      console.log(args.id);
+      return Babysitter.findById(args.id)
+      .populate("user")
+      .populate({path: 'interestedParents', model: Parent,
+      populate: {path: "user", select: "firstName lastName email"}});
     },
-    starredBabysitters: async () => {
-      // Parent model
-      // findById({ starredBabysitters })
+    starredBabysitters: async (parent, args) => {
+      return Parent.findById(args.id)
+      .populate("user")
+      .populate({path: 'starredBabysitters', model: Babysitter,
+      populate: {path: "user", select: "firstName lastName email"}});
     },
-    interestedParents: async () => {
-      // Babysitter model
-      // findById(args.id)
-    }
+    interestedParents: async (parent, args) => {
+      return Babysitter.findById(args.id)
+      .populate("user")
+      .populate({path: 'interestedParents', model: Parent,
+      populate: {path: "user", select: "firstName lastName email"}});
+    },
   },
   Mutation: {
     // sign up ▼
     signup: async (parent, args) => {
-      let exists=await User.findOne({email:args.email});
-      if(exists){
-        throw new ValidationError("User Already Exists !!")
+      let exists = await User.findOne({ email: args.email });
+      if (exists) {
+        throw new ValidationError("User Already Exists !!");
       }
       const user = await User.create(args);
-      const token = signToken(user); 
+      const token = signToken(user);
 
       return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const user = await User.findOne({email})
+      const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('User not found!');
+        throw new AuthenticationError("User not found!");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError("Incorrect credentials");
       }
 
       const token = signToken(user);
 
       return { token, user };
     },
-    // look at solved folder in unit 22 activity 26 
-    // resolvers and typeDefs files for reference
     createBabysitter: async (parent, args) => {
-      // perfect
       let babysitter = await Babysitter.create(args);
       return babysitter;
     },
     createParent: async (parent, args) => {
-      // perfect
-      let parentObj = await Parent.create(args)
+      let parentObj = await Parent.create(args);
       return parentObj;
     },
     updateBabysitter: async (parent, args, context) => {
-      // babysitter model
       if (context.user) {
-        let babysitter=await Babysitter.findOne({user:context.user._id});
-        if(!babysitter){
-          throw new ValidationError("User is not assosite with any babysitter")
+        let babysitter = await Babysitter.findOne({ user: context.user._id });
+        if (!babysitter) {
+          throw new ValidationError("User is not assosite with any babysitter");
         }
-        return await Babysitter.findOneAndUpdate({user:context.user._id}, args, { new: true });
+        return await Babysitter.findOneAndUpdate(
+          { user: context.user._id },
+          args,
+          { new: true }
+        );
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError("Not logged in");
     },
 
     updateParent: async (parent, args, context) => {
-      // parent model
       if (context.user) {
-        let parent=await Parent.findOne({user:context.user._id});
-        if(!parent){
-          throw new ValidationError("User is not assosite with any parent")
+        let parent = await Parent.findOne({ user: context.user._id });
+        if (!parent) {
+          throw new ValidationError("User is not assosite with any parent");
         }
-        return await Parent.findOneAndUpdate({user:context.user._id}, args, { new: true });
+        return await Parent.findOneAndUpdate({ user: context.user._id }, args, {
+          new: true,
+        });
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError("Not logged in");
     },
-    addToStarred: async (parent, args,context) => {
+    addToStarred: async (parent, args, context) => {
       if (context.user) {
-        let parent=await Parent.findOne({user:context.user._id})
-        if(!parent){
-          throw new ValidationError("User is not assosite with any parent")
+        let parent = await Parent.findOne({ user: context.user._id });
+        if (!parent) {
+          throw new ValidationError("User is not assosite with any parent");
         }
-        let prev_starredBabysitters=parent.starredBabysitters;
+        let prev_starredBabysitters = parent.starredBabysitters;
         prev_starredBabysitters.push(args.babySitter);
 
-
-        let babysitter=await Babysitter.findOne({_id:args.babySitter})
-        if(!babysitter){
-          throw new ValidationError("Babysitter id is incorrect !!")
+        let babysitter = await Babysitter.findOne({ _id: args.babySitter });
+        if (!babysitter) {
+          throw new ValidationError("Babysitter id is incorrect !!");
         }
-        let prev_interestedParents=babysitter.interestedParents;
-        prev_interestedParents.push(parent._id)
-        await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
-        
-        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true }).populate('starredBabysitters').populate('user');
+        let prev_interestedParents = babysitter.interestedParents;
+        prev_interestedParents.push(parent._id);
+        await Babysitter.findByIdAndUpdate(
+          babysitter._id,
+          { interestedParents: prev_interestedParents },
+          { new: true }
+        );
+
+        return await Parent.findByIdAndUpdate(
+          parent._id,
+          { starredBabysitters: prev_starredBabysitters },
+          { new: true }
+        )
+          .populate("starredBabysitters")
+          .populate("user");
       }
-      
-      throw new AuthenticationError('Not logged in');
+
+      throw new AuthenticationError("Not logged in");
     },
-    removeStarred: async (parent, args,context) => {
+    removeStarred: async (parent, args, context) => {
       if (context.user) {
-        let parent=await Parent.findOne({user:context.user._id})
-        if(!parent){
-          throw new ValidationError("User is not assosite with any parent")
+        let parent = await Parent.findOne({ user: context.user._id });
+        if (!parent) {
+          throw new ValidationError("User is not assosite with any parent");
         }
-        let prev_starredBabysitters=parent.starredBabysitters;
-        prev_starredBabysitters=prev_starredBabysitters.filter(id=>id!=args.babySitter);
+        let prev_starredBabysitters = parent.starredBabysitters;
+        prev_starredBabysitters = prev_starredBabysitters.filter(
+          (id) => id != args.babySitter
+        );
 
-
-        let babysitter=await Babysitter.findOne({_id:args.babySitter})
-        if(!babysitter){
-          throw new ValidationError("Babysitter id is incorrect !!")
+        let babysitter = await Babysitter.findOne({ _id: args.babySitter });
+        if (!babysitter) {
+          throw new ValidationError("Babysitter id is incorrect !!");
         }
-        let prev_interestedParents=babysitter.interestedParents;
-        prev_interestedParents=prev_interestedParents.filter(id=>id.toString()!=parent._id.toString())
-        await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
-        
-        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true }).populate('starredBabysitters').populate('user');
+        let prev_interestedParents = babysitter.interestedParents;
+        prev_interestedParents = prev_interestedParents.filter(
+          (id) => id.toString() != parent._id.toString()
+        );
+        await Babysitter.findByIdAndUpdate(
+          babysitter._id,
+          { interestedParents: prev_interestedParents },
+          { new: true }
+        );
+
+        return await Parent.findByIdAndUpdate(
+          parent._id,
+          { starredBabysitters: prev_starredBabysitters },
+          { new: true }
+        )
+          .populate("starredBabysitters")
+          .populate("user");
       }
-      
-      throw new AuthenticationError('Not logged in');
+
+      throw new AuthenticationError("Not logged in");
     },
-      // this one's a bit more complicated 
-      // new fields have been added to babysitter and parent models
-      // and im thinking about getting rid of Starred model all together
-
-      // when a parent saves a babysitter to starred, 
-      // the babysitter's profile should be added to the parents starredBabysitters list,
-      // and the parent that starred the babysitter should be added to their interested parents list
-
-      // babysitter and parent models
-      //const {user,babySitter}=args;
-
-    },
-    // removeFromStarred: async (parents, args) => {
-
-    // }
-  }
-
+  },
+};
 
 module.exports = resolvers;

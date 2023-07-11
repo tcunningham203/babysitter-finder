@@ -6,7 +6,6 @@
     "transportation": "I have a monthly MetroCard, and have access to Citi Bike",
     "shortNotice": true,
     "activities": "I plan to engage the kids in arts & crafts",
-    "issueHandling": "I give warnings during tough circumstances, and if the kids exceed their warnings, I take away certain privileges and make sure they learn their lesson",
     "pets": true,
     "smoker": false,
     "rates": "$40/hour"
@@ -18,7 +17,6 @@
     "transportation": "I have access to the MTA Subway and can walk",
     "shortNotice": true,
     "activities": "Strong narrator and book reader of kids books, and have a strong Disney+ movie playlist for children to enjoy",
-    "issueHandling": "I am able to hold children accountable of their actions and notify parents of their kids' behavior.",
     "pets": true,
     "smoker": false,
     "rates": "$30/hour (and $1 on top of flat rate per child ages under 8)"
@@ -30,7 +28,6 @@
     "transportation": "Taxis, Ubers, Subway",
     "shortNotice": true,
     "activities": "I am an aspiring pre-school teacher and can help teach kids the basics of reading, writing and math.",
-    "issueHandling": "I will enforce a screen time limit as a first strike. After the second and third strike, screen time privileges are taken away until kids hold themselves accountable.",
     "pets": true,
     "smoker": true,
     "rates": "$18/hour"
@@ -42,7 +39,6 @@
     "transportation": "I have access to Citi Bike and can walk/jog.",
     "shortNotice": true,
     "activities": "Bring kids outdoors and engage in activities at the playground and in museums.",
-    "issueHandling": "To help enforce rules, I will make kids do a certain physical activity (such as a pushup or a jumping jack) if they break a rule.",
     "pets": false,
     "smoker": false,
     "rates": "Negotiable"
@@ -54,7 +50,6 @@
     "transportation": "I own a monthly MetroCard.",
     "shortNotice": true,
     "activities": "I plan on taking the kids to various recreational events, such as Broadway shows and frequest visits to the Bronx zoo.",
-    "issueHandling": "Effective rule enforcer",
     "pets": true,
     "smoker": true,
     "rates": "$35 per hour"
@@ -66,7 +61,6 @@
     "transportation": "I own a Driver's License (NY State).  I also have access to subway and walking.",
     "shortNotice": true,
     "activities": "I plan on teaching kids on how to create art in many different forms.",
-    "issueHandling": "I have created different rule charts for past kids that I have babysat, and am effective in explaining rules to children. I also provide rewards/incentives for children who folow the rules.",
     "pets": true,
     "smoker": false,
     "rates": "$30 per hour"
@@ -78,7 +72,6 @@
     "transportation": "Access to the MTA Subway and Citi Bike.",
     "shortNotice": true,
     "activities": "I plan to spend time with the kids depending on their specific needs, wants and interests.",
-    "issueHandling": "When resolving tough circumstances and issues involving babysitting kids, I do my best in being fair and setting reasonable expectations. I also enforce time outs with the hope of kids learning their lesson.",
     "pets": true,
     "smoker": true,
     "rates": "$35 per hour"
@@ -90,7 +83,6 @@
     "transportation": "Subway and Walking",
     "shortNotice": true,
     "activities": "Will play kid-friendly video games and sing songs.",
-    "issueHandling": "I enforce a time out after the first strike.",
     "pets": true,
     "smoker": true,
     "rates": "$23 per hour"
@@ -102,7 +94,6 @@
     "transportation": "I own a Driver's License (NJ State).  I also have access to subway and walking.",
     "shortNotice": false,
     "activities": "Play sports and host team bonding experiences for children",
-    "issueHandling": "When kids get into fist fights and arguments, I know how to separate the kids in opposite corners and diffuse the situation",
     "pets": true,
     "smoker": false,
     "rates": "$18 per hour"
@@ -114,7 +105,6 @@
     "transportation": "Subway and Citi Bike",
     "shortNotice": true,
     "activities": "Bring kids to concerts and local fairs",
-    "issueHandling": "I set fair ground rules prior to the start of my babysitting term, but am still learning how to mitigate conflict while babysitting",
     "pets": false,
     "smoker": true,
     "rates": "$24 per hour"
@@ -126,7 +116,6 @@
     "transportation": "Subway, walking",
     "shortNotice": true,
     "activities": "I watch babies and toddlers carefully and make sure they don't accidentally harm themselves",
-    "issueHandling": "I am CPR/AED certified, so I know how to respond to a potentially life-threatening situation involving a child or an infant.",
     "pets": true,
     "smoker": true,
     "rates": "$21 per hour"
@@ -138,7 +127,6 @@
     "transportation": "Bicycle",
     "shortNotice": true,
     "activities": "I can cook/bake meals that children enjoy, as well as bring kids to baseball games and concerts.",
-    "issueHandling": "In a dangerous situation, I make sure to protect the kids and ensure that they are safe from harm.",
     "pets": false,
     "smoker": true,
     "rates": "$19 per hour"
@@ -150,7 +138,6 @@
     "transportation": "I ride a bicycle to commute and I also own a Driver's License (CT State)",
     "shortNotice": true,
     "activities": "I read fairytales for children prior to nap time.  I am also an experienced singer and guitar player, and can play all kinds of songs catered to kids.",
-    "issueHandling": "I ",
     "pets": false,
     "smoker": true,
     "rates": "$19 per hour"
@@ -162,7 +149,6 @@
     "transportation": "I ride a bicycle to commute and I also own a Driver's License (CT)",
     "shortNotice": true,
     "activities": "I can bring kids to Central Park and give them a great time outdoors",
-    "issueHandling": "I currently do not have much experience in behavioral issue handling, but I am willing to learn on the job",
     "pets": true,
     "smoker": true,
     "rates": "$24 per hour"
@@ -174,7 +160,6 @@
     "transportation": "I own a Driver's License (NY State)",
     "shortNotice": false,
     "activities": "I can bring kids to the American Museum of Natural History.",
-    "issueHandling": "I have no experience, but would love to learn from the parents if given the opportunity of babysitting your kids",
     "pets": false,
     "smoker": true,
     "rates": "$18 per hour"
@@ -186,7 +171,6 @@
     "transportation": "I own a Driver's License (CT State) as well as own a monthly subway MetroCard",
     "shortNotice": true,
     "activities": "If necessary, I am able to drive kids to recreational events within the CT/NY tri-state area.",
-    "issueHandling": "I am currently CPR/AED certified as of January 2023 and can help rescue kids in a life threatening situation.",
     "pets": true,
     "smoker": false,
     "rates": "$35 per hour"
@@ -198,7 +182,6 @@
     "transportation": "I own a monthly subway MetroCard as well as own a Driver's License (issued in NJ state).",
     "shortNotice": true,
     "activities": "I can bring kids to LEGOLAND and give a discount on the entry fee.",
-    "issueHandling": "I enforce time outs and limited screen time usage in case kids are disobedient.",
     "pets": false,
     "smoker": true,
     "rates": "$20 per hour"
@@ -210,7 +193,6 @@
     "transportation": "I have a Citi Bike Annual Membership.",
     "shortNotice": true,
     "activities": "I can bring kids to Chelsea Piers along Manhattan's Hudson River, as well as bring kids ice skating at Bryant Park during the winter months. I also take the kids to Rye Playland during summertime.",
-    "issueHandling": "I take away childrens' privileges and recreational opportunities if kids refuse to follow my ground rules.",
     "pets": false,
     "smoker": false,
     "rates": "$28 per hour"
@@ -222,7 +204,6 @@
     "transportation": "I have a monthly MetroCard to commute throughout Manhattan.",
     "shortNotice": true,
     "activities": "I plan on bringing the kids to Time Square to go to the fun attractions.",
-    "issueHandling": "While I currently have little babysitting experience, I intend to limit screen time usager (for iPad and television) in case boundaries are crossed. I also plan to communicate with the parents often on their kids' behavior after each session.",
     "pets": true,
     "smoker": true,
     "rates": "$15 per hour"
@@ -234,7 +215,6 @@
     "transportation": "I have a monthly MetroCard to commute throughout Manhattan/Queens/Brooklyn, as well as have an annual monthly Citi Bike subscription",
     "shortNotice": true,
     "activities": "I have tutoring experience in math and reading, and can help tutor your kids during their homework sessions.",
-    "issueHandling": "Prior to starting my relationship with a family, I make sure to set expectations and enforce ground rules with both parents and children.  In case rules are broken repeatedly, I enforce a time out and limit privilages.  I also reward good behavior.",
     "pets": false,
     "smoker": true,
     "rates": "$20 per hour"
@@ -246,7 +226,6 @@
     "transportation": "I have a monthly MetroCard.",
     "shortNotice": true,
     "activities": "I plan on bringing your children to a nearby park and help them engage in healthy recreational activities (basketball, softball, running, etc.)",
-    "issueHandling": "I am CPR/AED certified, and know how to resolve fist fights from my experience working as a referee",
     "pets": true,
     "smoker": false,
     "rates": "$22 per hour"
@@ -258,7 +237,6 @@
     "transportation": "I have a monthly MetroCard.",
     "shortNotice": true,
     "activities": "I enjoy educating adolescents, so would love to bring your children to a tour of various neighborhoods/cultures within Manhattan (such as Chinatown, Little Italy, etc.)",
-    "issueHandling": "I enforce ground rules prior to holding my first babysitting session, and know how to protect kids from any kind of harm (I have a background in mixed martial art)",
     "pets": false,
     "smoker": true,
     "rates": "$30 per hour"
@@ -270,7 +248,6 @@
     "transportation": "I have access to the Subway.",
     "shortNotice": true,
     "activities": "Coming from the Philippines, I enjoy cooking and serving children my Filipino cuisine and sharing my culture through my homecooked meals",
-    "issueHandling": "I enforce a time out, but also make sure to have the capacity to listen to the child involved in the issue and hear his/her side of the story prior to making a decision.",
     "pets": true,
     "smoker": false,
     "rates": "$40 per hour"
@@ -282,7 +259,6 @@
     "transportation": "I have a monthly MetroCard ",
     "shortNotice": true,
     "activities": "I plan to engage the kids in sing-a-long melodies and dances",
-    "issueHandling": "I give warnings during tough circumstances, and if the kids exceed their warnings, I take away certain privileges and make sure they learn their lesson",
     "pets": true,
     "smoker": false,
     "rates": "$45/hour"
@@ -294,7 +270,6 @@
     "transportation": "I can walk",
     "shortNotice": true,
     "activities": "Can bring the kids swimming",
-    "issueHandling": "I am able to hold children accountable of their actions and notify parents of their kids' behavior.",
     "pets": true,
     "smoker": false,
     "rates": "$20/hour"
@@ -306,7 +281,6 @@
     "transportation": "Taxis, Ubers, Subway",
     "shortNotice": false,
     "activities": "I can tutor kids the basics of reading, writing and math.",
-    "issueHandling": "I will enforce a screen time limit as a first strike. After the second and third strike, screen time privileges are taken away until kids hold themselves accountable.",
     "pets": true,
     "smoker": true,
     "rates": "$20/hour"
@@ -318,7 +292,6 @@
     "transportation": "I have access to Citi Bike and can walk/jog.",
     "shortNotice": false,
     "activities": "Bring kids outdoors and engage in activities at the playground and in museums.",
-    "issueHandling": "To help enforce rules, I will make kids do a certain physical activity (such as a pushup or a jumping jack) if they break a rule.",
     "pets": false,
     "smoker": false,
     "rates": "Negotiable"
@@ -330,7 +303,6 @@
     "transportation": "I own a monthly MetroCard.",
     "shortNotice": true,
     "activities": "I plan on taking the kids to various recreational events, such as Broadway shows and frequest visits to the Bronx zoo.",
-    "issueHandling": "Effective rule enforcer",
     "pets": true,
     "smoker": true,
     "rates": "$19 per hour"
@@ -342,7 +314,6 @@
     "transportation": "I own a Driver's License (NY State).  I also have access to subway and walking.",
     "shortNotice": true,
     "activities": "I plan on teaching kids on how to create art in many different forms.",
-    "issueHandling": "I have created different rule charts for past kids that I have babysat, and am effective in explaining rules to children. I also provide rewards/incentives for children who folow the rules.",
     "pets": true,
     "smoker": false,
     "rates": "$25 per hour"
@@ -354,7 +325,6 @@
     "transportation": "Access to Citi Bike.",
     "shortNotice": true,
     "activities": "I plan to spend time with the kids depending on their specific needs, wants and interests.",
-    "issueHandling": "When resolving tough circumstances and issues involving babysitting kids, I do my best in being fair and setting reasonable expectations. I also enforce time outs with the hope of kids learning their lesson.",
     "pets": true,
     "smoker": true,
     "rates": "$23 per hour"
@@ -366,7 +336,6 @@
     "transportation": "Access to MTA Monthly Metrocard",
     "shortNotice": true,
     "activities": "Will play kid-friendly video games and can do character impersonations.",
-    "issueHandling": "I enforce a time out after the first strike.",
     "pets": true,
     "smoker": true,
     "rates": "$18 per hour"
@@ -378,7 +347,6 @@
     "transportation": "I own a Driver's License (NY State).  I also have access to subway and walking.",
     "shortNotice": true,
     "activities": "Play sports and host team bonding experiences for children",
-    "issueHandling": "When kids get into fist fights and arguments, I know how to separate the kids in opposite corners and diffuse the situation",
     "pets": true,
     "smoker": false,
     "rates": "$25 per hour"
@@ -390,7 +358,6 @@
     "transportation": "I have a monthly MetroCard",
     "shortNotice": true,
     "activities": "I plan to engage the kids in dance",
-    "issueHandling": "I give warnings during tough circumstances, and if the kids exceed their warnings, I take away certain privileges and make sure they learn their lesson",
     "pets": true,
     "smoker": false,
     "rates": "$20/hour"
@@ -402,7 +369,6 @@
     "transportation": "I have access to the MTA Subway and can walk",
     "shortNotice": false,
     "activities": "I have a strong Hulu movie playlist for children to enjoy",
-    "issueHandling": "I am able to hold children accountable of their actions and notify parents of their kids' behavior.",
     "pets": true,
     "smoker": true,
     "rates": "$20/hour (and $1 on top of flat rate per child ages under 8)"
@@ -414,7 +380,6 @@
     "transportation": "Taxis, Ubers, Subway",
     "shortNotice": true,
     "activities": "I am an aspiring pre-school teacher and can help teach kids the basics of reading, writing and math.",
-    "issueHandling": "I will enforce a screen time limit as a first strike. After the second and third strike, screen time privileges are taken away until kids hold themselves accountable.",
     "pets": true,
     "smoker": true,
     "rates": "$23/hour"
@@ -426,7 +391,6 @@
     "transportation": "I have access to Citi Bike and can walk/jog.",
     "shortNotice": true,
     "activities": "Bring kids outdoors and engage in activities at the playground and in museums.",
-    "issueHandling": "To help enforce rules, I will make kids do a certain physical activity (such as a pushup or a jumping jack) if they break a rule.",
     "pets": false,
     "smoker": false,
     "rates": "Negotiable"

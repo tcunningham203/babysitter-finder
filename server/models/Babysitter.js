@@ -29,10 +29,6 @@ const babysitterSchema = new Schema({
         type: String,
         required: false
     },
-    issueHandling: {
-        type: String,
-        required: false
-    },
     pets: {
         type: Boolean,
         required: true
