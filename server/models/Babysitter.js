@@ -31,11 +31,11 @@ const babysitterSchema = new Schema({
     },
     pets: {
         type: Boolean,
-        required: true
+        required: false
     },
     smoker: {
         type: Boolean,
-        required: true
+        required: false
     },
     rates: {
         type: String,

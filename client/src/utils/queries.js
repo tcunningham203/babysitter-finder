@@ -29,11 +29,11 @@ export const QUERY_USERS = gql`
 export const QUERY_PARENT = gql`
   query Parent($parentId: ID!) {
     parent(id: $parentId) {
+      _id
       user {
         firstName
         lastName
         email
-        userType
       }
       activities
       age
@@ -43,7 +43,6 @@ export const QUERY_PARENT = gql`
       requests
       smoker
       zone
-      _id
     }
   }
 `;
@@ -51,13 +50,12 @@ export const QUERY_PARENT = gql`
 export const QUERY_PARENTS = gql`
   query Parents($zone: String!) {
     parents(zone: $zone) {
+      _id
       user {
         firstName
         lastName
-        userType
-        _id
+        email
       }
-      _id
       activities
       age
       allergies
@@ -73,15 +71,13 @@ export const QUERY_PARENTS = gql`
 export const QUERY_BABYSITTER = gql`
   query Babysitter($babysitterId: ID!) {
     babysitter(id: $babysitterId) {
+      _id
       user {
         firstName
         lastName
         email
-        userType
       }
-      _id
       activities
-      issueHandling
       jobExp
       otherExp
       pets
@@ -90,6 +86,7 @@ export const QUERY_BABYSITTER = gql`
       smoker
       transportation
       zone
+      profilePic
     }
   }
 `;
@@ -97,14 +94,13 @@ export const QUERY_BABYSITTER = gql`
 export const QUERY_BABYSITTERS = gql`
   query Babysitters($zone: String!) {
     babysitters(zone: $zone) {
+      _id
       user {
         firstName
         lastName
-        userType
+        email
       }
-      _id
       activities
-      issueHandling
       jobExp
       otherExp
       pets
@@ -113,22 +109,55 @@ export const QUERY_BABYSITTERS = gql`
       smoker
       transportation
       zone
+      profilePic
     }
   }
 `;
 
 export const QUERY_STARREDBABYSITTERS = gql`
-query Parent($parentId: ID!) {
-  parent(id: $parentId) {
-    starredBabysitters
+  query StarredBabysitters($parentId: ID!) {
+    parent(id: $parentId) {
+      starredBabysitters {
+        _id
+        user {
+          firstName
+          lastName
+          email
+        }
+        activities
+        jobExp
+        otherExp
+        pets
+        rates
+        shortNotice
+        smoker
+        transportation
+        zone
+        profilePic
+      }
+    }
   }
-}
 `;
 
 export const QUERY_INTERESTEDPARENTS = gql`
-query Babysitter($babysitterId: ID!) {
-  babysitter(id: $babysitterId) {
-    interestedParents
+  query InterestedParents($babysitterId: ID!) {
+    babysitter(id: $babysitterId) {
+      interestedParents {
+        _id
+        user {
+          firstName
+          lastName
+          email
+        }
+        activities
+        age
+        allergies
+        howMany
+        pets
+        requests
+        smoker
+        zone
+      }
+    }
   }
-}
 `;

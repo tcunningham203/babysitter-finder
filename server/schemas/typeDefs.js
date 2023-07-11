@@ -20,7 +20,7 @@ const typeDefs = gql`
     allergies: String
     pets: Boolean
     smoker: Boolean
-    requests: String,
+    requests: String
     starredBabysitters:[Babysitter]
   }
   
@@ -36,6 +36,7 @@ const typeDefs = gql`
     pets: Boolean
     smoker: Boolean
     rates: String
+    profilePic: String
     interestedParents:[Parent]
   }
 
@@ -58,12 +59,12 @@ const typeDefs = gql`
   type Mutation {
     signup(firstName: String!, lastName: String!, email: String!, password: String!, userType: String!): Auth
     login(email: String!, password: String!): Auth
-    createBabysitter(user: ID!, zone: String!, jobExp: String!, otherExp: String!, shortNotice: Boolean!, transportation: String!, activities: String!, issueHandling: String!, pets: Boolean!, smoker: Boolean!, rates: String!): Babysitter
-    createParent(user: ID!, zone: String!, howMany: String!, age: String!, activities: String!, allergies: String!, pets: Boolean!, smoker: Boolean!, requests: String!): Parent
-    updateBabysitter(zone: String, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, issueHandling: String, pets: Boolean, smoker: Boolean, rates: String): Babysitter
-    updateParent(zone: String,howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
-    addToStarred(babySitter:ID!):Parent
-    removeStarred(babySitter:ID!):Parent
+    createBabysitter(user: ID!, zone: String!, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, pets: Boolean, smoker: Boolean, rates: String, profilePic: String): Babysitter
+    createParent(user: ID!, zone: String!, howMany: String, age: String, activities: String, allergies: String, pets: Boolean, smoker: Boolean, requests: String): Parent
+    updateBabysitter(zone: String, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, pets: Boolean, smoker: Boolean, rates: String): Babysitter
+    updateParent(zone: String, howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
+    addToStarred(babySitter:ID!): Parent
+    removeStarred(babySitter:ID!): Parent
   }
 `;
 
