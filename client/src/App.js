@@ -10,7 +10,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import Clients from "./components/pages/ClientsPage";
+
 import Header from "./components/templates/Header"
 import Home from "./components/pages/HomePage";
 import Map from "./components/pages/MapPage";
@@ -48,7 +48,6 @@ function App() {
         <SkylineWrapper></SkylineWrapper>
           <Routes>
             <Route path="/contacts" element={<Contacts />} />
-            <Route path="/clients" element={<Clients />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/editprofile" element={<EditProfile />} />
             <Route path="/header" element={<Header />} />

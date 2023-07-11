@@ -89,7 +89,7 @@ export default function ProfileTemplate() {
                         {showToast && (
                             <div className="bg-slate-900 text-white px-6 py-2 rounded-lg">
                                 <div className="flex text-justify items-center justify-between pb-4 ">
-                                    <div>You have a babysitter account. Sign up as a parent to contact babyistters.</div></div>
+                                    <div>You have a babysitter account. Sign up as a parent to contact babysitters.</div></div>
                                 <div className="h-px bg-slate-500 w-full mb-2"></div>
                                 <div className="flex items-center justify-between">
                                     <button className="text-gray-100 hover:text-white" onClick={hideToast}>

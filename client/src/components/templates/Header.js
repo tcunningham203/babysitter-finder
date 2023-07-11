@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import BearIcon from "../svg/BearIcon";
 import Clouds from "../svg/clouds";
 import Auth from "../../utils/auth";
-import { getUserType } from "../../utils/userTypeCheck";
+
 
 
 function Header() {
@@ -11,8 +11,7 @@ function Header() {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-  const loggedIn = Auth.loggedIn();
-  const userType = getUserType();
+
 
  
   if (Auth.loggedIn()) {
@@ -75,26 +74,17 @@ function Header() {
                   Profile
                 </NavLink>
               </li>
-              {loggedIn && userType === "Babysitter" && (
-              <li>
-                <NavLink
-                  to="/clients"
-                  className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center"
-                >
-                  Clients
-                </NavLink>
-              </li>
-               )}
-               {loggedIn && userType === "Parent" && (
+             
               <li>
                 <NavLink
                   to="/contacts"
                   className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center"
                 >
-                  Starred
+                  Contacts
                 </NavLink>
               </li>
-              )}
+             
+            
               <li>
                 <NavLink
                   to="/map"
