@@ -107,10 +107,10 @@ export const UPDATE_PARENT = gql`
   }
 `;
 
-export const ADD_TO_STARRED = gql`
+// export const ADD_TO_STARRED = gql`
 
-`;
+// `;
 
-export const REMOVE_STARRED = gql`
+// export const REMOVE_STARRED = gql`
 
-`;
+// `;
