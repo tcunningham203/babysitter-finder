@@ -101,15 +101,45 @@ const resolvers = {
     addToStarred: async (parent, args,context) => {
       if (context.user) {
         let parent=await Parent.findOne({user:context.user._id})
+        if(!parent){
+          throw new ValidationError("User is not assosite with any parent")
+        }
         let prev_starredBabysitters=parent.starredBabysitters;
         prev_starredBabysitters.push(args.babySitter);
 
+
         let babysitter=await Babysitter.findOne({_id:args.babySitter})
+        if(!babysitter){
+          throw new ValidationError("Babysitter id is incorrect !!")
+        }
         let prev_interestedParents=babysitter.interestedParents;
         prev_interestedParents.push(parent._id)
         await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
         
-        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true }).populate('starredBabysitters');
+        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true }).populate('starredBabysitters').populate('user');
+      }
+      
+      throw new AuthenticationError('Not logged in');
+    },
+    removeStarred: async (parent, args,context) => {
+      if (context.user) {
+        let parent=await Parent.findOne({user:context.user._id})
+        if(!parent){
+          throw new ValidationError("User is not assosite with any parent")
+        }
+        let prev_starredBabysitters=parent.starredBabysitters;
+        prev_starredBabysitters=prev_starredBabysitters.filter(id=>id!=args.babySitter);
+
+
+        let babysitter=await Babysitter.findOne({_id:args.babySitter})
+        if(!babysitter){
+          throw new ValidationError("Babysitter id is incorrect !!")
+        }
+        let prev_interestedParents=babysitter.interestedParents;
+        prev_interestedParents=prev_interestedParents.filter(id=>id.toString()!=parent._id.toString())
+        await Babysitter.findByIdAndUpdate(babysitter._id,{interestedParents:prev_interestedParents},{new:true})
+        
+        return await Parent.findByIdAndUpdate(parent._id, {starredBabysitters:prev_starredBabysitters}, { new: true }).populate('starredBabysitters').populate('user');
       }
       
       throw new AuthenticationError('Not logged in');

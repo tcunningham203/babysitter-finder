@@ -64,6 +64,7 @@ const typeDefs = gql`
     updateBabysitter(zone: String, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, issueHandling: String, pets: Boolean, smoker: Boolean, rates: String): Babysitter
     updateParent(zone: String,howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
     addToStarred(babySitter:ID!):Parent
+    removeStarred(babySitter:ID!):Parent
 
   }
 
