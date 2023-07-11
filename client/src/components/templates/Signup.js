@@ -21,6 +21,11 @@ const SignUp = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+    if (formState.password !== formState.confirmPassword) {
+      setShowAlert(true);
+      return;
+    }
+
     const mutationResponse = await signup({
       variables: {
         firstName: formState.firstName,
