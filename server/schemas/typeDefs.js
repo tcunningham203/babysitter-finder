@@ -33,7 +33,6 @@ const typeDefs = gql`
     shortNotice: Boolean
     transportation: String
     activities: String
-    issueHandling: String
     pets: Boolean
     smoker: Boolean
     rates: String
@@ -65,9 +64,7 @@ const typeDefs = gql`
     updateParent(zone: String,howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
     addToStarred(babySitter:ID!):Parent
     removeStarred(babySitter:ID!):Parent
-
   }
-
 `;
 
 module.exports = typeDefs;
