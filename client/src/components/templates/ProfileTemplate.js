@@ -5,7 +5,7 @@ import { TfiTimer } from "react-icons/tfi";
 import { Modal, Button, } from 'flowbite-react';
 import React, { useState, useEffect } from 'react'
 import ProfilePic from "./ProfilePic";
-import { getUserType } from "../../utils/userTypeCheck";
+import { getUserType } from "../../utils/helpers";
 
 export default function ProfileTemplate() {
     const [showToast, setShowToast] = useState(false);

@@ -3,7 +3,7 @@ import { GiCancel } from "react-icons/gi";
 import { MdPets } from "react-icons/md";
 import { MdSmokeFree, MdSmokingRooms } from "react-icons/md";
 import { LuTimerOff, LuTimer } from "react-icons/lu";
-import { getUserType } from "../../utils/userTypeCheck";
+import { getUserType } from "../../utils/helpers";
 
 const EdProSwitch = () => {
     const userType = getUserType();
