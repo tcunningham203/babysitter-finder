@@ -76,7 +76,7 @@ input:checked ~ .dot {
 .animate-mapfade2-in-word {
   opacity: 0;
   animation: fadeAndGrow3 0.5s ease-in-out forwards;
-  animation-delay: calc(0.05s * var(--word-index));
+  animation-delay: calc(0.09s * var(--word-index));
 }
 @keyframes fadeAndGrow3 {
   0% {
@@ -238,7 +238,7 @@ input:checked ~ .dot {
 .animate-mapfade-out-words {
   opacity: 1;
   animation: fade-out 0.6s ease-in-out forwards;
-  animation-delay: calc(0.1s * var(--out-index));
+  animation-delay: calc(0.21s * var(--out-index));
 }
 
 @keyframes fade-out {

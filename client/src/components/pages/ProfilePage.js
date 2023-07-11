@@ -40,7 +40,7 @@ export default function Profile() {
 
             <div className="flex flex-wrap justify-center 2xl:mx-72 z-20">
                 <div className="flex flex-wrap justify-center sm:w-80 w-72 bg-white rounded-lg py-1 z-20">
-                <NavLink to='/EditProfileB' type="button" className="flex-col rounded bg-red-700  px-12 pb-2 pt-2.5  m-1 leading-normal font-medium text-white transition duration-150 ease-in-out hover:bg-red-800  focus:outline-none focus:ring-0 active:bg-red-950 text-xl xs:text-sm z-20">
+                <NavLink to='/EditProfile' type="button" className="flex-col rounded bg-red-700  px-12 pb-2 pt-2.5  m-1 leading-normal font-medium text-white transition duration-150 ease-in-out hover:bg-red-800  focus:outline-none focus:ring-0 active:bg-red-950 text-xl xs:text-sm z-20">
                     Edit Profile
                 </NavLink>
             </div>
