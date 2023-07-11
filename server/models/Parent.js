@@ -27,17 +27,13 @@ const parentSchema = new Schema({
     },
     pets: {
         type: Boolean,
-        required: true
+        required: false
     },
     smoker: {
         type: Boolean,
-        required: true
-    },
-    requests: {
-        type: String,
         required: false
     },
-    profilePic: {
+    requests: {
         type: String,
         required: false
     },
