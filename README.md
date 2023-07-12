@@ -1,9 +1,7 @@
-# babysitter-finder
+# CubCare
 
 ## Description
-Signup as a babysitter or a parent, search for babysitters that meet your needs, and get that day off you've been wanting. 
-
-<!-- ADD ADDITIONAL DESCRIPTION HERE -->
+CubCare is a childcare website where parents can match with babysitters (based on a questionaire) and can select babysitters to care for their children. This app is designed for both parents and babysitters to benefit, where parents can gain the time off that they have needed away from their kids, while babysitters can earn an income by babysitting their children.  This app is targeted to parents and babysitters living inside the borough of Manhattan in NYC.  
 
 <h1 align="center">
     <a href="LINK HERE" target="_blank">
@@ -26,7 +24,11 @@ Signup as a babysitter or a parent, search for babysitters that meet your needs,
 
 # User story: 
 
-<!-- ADD USER STORY HERE -->
+AS A parent living in Manhattan,
+
+I WANT to find the right babysitter that match my qualifications and can babysit my child/children,
+
+SO THAT my children can still receive proper care while I prioritize other needs. 
 
 
 ## Getting Started 
@@ -35,27 +37,19 @@ These instructions will help you determine the technologies used for the project
 
 ### Technologies 
 
-<!-- EXAMPLE LIST OF TECHNOLOGIES (from project 2). ADD ACTUAL LIST HERE -->
-
-- Bootstrap
-- CSS
-- magic.css
-- MySql
-- Sequelize
-- Express
-- Express-handlebars
-- MySQL
+- React
+- GraphQL
 - Node.js
-- Animista
-- DBeaver
-- Javascript
+- Express.js
+- MongoDB
 
 ### Installing
 
 1. Clone this repo.
 2. Navigate to repo folder.
-
-<!-- NEED TO PUT REST OF INSTRUCTIONS HERE. -->
+3. From the command line, run npm i to install the packages listed above.
+4. Run npm run develop
+5. Open a new tab in your browser and navigate to http://localhost:3000
 
 ## Application Usage and Features:
 
@@ -74,9 +68,15 @@ This section will walk through the features of each page.
 
 ## Contributors 
 
-<!-- NEED TO PUT REST OF GROUP MEMBERS HERE. -->
+- [Lauren Sullivan](https://github.com/lnsvn)
 
 - [Tim Cunningham](https://github.com/tcunningham203)
 
-- [Lauren Sullivan](https://github.com/lnsvn)
+- [Genci Odobashi](https://github.com/odobashigenci)
+
+- [Rama Santayana](https://github.com/ramasantayana)
+
+
+
+
 

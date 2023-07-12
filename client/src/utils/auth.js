@@ -3,6 +3,9 @@ import decode from 'jwt-decode';
 class AuthService {
  
   getProfile(token) {
+    if(!token){
+     token = this.getToken();
+    }
     if (token) {
       const decodedToken = decode(token);
       console.log("Decoded Token UserType:", decodedToken.data.userType);

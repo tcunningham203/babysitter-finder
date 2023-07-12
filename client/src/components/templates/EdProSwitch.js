@@ -5,7 +5,7 @@ import { MdSmokeFree, MdSmokingRooms } from "react-icons/md";
 import { LuTimerOff, LuTimer } from "react-icons/lu";
 import { getUserType } from "../../utils/helpers";
 
-const EdProSwitch = () => {
+const EdProSwitch = ({data,handleToggle}) => {
     const userType = getUserType();
     return (
         <>
@@ -33,7 +33,7 @@ const EdProSwitch = () => {
 
                             <div class="relative">
 
-                                <input type="checkbox" id="toggleA" className="sr-only" />
+                                <input type="checkbox" onChange={(e=>{handleToggle('shortNotice',!e.target.checked)})} defaultChecked={!data.shortNotice} id="toggleA" className="sr-only" />
 
                                 <div className="block bg-slate-300 w-14 h-8 rounded-full"></div>
 
@@ -68,7 +68,7 @@ const EdProSwitch = () => {
 
                         <div class="relative">
 
-                            <input type="checkbox" id="toggleB" className="sr-only" />
+                            <input type="checkbox" id="toggleB" onChange={(e=>{handleToggle('pets',!e.target.checked)})} defaultChecked={!data.pets} className="sr-only" />
 
                             <div className="block bg-slate-300 w-14 h-8 rounded-full"></div>
 
@@ -103,7 +103,7 @@ const EdProSwitch = () => {
 
                         <div class="relative">
 
-                            <input type="checkbox" id="toggleC" className="sr-only" />
+                            <input type="checkbox" onChange={(e=>{handleToggle('smoker',!e.target.checked)})} id="toggleC" defaultChecked={!data.smoker} className="sr-only" />
 
                             <div className="block bg-slate-300 w-14 h-8 rounded-full"></div>
 

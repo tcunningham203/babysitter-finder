@@ -161,3 +161,50 @@ export const QUERY_INTERESTEDPARENTS = gql`
     }
   }
 `;
+
+export const QUERY_MY_PROFILE_PARENT=gql`
+query MyProfileDetailParent {
+  myProfileDetailParent {
+    _id
+    user {
+      _id
+      firstName
+      lastName
+      email
+      userType
+    }
+    zone
+    howMany
+    age
+    activities
+    allergies
+    pets
+    smoker
+    requests
+  }
+}`
+
+export const QUERY_MY_PROFILE_BABYSITTER=gql`
+query MyProfileDetailBabysitter {
+  myProfileDetailBabysitter {
+    _id
+    user {
+      _id
+      firstName
+      lastName
+      email
+      password
+      userType
+    }
+    zone
+    jobExp
+    otherExp
+    shortNotice
+    transportation
+    activities
+    pets
+    smoker
+    rates
+    profilePic
+  }
+}`

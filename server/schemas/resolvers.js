@@ -50,6 +50,24 @@ const resolvers = {
       .populate({path: 'interestedParents', model: Parent,
       populate: {path: "user", select: "firstName lastName email"}});
     },
+    myProfileDetailParent:async(parent,args,context)=>{
+      if (context.user) {
+      return Parent.findOne({user:context.user._id})
+      .populate("user")
+      .populate({path: 'starredBabysitters', model: Babysitter, 
+      populate: {path: "user", select: "firstName lastName email"}});
+      }
+      throw new AuthenticationError("Not logged in");
+    },
+    myProfileDetailBabysitter:async(parent,args,context)=>{
+      if (context.user) {
+        return Babysitter.findOne({user:context.user._id})
+        .populate("user")
+        .populate({path: 'interestedParents', model: Parent,
+        populate: {path: "user", select: "firstName lastName email"}});
+      }
+      throw new AuthenticationError("Not logged in");
+    }
   },
   Mutation: {
     // sign up ▼
@@ -103,7 +121,6 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
-
     updateParent: async (parent, args, context) => {
       if (context.user) {
         let parent = await Parent.findOne({ user: context.user._id });
