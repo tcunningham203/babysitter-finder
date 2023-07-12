@@ -92,8 +92,8 @@ export const QUERY_BABYSITTER = gql`
 `;
 
 export const QUERY_BABYSITTERS = gql`
-  query Babysitters($zone: String!) {
-    babysitters(zone: $zone) {
+  query Babysitters {
+    babysitters {
       _id
       user {
         firstName

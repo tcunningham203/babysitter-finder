@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 import ProfilePic from "./ProfilePic";
 import { getUserType } from "../../utils/helpers";
 
-export default function ProfileTemplate() {
+export default function ProfileTemplate({babysitters}) {
     const [showToast, setShowToast] = useState(false);
     const userType = getUserType();
 
@@ -34,8 +34,10 @@ export default function ProfileTemplate() {
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     return (
-
-        <div className=" m-2 md:m-5  font-cool sm:w-80 w-72  z-10">
+        <>
+        {babysitters && 
+            babysitters.map((babysitter) => (
+        <div key={babysitter._id} className=" m-2 md:m-5  font-cool sm:w-80 w-72  z-10">
             <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
                 <div
                     className=" flex  flex-col  align-center justify-between  ">
@@ -46,14 +48,35 @@ export default function ProfileTemplate() {
                     <div className="">
                         <h5
                             className=" text-4xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Firstname
+                            {babysitter.user.firstName} {babysitter.user.lastName}
+
                         </h5>
                         <div className="h-px bg-slate-500 w-full mb-2"></div>
 
                         <p className=" text-lg pb-2 text-base/6">
-                            Rate: 20 per hour for 1 child, +1 dollar for each additional child
+                            Zone: {babysitter.zone}
                         </p>
 
+
+                        <p className=" text-lg pb-2 text-base/6">
+                            Rate: {babysitter.rates}
+                        </p>
+
+                        <p className=" text-lg pb-2 text-base/6">
+                            Babysitting Experience: {babysitter.jobExp}
+                        </p>
+
+                        <p className=" text-lg pb-2 text-base/6">
+                            Other Experience: {babysitter.otherExp}
+                        </p>
+
+                        <p className=" text-lg pb-2 text-base/6">
+                            Transportation: {babysitter.transportation}
+                        </p>
+
+                        <p className=" text-lg pb-2 text-base/6">
+                            Activities and Games: {babysitter.activities}
+                        </p>
                     </div>
 
                 </div>
@@ -138,7 +161,7 @@ export default function ProfileTemplate() {
                             <div className="flex flex-col w-5/6 px-2 items-start ">
                                 <h5
                                     className=" sm:text-4xl xs:text-3xl font-medium leading-tight text-neutral-800 dark:text-neutral-50" style={{ fontSize: 40 }}>
-                                    Firstname
+                                    {babysitter.user.firstName}
                                 </h5>
                                 <div className="h-px bg-slate-500 w-full "></div>
                                 <p className=" sm:text-xl xs:text-sm text-slate-500">
@@ -240,5 +263,8 @@ export default function ProfileTemplate() {
                 </div>
             </div>
         </div>
+        ))
+    }
+    </>
     )
 };
