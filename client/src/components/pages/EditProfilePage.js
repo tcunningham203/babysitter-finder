@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { app } from "../../Firebase";
 import LandingPage from "./LandingPage";
