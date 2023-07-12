@@ -1,31 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { LOGIN } from "../../utils/mutations";
+
 
 const LogIn = () => {
   const [formState, setFormState] = useState({
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const [showAlert, setShowAlert] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const [login] = useMutation(LOGIN);
+
+  const showToastMessage = () => {
+    setShowToast(true);
+  };
+
+  const hideToast = () => {
+    setShowToast(false);
+  }
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const mutationResponse = await login({
+    try {
+      const mutationResponse = await login({
       variables: {
         email: formState.email,
         password: formState.password,
       },
     });
+
+    if (mutationResponse.data.login === null) {
+      showToastMessage();
+      return;
+    }
+
     const token = mutationResponse.data.login.token;
     Auth.login(token);
-  };
+  } catch (error) {
+    showToastMessage();
+    console.log(error);
+  }
+};
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,6 +54,16 @@ const LogIn = () => {
       [name]: value,
     });
   };
+
+  useEffect(() => {
+    let timer;
+    if (showToast) {
+      timer = setTimeout(() => {
+        hideToast();
+      }, 16000)
+    }
+    return () => clearTimeout(timer);
+  }, [showToast]);
 
   return (
     <div className="mx-4 flex  items-stretch">
@@ -58,6 +88,11 @@ const LogIn = () => {
                 >
                   Log in to CubCare
                 </div>
+                {showToast && (
+      <div className="bg-rose-100 text-center py-2 absolute top-0 left-0 w-full">
+      <p>Invalid credentials. Please try again</p>
+</div>
+    )}
               </div>
 
               <div className="mb-4">
@@ -81,17 +116,7 @@ const LogIn = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="mb-4">
-                <input
-                  className="appearance-none border-slate-300 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="confirmPassword"
-                  type="password"
-                  placeholder="Confirm Password"
-                  name="confirmPassword"
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="h-px bg-slate-500 w-full lg:mt-16 mb-1 sm:mb-4"></div>
+                            <div className="h-px bg-slate-500 w-full lg:mt-16 mb-1 sm:mb-4"></div>
               <div className="mb-4">
                 <div className="flex justify-center pb-6 lg:mt-0 md:mt-8 pt-4">
                   <button
@@ -111,6 +136,7 @@ const LogIn = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

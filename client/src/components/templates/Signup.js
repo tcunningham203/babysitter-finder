@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { SIGNUP } from "../../utils/mutations";
@@ -14,15 +14,27 @@ const SignUp = () => {
   });
   const [showAlert, setShowAlert] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 //   const [isAnimating2, setIsAnimating2] = useState(false);
 //   const [showSignupForm, setShowSignupForm] = useState(true);
   const [signup] = useMutation(SIGNUP);
 
+  const showToastMessage = () => {
+    setShowToast(true);
+};
+
+const hideToast = () => {
+  setShowToast(false);
+};
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+    
+
     if (formState.password !== formState.confirmPassword) {
       setShowAlert(true);
+      showToastMessage();
       return;
     }
 
@@ -47,6 +59,18 @@ const SignUp = () => {
     });
   };
 
+  useEffect(() => {
+    let timer;
+    if (showToast) {
+      timer = setTimeout(() => {
+        hideToast();
+      }, 16000)
+    }
+    return () => clearTimeout(timer);
+  }, [showToast]);
+
+
+
   return (
     <div className="mx-4 flex align-stretch items-stretch">
       <div className="   flex  justify-center ">
@@ -57,9 +81,9 @@ const SignUp = () => {
           >
             <div className="bg-white w-80 shadow-md rounded lg:pt-0 pt-5 px-5 py-1 relative flex flex-col justify-evenly align-stretch items-stretch">
               {showAlert && (
-                <div className="bg-slate-100 border-l-4 border-slate-500 text-slate-700 text-center py-7 absolute top-9 left-0 w-full text-sm -mt-4 mb-4 z-10">
+                <div className="bg-rose-100 border-l-4 border-slate-500 text-slate-700 text-center py-4 absolute top-0 left-0 w-full text-sm z-10">
                   <p>
-                    Please fill in all fields correctly, and select a user type.
+                    Please fill in all fields correctly.
                   </p>
                 </div>
               )}
