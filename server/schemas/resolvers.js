@@ -25,8 +25,8 @@ const resolvers = {
       .populate({path: 'starredBabysitters', model: Babysitter, 
       populate: {path: "user", select: "firstName lastName email"}});
     },
-    babysitters: async (parent, { zone }) => {
-      return Babysitter.find({ zone })
+    babysitters: async () => {
+      return Babysitter.find()
       .populate("user")
       .populate({path: 'interestedParents', model: Parent,
       populate: {path: "user", select: "firstName lastName email"}});

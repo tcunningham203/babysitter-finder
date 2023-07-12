@@ -50,7 +50,7 @@ const typeDefs = gql`
     user(id: ID!): User
     parents(zone: String!): [Parent]
     parent(id: ID!): Parent
-    babysitters(zone: String!): [Babysitter]
+    babysitters: [Babysitter]
     babysitter(id: ID!): Babysitter
     starredBabysitters(id: ID!): Parent
     interestedParents(id: ID!): Babysitter  
