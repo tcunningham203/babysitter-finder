@@ -11,7 +11,7 @@ import EdProDropdown from "../templates/EdProDropdown";
 import EdProForm from "../templates/EdProForm";
 import EdProPic from "../templates/EdProPic";
 import EdProSwitch from "../templates/EdProSwitch";
-import { getUserType } from "../../utils/userTypeCheck";
+import { getUserType } from "../../utils/helpers";
 
 function EditProfile() {
     const [image, setImage] = useState("https://placehold.co/400");

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import React from 'react'
 import Auth from "../../utils/auth";
 import LandingPage from "./LandingPage";
-import { getUserType } from "../../utils/userTypeCheck";
+import { getUserType } from "../../utils/helpers";
 
 import ProfileTemplate from "../templates/ProfileTemplate";
 import ParentContactInfo from "../templates/ParentInfoTemplate";

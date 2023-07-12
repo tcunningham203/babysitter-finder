@@ -3,7 +3,7 @@ import React from 'react'
 import LandingPage from './LandingPage';
 import Auth from "../../utils/auth";
 import ParentContactInfo from '../templates/ParentInfoTemplate';
-import { getUserType } from "../../utils/userTypeCheck";
+import { getUserType } from "../../utils/helpers";
 import ProfileTemplate from '../templates/ProfileTemplate';
 
 export default function Contacts() {

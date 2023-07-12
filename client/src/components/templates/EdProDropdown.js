@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dropdown } from 'flowbite-react';
-import { getUserType } from "../../utils/userTypeCheck";
+import { getUserType } from "../../utils/helpers";
 const EdProDropdown = () => {
     const userType = getUserType();
   return (
