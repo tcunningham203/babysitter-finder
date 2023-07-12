@@ -26,7 +26,7 @@ function ProfilePicture() {
     console.log(file.current.files[0]);
     const fileName = file.current.files[0].name;
     const storageRef = ref(storage, `users/${fileName}`);
-    
+
     uploadBytes(storageRef, file.current.files[0])
       .then(() => {
         console.log("File upload successful");

@@ -14,27 +14,26 @@ import ProfilePicture from "../templates/profilePicture";
 
 
 function EditProfile() {
-  const userType = getUserType(); // Assuming you have a function to retrieve the user type
+    const userType = getUserType(); // Assuming you have a function to retrieve the user type
 
-  if (Auth.loggedIn()) {
-    return (
-      <div className="bg-slate-300 min-h-screen pt-16 sm:pt-20 md:pt-24 font-cool">
-        <div className="justify-between z-10">
-          <div className="flex sm:flex-row flex-col rounded-lg align-center md:mt-5 mt-2 justify-center items-center md:py-5 py-2 font-neat">
-            {userType === "Babysitter" && (
-              <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium">
-                Update your brand.
-              </h1>
-            )}
-            {userType === "Parent" && (
-              <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium">
-                Choose what to share with babysitters.
-              </h1>
-            )}
-          </div>
-        </div>
-
-        <div className="justify-center z-10">
+    if (Auth.loggedIn()) {
+        return (
+          <div className="bg-slate-300 min-h-screen pt-16 sm:pt-20 md:pt-24 font-cool">
+            <div className="justify-between z-10">
+              <div className="flex sm:flex-row flex-col rounded-lg align-center md:mt-5 mt-2 justify-center items-center md:py-5 py-2 font-neat">
+                {userType === "Babysitter" && (
+                  <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium">
+                    Update your brand.
+                  </h1>
+                )}
+                {userType === "Parent" && (
+                  <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium">
+                    Choose what to share with babysitters.
+                  </h1>
+                )}
+              </div>
+            </div>
+            <div className="justify-center z-10">
           <div className="flex flex-wrap justify-center 2xl:mx-60 z-10 animate-fade-in-word">
             {userType === "Babysitter" && (
               <EdProContainer title="Upload Profile Picture">
@@ -64,7 +63,6 @@ function EditProfile() {
                 <EdProForm placeholder="How do you engage with the kids?" />
               </EdProContainer>
             )}
-
             {userType === "Parent" && (
               <EdProContainer title="Number of Kids">
                 <EdProForm placeholder="How many children will you need child care for? You can put genders here too if you like. (Eg: 1 boy and 1 girl)" />
