@@ -41,8 +41,8 @@ export default function ProfileTemplate({babysitters}) {
             <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4">
                 <div
                     className=" flex  flex-col  align-center justify-between  ">
-                    <div className="flex justify-between  pb-2">
-                        <ProfilePic />
+                    <div className="flex justify-center align-center items-center   pb-2">
+                   <img className="flex " src={babysitter.profilePic}></img> 
 
                     </div>
                     <div className="">
