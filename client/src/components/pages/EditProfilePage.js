@@ -35,6 +35,7 @@ function EditProfile() {
           }`,
         },
       },
+      
     });
 
     const { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:QUERY_MY_PROFILE_BABYSITTER,{
@@ -57,6 +58,11 @@ function EditProfile() {
     }
     const handleToggle=(name,value)=>{
       setTemp(prev=>({...prev,[name]:value}))
+    }
+    const handleProfilePic=(url)=>{
+      console.log(url);
+      setTemp(prev=>({...prev, profilePic: url}))
+      console.log(temp);
     }
 
     const handleUpdate=async(e)=>{
@@ -101,7 +107,7 @@ function EditProfile() {
           <div className="flex flex-wrap justify-center 2xl:mx-60 z-10 animate-fade-in-word">
             {userType === "Babysitter" && (
               <EdProContainer title="Upload Profile Picture">
-                <ProfilePicture />
+                <ProfilePicture currentProfilePic={data.myProfileDetailBabysitter.profilePic} profilePicUploaded={handleProfilePic} />
               </EdProContainer>
             )}
             <EdProContainer title="Location">
