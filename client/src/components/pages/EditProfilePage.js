@@ -105,7 +105,7 @@ function EditProfile() {
               </EdProContainer>
             )}
             <EdProContainer title="Location">
-              <EdProDropdown handleChange={handleChange} zone={temp?.zone ||(data.myProfileDetailBabysitter?.zone||data.myProfileDetailParent?.zone)}  />
+              <EdProDropdown onChange={handleChange} zone={temp?.zone ||(data.myProfileDetailBabysitter?.zone||data.myProfileDetailParent?.zone)}  />
             </EdProContainer>
             {userType === "Babysitter" && (
               <EdProContainer title="Babysitting Experience">

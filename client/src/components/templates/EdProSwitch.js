@@ -7,6 +7,12 @@ import { getUserType } from "../../utils/helpers";
 
 const EdProSwitch = ({data,handleToggle}) => {
     const userType = getUserType();
+
+    if (!data) {
+        // Handle the case when data is undefined
+        return null;
+      }
+
     return (
         <>
             {userType === "Parent" && (
