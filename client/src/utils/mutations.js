@@ -77,8 +77,8 @@ export const CREATE_PARENT = gql`
 `;
 
 export const UPDATE_BABYSITTER = gql`
-  mutation UpdateBabysitter($zone: String, $jobExp: String, $otherExp: String, $shortNotice: Boolean, $transportation: String, $activities: String, $pets: Boolean, $smoker: Boolean, $rates: String) {
-    updateBabysitter(zone: $zone, jobExp: $jobExp, otherExp: $otherExp, shortNotice: $shortNotice, transportation: $transportation, activities: $activities, pets: $pets, smoker: $smoker, rates: $rates) {
+  mutation UpdateBabysitter($profilePic: String, $zone: String, $jobExp: String, $otherExp: String, $shortNotice: Boolean, $transportation: String, $activities: String, $pets: Boolean, $smoker: Boolean, $rates: String) {
+    updateBabysitter(profilePic: $profilePic, zone: $zone, jobExp: $jobExp, otherExp: $otherExp, shortNotice: $shortNotice, transportation: $transportation, activities: $activities, pets: $pets, smoker: $smoker, rates: $rates) {
       activities
       jobExp
       otherExp

@@ -3,8 +3,8 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "@firebase/storage"
 import { app } from "../../Firebase";
 import "@firebase/storage";
 
-function ProfilePicture() {
-  const [image, setImage] = useState("https://placehold.co/400");
+function ProfilePicture({ currentProfilePic, profilePicUploaded }) {
+  const [image, setImage] = useState(currentProfilePic || "https://placehold.co/400");
   const storage = getStorage();
   const file = useRef(null);
 
@@ -13,7 +13,6 @@ function ProfilePicture() {
     const profileRef = ref(storage, `users/profile.jpg`);
     getDownloadURL(profileRef)
       .then((url) => {
-        console.log(url);
         setImage(url);
       })
       .catch((error) => {
@@ -35,6 +34,7 @@ function ProfilePicture() {
       .then((url) => {
         console.log(url);
         setImage(url);
+        profilePicUploaded(url);
       })
       .catch((error) => {
         // Handle any errors
