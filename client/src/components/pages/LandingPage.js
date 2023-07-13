@@ -77,29 +77,11 @@ const LandingPage = () => {
                   families who need your help.
                 </p>
 
-                <div className="h-64 mb-3">
-                  <Carousel slideInterval={10000}>
-                    <img
+                <div className=" h-64 justify-center flex align-center items-center rounded-lg ">
+                <img className="h-64  justify-center flex align-center items-center pb-4 rounded-lg "
                       alt="..."
-                      src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                      src="./caro/caro1.png"
                     />
-                    <img
-                      alt="..."
-                      src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-                    />
-                    <img
-                      alt="..."
-                      src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-                    />
-                    <img
-                      alt="..."
-                      src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-                    />
-                    <img
-                      alt="..."
-                      src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-                    />
-                  </Carousel>
                 </div>
 
                 <p className=" text-sm absolute bottom-0 left-5 text-justify pb-2 text-base/6">
