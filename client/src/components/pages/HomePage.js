@@ -2,24 +2,35 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import ProfileTemplate from "../templates/ProfileTemplate";
 import Auth from "../../utils/auth";
-import { QUERY_BABYSITTERS } from "../../utils/queries";
+import { getUserType } from "../../utils/helpers";
+import {
+  QUERY_MY_PROFILE_PARENT,
+  QUERY_MY_PROFILE_BABYSITTER,
+  QUERY_BABYSITTERS,
+} from "../../utils/queries";
 import LandingPage from "./LandingPage";
 import NoProfileWarning from "../templates/NoProfileWarning";
 import { QUERY_BABYSITTER } from "../../utils/queries";
 
 function Home() {
+ 
   function ShowHome() {
-    const { data, loading } = useQuery(QUERY_BABYSITTERS);
-    // const { sitter } = useQuery(QUERY_BABYSITTER);
+    const { data: babysittersData, loading } = useQuery(QUERY_BABYSITTERS);
+    const { data: profileData } = useQuery(
+      getUserType() === "Parent"
+        ? QUERY_MY_PROFILE_PARENT
+        : QUERY_MY_PROFILE_BABYSITTER
+    );
 
-    if (loading){
-      return (
-       <h1>Loading...</h1>
-      )
-    };
-console.log(data)
-    const babysitters = data?.babysitters || [];
-    // const curr = sitter?.curr
+    if (loading) {
+      return <h1>Loading...</h1>;
+    }
+
+    const userType = getUserType();
+    const zone = profileData?.myProfileDetailParent?.zone || profileData?.myProfileDetailBabysitter?.zone;
+    const filteredBabysitters = babysittersData?.babysitters.filter(
+      (babysitter) => babysitter.zone === zone
+    );
 
     if (Auth.loggedIn()) {
       return (
@@ -29,9 +40,9 @@ console.log(data)
             <div className="flex sm:flex-row flex-col rounded-lg align-center  md:mt-5 mt-2 justify-center  items-center md:py-5 py-2 font-neat">
               <h1 className=" xl:text-7xl lg:text-6xl px-2 md:text-4xl text-3xl text-center font-medium animate-fade-in-word">
                 Babysitters in
-              </h1>{" "}
+              </h1>
               <h1 className="xl:text-7xl lg:text-6xl px-2 md:text-4xl text-3xl text-center font-bold animate-fade-in-word">
-                Manhattan
+              {zone}
               </h1>
             </div>
           </div>
@@ -43,7 +54,9 @@ console.log(data)
          
             <div className="flex flex-wrap justify-center 2xl:mx-60 z-10 animate-fade-in-word">
           
-                  <ProfileTemplate babysitters={babysitters} />
+            <ProfileTemplate babysitters={filteredBabysitters} zone={zone} />
+
+
                  
             </div>
          

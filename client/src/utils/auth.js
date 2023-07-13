@@ -3,13 +3,27 @@ import decode from 'jwt-decode';
 class AuthService {
  
   getProfile(token) {
-    if(!token){
-     token = this.getToken();
+    if (!token) {
+      token = this.getToken();
     }
     if (token) {
       const decodedToken = decode(token);
       console.log("Decoded Token UserType:", decodedToken.data.userType);
-      return decodedToken;
+      const userType = decodedToken.data.userType;
+      let userZone = '';
+  
+      if (userType === "Babysitter") {
+        // Retrieve the babysitter's zone from the token payload
+        userZone = decodedToken.data.zone;
+      } else if (userType === "Parent") {
+        // Retrieve the parent's zone from the token payload
+        userZone = decodedToken.data.zone;
+      }
+  
+      return {
+        ...decodedToken,
+        userZone,
+      };
     }
     return null;
   }

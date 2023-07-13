@@ -6,7 +6,7 @@ import { Button, Accordion } from 'flowbite-react';
 import React, { useState, useEffect } from 'react'
 import { getUserType } from "../../utils/helpers";
 
-export default function ProfileTemplate({ babysitters }) {
+export default function ProfileTemplate({ babysitters, zone }) {
     const userType = getUserType();
 
     const [toastStates, setToastStates] = useState(() =>
@@ -40,7 +40,7 @@ export default function ProfileTemplate({ babysitters }) {
                         <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4 ">
                             <div
                                 className=" flex  flex-col  align-center justify-between  ">
-                                <div className="flex  justify-center align-center items-center  mx-2  pb-2">
+                                <div className="flex  justify-center align-center items-center animate-fade-in-word mx-2 h-52 pb-2">
                                     <img className="flex " src={babysitter.profilePic}></img>
 
                                 </div>
