@@ -13,7 +13,7 @@ export default function Profile() {
     const userType = getUserType();
     if (Auth.loggedIn()) {
         return (
-        <div className="bg-slate-300 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
+        <div className="break-before-column bg-slate-300 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
      
           
             <div className='justify-between z-10'>
@@ -36,9 +36,9 @@ export default function Profile() {
             <div className="    justify-center z-10 ">
 
                 <div className="  flex flex-wrap justify-center 2xl:mx-72 z-10 ">
-                {userType === "Babysitter" && (
+                {/* {userType === "Babysitter" && (
                     <ProfileTemplate />
-                    )}
+                    )} */}
                     {userType === "Parent" && (
                     <ParentContactInfo />
                     )}
