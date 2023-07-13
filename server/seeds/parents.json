@@ -7,7 +7,8 @@
     "pets": true,
     "smoker": false,
     "allergies": "Peanut Allergy",
-    "requests": "Use zero profanity or limit innapropriate words when babysitting my three children."
+    "requests": "Use zero profanity or limit innapropriate words when babysitting my three children.",
+    "contact": "Add me on Instagram @CozyCat"
   },
   {
     "zone": "Midtown",
@@ -17,7 +18,8 @@
     "pets": false,
     "smoker": true,
     "allergies": "Shellfish",
-    "requests": "Can you reward my child with chocolate chip cookies if he follows ground rules and displays proper behavior?"
+    "requests": "Can you reward my child with chocolate chip cookies if he follows ground rules and displays proper behavior?",
+    "contact": "Email me at totallyreal@gmail.com"
   },
   {
     "zone": "Upper East Side",
@@ -27,6 +29,7 @@
     "pets": false,
     "smoker": false,
     "allergies": "No allergies",
-    "requests": "Could you bring my two children to our local park this summer when the weather is nice?"
+    "requests": "Could you bring my two children to our local park this summer when the weather is nice?",
+    "contact": "Give me a call at 404-867-5309."
   }
 ]

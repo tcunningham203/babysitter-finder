@@ -43,6 +43,7 @@ export const QUERY_PARENT = gql`
       requests
       smoker
       zone
+      contact
     }
   }
 `;
@@ -64,6 +65,7 @@ export const QUERY_PARENTS = gql`
       requests
       smoker
       zone
+      contact
     }
   }
 `;
@@ -157,6 +159,7 @@ export const QUERY_INTERESTEDPARENTS = gql`
       requests
       smoker
       zone
+      contact
       }
     }
   }
@@ -181,6 +184,7 @@ query MyProfileDetailParent {
     pets
     smoker
     requests
+    contact
   }
 }`
 

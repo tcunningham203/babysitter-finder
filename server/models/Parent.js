@@ -37,6 +37,10 @@ const parentSchema = new Schema({
         type: String,
         required: false
     },
+    contact: {
+        type: String,
+        required: false
+    },
     starredBabysitters: [
         {
             type: Schema.Types.ObjectId,

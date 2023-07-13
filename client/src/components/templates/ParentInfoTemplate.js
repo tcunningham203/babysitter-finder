@@ -144,7 +144,7 @@ export default function ParentContactInfo({ parents }) {
                     <div className="flex flex-col  items-start ">
                       <p className=" text-2xl  ">Email:</p>
                       <p className=" text-lg  text-base/6 text-neutral-600 ">
-                        {parent.user.email}
+                        {parent.contact}
                       </p>
                     </div>
                     <div className="h-px bg-slate-500 mb-3 w-full "></div>

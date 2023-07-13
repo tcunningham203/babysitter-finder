@@ -162,7 +162,7 @@ function EditProfile() {
             )}
             {userType === "Parent" && (
               <EdProContainer title="Contact Info">
-                <EdProForm value={data.myProfileDetailParent.user.email} placeholder="How do you want babysitters to contact you? Phone number, email, or social media are all OK. If this field is blank, babysitters have no way to reply to you." />
+                <EdProForm value={data.myProfileDetailParent.contact} placeholder="How do you want babysitters to contact you? Phone number, email, or social media are all OK. If this field is blank, babysitters have no way to reply to you." />
               </EdProContainer>
             )}
           </div>

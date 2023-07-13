@@ -21,6 +21,7 @@ const typeDefs = gql`
     pets: Boolean
     smoker: Boolean
     requests: String
+    contact: String
     starredBabysitters:[Babysitter]
   }
   
@@ -62,9 +63,9 @@ const typeDefs = gql`
     signup(firstName: String!, lastName: String!, email: String!, password: String!, userType: String!): Auth
     login(email: String!, password: String!): Auth
     createBabysitter(user: ID!, zone: String!, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, pets: Boolean, smoker: Boolean, rates: String, profilePic: String): Babysitter
-    createParent(user: ID!, zone: String!, howMany: String, age: String, activities: String, allergies: String, pets: Boolean, smoker: Boolean, requests: String): Parent
+    createParent(user: ID!, zone: String!, howMany: String, age: String, activities: String, allergies: String, pets: Boolean, smoker: Boolean, requests: String,contact: String): Parent
     updateBabysitter(zone: String, jobExp: String, otherExp: String, shortNotice: Boolean, transportation: String, activities: String, pets: Boolean, smoker: Boolean, rates: String): Babysitter
-    updateParent(zone: String, howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String):Parent
+    updateParent(zone: String, howMany: String,age: String,activities: String,allergies: String,pets: Boolean,smoker: Boolean,requests: String,contact: String):Parent
     addToStarred(babySitter:ID!): Parent
     removeStarred(babySitter:ID!): Parent
   }

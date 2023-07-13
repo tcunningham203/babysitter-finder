@@ -58,8 +58,8 @@ export const CREATE_BABYSITTER = gql`
 `;
 
 export const CREATE_PARENT = gql`
-  mutation CreateParent($user: ID!, $zone: String!, $howMany: String!, $age: String!, $activities: String!, $allergies: String!, $pets: Boolean!, $smoker: Boolean!, $requests: String!) {
-    createParent(user: $user, zone: $zone, howMany: $howMany, age: $age, activities: $activities, allergies: $allergies, pets: $pets, smoker: $smoker, requests: $requests) {
+  mutation CreateParent($user: ID!, $zone: String!, $howMany: String!, $age: String!, $activities: String!, $allergies: String!, $pets: Boolean!, $smoker: Boolean!, $requests: String!, $contact: String!) {
+    createParent(user: $user, zone: $zone, howMany: $howMany, age: $age, activities: $activities, allergies: $allergies, pets: $pets, smoker: $smoker, requests: $requests, contact: $contact) {
       user {
         _id
       }
@@ -71,6 +71,7 @@ export const CREATE_PARENT = gql`
       pets
       smoker
       requests
+      contact
     }
   }
 `;
@@ -93,8 +94,8 @@ export const UPDATE_BABYSITTER = gql`
 `;
 
 export const UPDATE_PARENT = gql`
-  mutation updateParent($zone: String, $howMany: String, $age: String, $activities: String, $allergies: String, $pets: Boolean, $smoker: Boolean, $requests: String) {
-    updateParent(zone: $zone, howMany: $howMany, age: $age, activities: $activities, allergies: $allergies, pets: $pets, smoker: $smoker, requests: $requests) {
+  mutation updateParent($zone: String, $howMany: String, $age: String, $activities: String, $allergies: String, $pets: Boolean, $smoker: Boolean, $requests: String, $contact: String) {
+    updateParent(zone: $zone, howMany: $howMany, age: $age, activities: $activities, allergies: $allergies, pets: $pets, smoker: $smoker, requests: $requests, contact: $contact) {
       activities
       age
       allergies
@@ -103,6 +104,7 @@ export const UPDATE_PARENT = gql`
       requests
       smoker
       zone
+      contact
     }
   }
 `;
