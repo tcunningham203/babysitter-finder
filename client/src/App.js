@@ -10,7 +10,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-
+import MapResultsPage from "./components/pages/MapResultsPage";
 import Header from "./components/templates/Header"
 import Home from "./components/pages/HomePage";
 import Map from "./components/pages/MapPage";
@@ -50,7 +50,7 @@ function App() {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/editprofile" element={<EditProfile />} />
-            <Route path="/header" element={<Header />} />
+            <Route exact path="/results/:zone" element={<MapResultsPage />} />
             <Route path="/map" element={<Map />} />
             <Route path="/" element={<Home />} />
           </Routes>

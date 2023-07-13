@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { useQuery } from "@apollo/client";
 import ProfileTemplate from "../templates/ProfileTemplate";
 import Auth from "../../utils/auth";
-import { getUserType } from "../../utils/helpers";
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
-  QUERY_MY_PROFILE_PARENT,
-  QUERY_MY_PROFILE_BABYSITTER,
+
   QUERY_BABYSITTERS,
 } from "../../utils/queries";
 import LandingPage from "./LandingPage";
-import NoProfileWarning from "../templates/NoProfileWarning";
 
 
-function Home() {
- 
-  function ShowHome() {
-    const { data: babysittersData, loading } = useQuery(QUERY_BABYSITTERS);
-    const { data: profileData } = useQuery(
-      getUserType() === "Parent"
-        ? QUERY_MY_PROFILE_PARENT
-        : QUERY_MY_PROFILE_BABYSITTER
+const MapResultsPage = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { data: babysittersData, loading, refetch } = useQuery(QUERY_BABYSITTERS);
+    const zone = decodeURIComponent(location.pathname.split('/')[2]);
+    const filteredBabysitters = babysittersData?.babysitters.filter(
+      (babysitter) => babysitter.zone === zone
     );
-
+    useEffect(() => {
+        // Update the URL and page title with the decoded zone
+        const decodedZone = decodeURIComponent(zone);
+        if (zone !== decodedZone) {
+          navigate(`/results/${encodeURIComponent(decodedZone)}`);
+          document.title = `Babysitters in ${decodedZone}`;
+        } else {
+          document.title = `Babysitters in ${zone}`;
+        }
+      }, [navigate, zone]);
+    
+      useEffect(() => {
+        // Refetch babysitters when the zone changes
+        refetch();
+      }, [refetch, zone]);
     if (loading) {
       return <h1>Loading...</h1>;
     }
 
-    const userType = getUserType();
-    const zone = profileData?.myProfileDetailParent?.zone || profileData?.myProfileDetailBabysitter?.zone;
-    const filteredBabysitters = babysittersData?.babysitters.filter(
-      (babysitter) => babysitter.zone === zone
-    );
+   
+  
 
     if (Auth.loggedIn()) {
       return (
@@ -47,7 +55,7 @@ function Home() {
             </div>
           </div>
 
-        
+       
 
          
             <div className="flex flex-wrap justify-center 2xl:mx-60 z-10 animate-fade-in-word">
@@ -57,14 +65,13 @@ function Home() {
 
                  
             </div>
-        
+         
         </div>
       );
     } else {
       return <LandingPage />;
     }
   }
-  return <div>{ShowHome()}</div>;
-}
 
-export default Home;
+
+export default MapResultsPage;

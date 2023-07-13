@@ -16,7 +16,7 @@ import { UPDATE_BABYSITTER, UPDATE_PARENT } from "../../utils/mutations";
 import { Button } from "flowbite-react";
 
 function EditProfile() {
-    const userType = getUserType(); // Assuming you have a function to retrieve the user type
+    const userType = getUserType(); 
     const [temp,setTemp]=useState({});
     const [updateParent] = useMutation(UPDATE_PARENT,{
       context: {

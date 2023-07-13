@@ -85,7 +85,7 @@ const SkylineWrapper = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div >
       <SVGAnimation style={animationStyle} />
     </div>
   );

@@ -46,9 +46,10 @@ const Map = () => {
         e.preventDefault();
         setIsAnimating(true);
         setTimeout(() => {
-            navigate('/'); 
-        }, 1500); 
-    };
+          const zoneName = displayedNames[regions.indexOf(selectedRegion)];
+          navigate(`/results/${zoneName}`);
+        }, 1500);
+      };
 
 
     if (Auth.loggedIn()) {
