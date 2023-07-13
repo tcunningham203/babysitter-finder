@@ -11,7 +11,7 @@ import EdProForm from "../templates/EdProForm";
 import EdProSwitch from "../templates/EdProSwitch";
 import { getUserType } from "../../utils/helpers";
 import ProfilePicture from "../templates/profilePicture";
-import { QUERY_MY_PROFILE_BABYSITTER,QUERY_MY_PROFILE_PARENT } from "../../utils/queries";
+import { QUERY_MY_PROFILE_BABYSITTER, QUERY_MY_PROFILE_PARENT } from "../../utils/queries";
 import { UPDATE_BABYSITTER, UPDATE_PARENT } from "../../utils/mutations";
 import { Button } from "flowbite-react";
 
@@ -37,7 +37,7 @@ function EditProfile() {
       },
     });
 
-    const { data, loading } = useQuery(userType=='Parent'?QUERY_MY_PROFILE_PARENT:QUERY_MY_PROFILE_BABYSITTER,{
+    const { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:QUERY_MY_PROFILE_BABYSITTER,{
       context: {
             headers: {
               authorization: `${
@@ -61,7 +61,7 @@ function EditProfile() {
 
     const handleUpdate=async(e)=>{
       e.preventDefault();
-      if(userType=='Parent'){
+      if(userType==='Parent'){
         await updateParent({
           variables: {
           ...data.myProfileDetailParent,

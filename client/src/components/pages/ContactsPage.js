@@ -3,11 +3,32 @@ import React from 'react'
 import LandingPage from './LandingPage';
 import Auth from "../../utils/auth";
 import ParentContactInfo from '../templates/ParentInfoTemplate';
+import { useQuery,useMutation } from "@apollo/client";
 import { getUserType } from "../../utils/helpers";
 import ProfileTemplate from '../templates/ProfileTemplate';
+import { QUERY_INTERESTEDPARENTS } from '../../utils/queries';
+import { QUERY_STARREDBABYSITTERS } from '../../utils/queries';
 
 export default function Contacts() {
-  const userType = getUserType();
+    const userType = getUserType();
+    const { data, loading } = useQuery(userType==='Babysitter' ? QUERY_INTERESTEDPARENTS : QUERY_STARREDBABYSITTERS,{
+        context: {
+              headers: {
+                authorization: `${
+                  Auth.getToken()||''
+                }`,
+              },
+            },
+      });
+      if(loading){
+       return (
+          <h1>Loading...</h1>
+         )
+      }
+  
+      console.log(data)
+      const parents = data.interestedParents.interestedParents || [];
+      console.log(parents)
     if (Auth.loggedIn()) {
     return (
         <div className="bg-slate-300 min-h-screen  pt-16 sm:pt-20 md:pt-24 z-10 ">
@@ -35,7 +56,7 @@ export default function Contacts() {
                 
                 {userType === "Babysitter" && (
                     <div className="  flex flex-wrap justify-center 2xl:mx-72 z-10 animate-fade-in-word ">
-                    <ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo /><ParentContactInfo />
+                    <ParentContactInfo parents={parents}/>
                     </div>
                     )}
                      {userType === "Parent" && (

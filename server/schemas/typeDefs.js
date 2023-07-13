@@ -54,8 +54,8 @@ const typeDefs = gql`
     babysitters: [Babysitter]
     babysitter(id: ID!): Babysitter
     myProfileDetailBabysitter: Babysitter
-    starredBabysitters(id: ID!): Parent
-    interestedParents(id: ID!): Babysitter  
+    starredBabysitters: Parent
+    interestedParents: Babysitter  
   }
 
   type Mutation {
