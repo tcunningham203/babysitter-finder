@@ -10,7 +10,7 @@ import {
 } from "../../utils/queries";
 import LandingPage from "./LandingPage";
 import NoProfileWarning from "../templates/NoProfileWarning";
-import { QUERY_BABYSITTER } from "../../utils/queries";
+
 
 function Home() {
  

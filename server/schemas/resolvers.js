@@ -38,17 +38,23 @@ const resolvers = {
       .populate({path: 'interestedParents', model: Parent,
       populate: {path: "user", select: "firstName lastName email"}});
     },
-    starredBabysitters: async (parent, args) => {
-      return Parent.findById(args.id)
+    starredBabysitters: async (parent, args, context) => {
+      if (context.user) {
+        return Parent.findOne({user: context.user._id})
       .populate("user")
       .populate({path: 'starredBabysitters', model: Babysitter,
       populate: {path: "user", select: "firstName lastName email"}});
+    }
+    throw new AuthenticationError("Not logged in");
     },
-    interestedParents: async (parent, args) => {
-      return Babysitter.findById(args.id)
+    interestedParents: async (parent, args, context) => {
+      if (context.user) {
+      return Babysitter.findOne({user: context.user._id})
       .populate("user")
       .populate({path: 'interestedParents', model: Parent,
       populate: {path: "user", select: "firstName lastName email"}});
+      }
+      throw new AuthenticationError("Not logged in");
     },
     myProfileDetailParent:async(parent,args,context)=>{
       if (context.user) {

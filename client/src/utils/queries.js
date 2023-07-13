@@ -115,8 +115,8 @@ export const QUERY_BABYSITTERS = gql`
 `;
 
 export const QUERY_STARREDBABYSITTERS = gql`
-  query StarredBabysitters($parentId: ID!) {
-    parent(id: $parentId) {
+  query StarredBabysitters {
+    starredBabysitters {
       starredBabysitters {
         _id
         user {
@@ -124,24 +124,24 @@ export const QUERY_STARREDBABYSITTERS = gql`
           lastName
           email
         }
-        activities
-        jobExp
-        otherExp
-        pets
-        rates
-        shortNotice
-        smoker
-        transportation
-        zone
-        profilePic
+      activities
+      jobExp
+      otherExp
+      pets
+      rates
+      shortNotice
+      smoker
+      transportation
+      zone
+      profilePic
       }
     }
   }
 `;
 
 export const QUERY_INTERESTEDPARENTS = gql`
-  query InterestedParents($babysitterId: ID!) {
-    babysitter(id: $babysitterId) {
+  query InterestedParents {
+    interestedParents {
       interestedParents {
         _id
         user {
@@ -149,14 +149,14 @@ export const QUERY_INTERESTEDPARENTS = gql`
           lastName
           email
         }
-        activities
-        age
-        allergies
-        howMany
-        pets
-        requests
-        smoker
-        zone
+      activities
+      age
+      allergies
+      howMany
+      pets
+      requests
+      smoker
+      zone
       }
     }
   }
