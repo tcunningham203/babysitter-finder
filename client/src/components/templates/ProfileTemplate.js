@@ -1,7 +1,8 @@
 import { MdPets } from "react-icons/md";
+import { GiCancel } from "react-icons/gi";
 import { VscMail } from "react-icons/vsc";
-import { MdSmokeFree } from "react-icons/md";
-import { TfiTimer } from "react-icons/tfi";
+import { MdSmokeFree, MdSmokingRooms } from "react-icons/md";
+import { LuTimerOff, LuTimer } from "react-icons/lu";
 import { Button, Accordion } from "flowbite-react";
 import React, { useState, useEffect } from "react";
 import { getUserType } from "../../utils/helpers";
@@ -107,40 +108,68 @@ export default function ProfileTemplate({ babysitters, zone }) {
                     </div>
                     <div className="h-px bg-slate-500 mb-3 w-full "></div>
                     <div className="grid grid-cols-3">
-                      <div className="flex flex-col justify-evenly text-center items-center ">
-                        <p className="  flex   ">
-                          <TfiTimer size={30} />
+                    {babysitter.shortNotice && (
+                      <div className="flex flex-col justify-evenly text-center items-center">
+                        <p className="flex">
+                          <LuTimer size={30} />
                         </p>
-                        <p
-                          className=" xs:text-xs text-lg flex   "
-                          style={{ fontSize: 10 }}
-                        >
+                        <p className="xs:text-xs text-lg flex" style={{ fontSize: 10 }}>
                           Short Notice OK
                         </p>
                       </div>
-                      <div className="flex flex-col justify-evenly text-center items-center ">
-                        <p className="  flex   ">
+                    )}
+                    {!babysitter.shortNotice && (
+                      <div className="flex flex-col justify-evenly text-center items-center">
+                        <p className="flex">
+                          <LuTimerOff size={30} />
+                        </p>
+                        <p className="xs:text-xs text-lg flex" style={{ fontSize: 10 }}>
+                          No Short Notice
+                        </p>
+                      </div>
+                    )}
+                    {babysitter.pets && (
+                      <div className="flex flex-col justify-evenly text-center items-center">
+                        <p className="flex">
                           <MdPets size={30} />
                         </p>
-                        <p
-                          className=" xs:text-xs text-lg flex "
-                          style={{ fontSize: 10 }}
-                        >
+                        <p className="xs:text-xs text-lg flex" style={{ fontSize: 10 }}>
                           Pets OK
                         </p>
                       </div>
-                      <div className="flex flex-col justify-evenly text-center items-center ">
-                        <p className="  flex  ">
+                    )}
+                    {!babysitter.pets && (
+                      <div className="flex flex-col justify-evenly text-center items-center">
+                        <p className="flex">
+                          <GiCancel size={30} />
+                        </p>
+                        <p className="xs:text-xs text-lg flex" style={{ fontSize: 10 }}>
+                          No Pets
+                        </p>
+                      </div>
+                    )}
+                    {babysitter.smoker && (
+                      <div className="flex flex-col justify-evenly text-center items-center">
+                        <p className="flex">
+                          <MdSmokingRooms size={30} />
+                        </p>
+                        <p className="xs:text-xs text-lg flex" style={{ fontSize: 10 }}>
+                          Smoker
+                        </p>
+                      </div>
+                    )}
+                    {!babysitter.smoker && (
+                      <div className="flex flex-col justify-evenly text-center items-center">
+                        <p className="flex">
                           <MdSmokeFree size={30} />
                         </p>
-                        <p
-                          className=" xs:text-xs text-lg flex  "
-                          style={{ fontSize: 10 }}
-                        >
+                        <p className="xs:text-xs text-lg flex" style={{ fontSize: 10 }}>
                           Non Smoker
                         </p>
                       </div>
-                    </div>
+                    )}
+                  </div>
+              
                   </Accordion.Content>
                   <Accordion.Title className="p-2 m-0 text-white bg-slate-700 hover:bg-slate-700 active:bg-slate-700">
                     More Details
