@@ -39,11 +39,11 @@ SO THAT I can grow my business more easily.
 
 Here are screenshots of the landing page, home page, and map page, respectively.
 
-![AppScreenshot1](/public/images/screenshot1.png?raw=true "Screenshot of Deployed Application- Landing")
+![AppScreenshot1](/client/public/images/screenshot1.png?raw=true "Screenshot of Deployed Application- Landing")
 
-![AppScreenshot1](/public/images/screenshot2.png?raw=true "Screenshot of Deployed Application- Homepage")
+![AppScreenshot1](/client/public/images/screenshot2.png?raw=true "Screenshot of Deployed Application- Homepage")
 
-![AppScreenshot1](/public/images/screenshot3.png?raw=true "Screenshot of Deployed Application- Map")
+![AppScreenshot1](/client/public/images/screenshot3.png?raw=true "Screenshot of Deployed Application- Map")
 
 ### Technologies 
 
