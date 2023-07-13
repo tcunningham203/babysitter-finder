@@ -42,7 +42,7 @@ const { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:Q
                     </h1>
                     )}
                            {userType === "Parent" && (
-                    <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-neat font-medium">
+                    <h1 className="lg:text-5xl px-1 md:text-4xl text-3xl text-center font-neat font-medium pb-24">
                         Here's what you send to babysitters.
                     </h1>
                     )}
@@ -57,7 +57,7 @@ const { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:Q
                <ProfileTemplate babysitters={data?.myProfileDetailBabysitter} zone={data?.myProfileDetailBabysitter?.zone} />
                     )} 
                     {userType === "Parent" && (
-                    <ParentContactInfo parent={data?.myProfileDetailParent} />
+                     <ParentContactInfo parents={data?.myProfileDetailParent} zone={data?.myProfileDetailParent?.zone} />
                     )}
                 </div>
             </div>

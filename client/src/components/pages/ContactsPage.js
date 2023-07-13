@@ -38,12 +38,12 @@ export default function Contacts() {
                 <div
                     className="flex sm:flex-row flex-col rounded-lg align-center  md:mt-5 mt-2 justify-center  items-center md:py-5 py-2 font-neat">
                        {userType === "Babysitter" && (
-                    <h1 className=" lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium ">
+                    <h1 className=" lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium pb-24">
                         Interested parents are listed here.
                     </h1>  
                     )}
                     {userType === "Parent" && (
-                    <h1 className=" lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium ">
+                    <h1 className=" lg:text-5xl px-1 md:text-4xl text-3xl text-center font-medium pb-24">
                         Babysitter profiles you've liked. 
                     </h1>  
                      )}
