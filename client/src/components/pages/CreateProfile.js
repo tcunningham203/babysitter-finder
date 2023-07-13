@@ -46,44 +46,53 @@ function CreateProfile() {
   );
 
   const navigate = useNavigate();
-  const client = useApolloClient(); // Use the useApolloClient hook here
+
 
   useEffect(() => {
-    if (data && data.myProfileDetailParent?.zone) {
+    if (data?.myProfileDetailParent?.zone|| data?.myProfileDetailBabysitter?.zone) {
       // Redirect to a different page if the profile is already created
-      navigate("/");
+      window.location.href='/';
     }
-  }, [navigate]);
+  }, [data]);
 
   if (loading) {
     return <h1>Loading...</h1>;
   }
 
-  const handleChange = (value) => {
-    setTemp((prev) => ({ ...prev, zone: value }));
+  const handleChange = (e) => {
+    setTemp((prev) => ({ ...prev, zone: e.target.value }));
   };
 
-  const handleToggle = (name, value) => {
-    setTemp((prev) => ({ ...prev, [name]: value }));
-  };
+
 
   const handleCreate = async (e) => {
     e.preventDefault();
+    let userData=Auth.getProfile().data;
+    let id=userData._id;
     try {
       if (userType === "Parent") {
-        await createParent({
+       createParent({
           variables: {
+            user:id,
             ...temp,
           },
-        });
+        })
+        .then(()=>{
+          Auth.userZoneGlobal=temp.zone;
+          window.location.href='/';
+        })
       } else {
         await createBabysitter({
           variables: {
+            user:id,
             ...temp,
           },
-        });
+        }).then(()=>{
+          Auth.userZoneGlobal=temp.zone;
+          window.location.href='/';
+        })
       }
-      navigate("/");
+
     } catch (error) {
       console.log(error);
       // If the error is related to a 400 status code, you can also access the specific error message

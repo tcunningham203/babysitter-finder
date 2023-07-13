@@ -38,7 +38,7 @@ function EditProfile() {
       
     });
 
-    const { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:QUERY_MY_PROFILE_BABYSITTER,{
+    let { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:QUERY_MY_PROFILE_BABYSITTER,{
       context: {
             headers: {
               authorization: `${
@@ -47,6 +47,9 @@ function EditProfile() {
             },
           },
     });
+    if(!data?.myProfileDetailParent || !data?.myProfileDetailBabysitter){
+      data={myProfileDetailParent:{},myProfileDetailBabysitter:{}}
+    }
     if(loading){
      return (
         <h1>Loading...</h1>
@@ -78,7 +81,7 @@ function EditProfile() {
       }else{
         await updateBabysitter({
           variables: {
-          ...data.myProfileDetailParent,
+          ...data.myProfileDetailBabysitter,
           ...temp
           }
         })
@@ -107,7 +110,7 @@ function EditProfile() {
           <div className="flex flex-wrap justify-center 2xl:mx-60 z-10 animate-fade-in-word">
             {userType === "Babysitter" && (
               <EdProContainer title="Upload Profile Picture">
-                <ProfilePicture currentProfilePic={data.myProfileDetailBabysitter.profilePic} profilePicUploaded={handleProfilePic} />
+                <ProfilePicture currentProfilePic={data.myProfileDetailBabysitter?.profilePic} profilePicUploaded={handleProfilePic} />
               </EdProContainer>
             )}
             <EdProContainer title="Location">

@@ -19,6 +19,7 @@ import EditProfile from "./components/pages/EditProfilePage";
 import Contacts from "./components/pages/ContactsPage";
 
 import SkylineWrapper from './components/svg/SkylineWrapper';
+import CreateProfile from "./components/pages/CreateProfile";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -49,6 +50,7 @@ function App() {
           <Routes>
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/create-profile" element={<CreateProfile />} />
             <Route path="/editprofile" element={<EditProfile />} />
             <Route exact path="/results/:zone" element={<MapResultsPage />} />
             <Route path="/map" element={<Map />} />

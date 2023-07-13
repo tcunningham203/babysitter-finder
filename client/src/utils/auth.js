@@ -1,7 +1,8 @@
 import decode from 'jwt-decode';
 
 class AuthService {
- 
+
+  userZoneGlobal;
   getProfile(token) {
     if (!token) {
       token = this.getToken();
@@ -19,7 +20,7 @@ class AuthService {
         // Retrieve the parent's zone from the token payload
         userZone = decodedToken.data.zone;
       }
-  
+
       return {
         ...decodedToken,
         userZone,

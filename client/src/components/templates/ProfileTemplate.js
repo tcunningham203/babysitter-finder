@@ -35,18 +35,18 @@ export default function ProfileTemplate({ babysitters, zone }) {
     <>
       {babysitterArray.map((babysitter, index) => (
           <div
-            key={babysitter._id}
+            key={babysitter?._id}
             className=" m-2 md:m-5  font-cool sm:w-80 w-72 z-10"
           >
             <div className="  rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  p-4 ">
               <div className=" flex  flex-col  align-center justify-between  "></div>
               <div className="flex  justify-center align-center items-center animate-fade-in-word mx-2 h-52 pb-2">
-                <img className="flex " src={babysitter.profilePic}></img>
+                <img className="flex " src={babysitter?.profilePic}></img>
               </div>
               <div className="flex flex-row justify-between py-2  mx-2">
                 <h5 className=" text-4xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                  {babysitter.user.firstName}{" "}
-                  {babysitter.user.lastName.charAt(0)}.
+                  {babysitter?.user?.firstName}{" "}
+                  {babysitter?.user?.lastName.charAt(0)}.
                 </h5>
                 <div className="flex justify-between align-center text-center items-center ">
                   {userType === "Parent" && (
@@ -72,9 +72,9 @@ export default function ProfileTemplate({ babysitters, zone }) {
               <div className="h-28">
                 <div className=" mx-2 h-px bg-slate-500  mb-2"></div>
                 <p className="mx-2 text-lg pb-1 ">
-                  Works Near {babysitter.zone}
+                  Works Near {babysitter?.zone}
                 </p>
-                <p className="mx-2 text-lg pb-4 ">Rate: {babysitter.rates}</p>
+                <p className="mx-2 text-lg pb-4 ">Rate: {babysitter?.rates}</p>
               </div>
               <Accordion
                 className="p-0 m-0 flex flex-col items-center align-center relative justify-center"
@@ -85,30 +85,30 @@ export default function ProfileTemplate({ babysitters, zone }) {
                     <div className="flex flex-col  items-start ">
                       <p className=" text-lg  ">Babysitting Experience:</p>
                       <p className="    text-neutral-600 text-sm">
-                        {babysitter.jobExp}
+                        {babysitter?.jobExp}
                       </p>
                     </div>
                     <div className="flex flex-col items-start ">
                       <p className=" text-lg  ">Other Experience:</p>
                       <p className="    text-neutral-600 text-sm">
-                        {babysitter.otherExp}
+                        {babysitter?.otherExp}
                       </p>
                     </div>
                     <div className="flex flex-col  items-start ">
                       <p className=" text-lg  ">Transportation:</p>
                       <p className="    text-neutral-600 text-sm ">
-                        {babysitter.transportation}
+                        {babysitter?.transportation}
                       </p>
                     </div>
                     <div className="flex flex-col items-start ">
                       <p className=" text-lg  ">Activities and Games:</p>
                       <p className="    text-neutral-600 text-sm ">
-                        {babysitter.activities}
+                        {babysitter?.activities}
                       </p>
                     </div>
                     <div className="h-px bg-slate-500 mb-3 w-full "></div>
                     <div className="grid grid-cols-3">
-                    {babysitter.shortNotice && (
+                    {babysitter?.shortNotice && (
                       <div className="flex flex-col justify-evenly text-center items-center">
                         <p className="flex">
                           <LuTimer size={30} />
@@ -118,7 +118,7 @@ export default function ProfileTemplate({ babysitters, zone }) {
                         </p>
                       </div>
                     )}
-                    {!babysitter.shortNotice && (
+                    {!babysitter?.shortNotice && (
                       <div className="flex flex-col justify-evenly text-center items-center">
                         <p className="flex">
                           <LuTimerOff size={30} />
@@ -128,7 +128,7 @@ export default function ProfileTemplate({ babysitters, zone }) {
                         </p>
                       </div>
                     )}
-                    {babysitter.pets && (
+                    {babysitter?.pets && (
                       <div className="flex flex-col justify-evenly text-center items-center">
                         <p className="flex">
                           <MdPets size={30} />
@@ -138,7 +138,7 @@ export default function ProfileTemplate({ babysitters, zone }) {
                         </p>
                       </div>
                     )}
-                    {!babysitter.pets && (
+                    {!babysitter?.pets && (
                       <div className="flex flex-col justify-evenly text-center items-center">
                         <p className="flex">
                           <GiCancel size={30} />
@@ -148,7 +148,7 @@ export default function ProfileTemplate({ babysitters, zone }) {
                         </p>
                       </div>
                     )}
-                    {babysitter.smoker && (
+                    {babysitter?.smoker && (
                       <div className="flex flex-col justify-evenly text-center items-center">
                         <p className="flex">
                           <MdSmokingRooms size={30} />
@@ -158,7 +158,7 @@ export default function ProfileTemplate({ babysitters, zone }) {
                         </p>
                       </div>
                     )}
-                    {!babysitter.smoker && (
+                    {!babysitter?.smoker && (
                       <div className="flex flex-col justify-evenly text-center items-center">
                         <p className="flex">
                           <MdSmokeFree size={30} />

@@ -35,7 +35,7 @@ export const SIGNUP = gql`
 `;
 
 export const CREATE_BABYSITTER = gql`
-  mutation createBabysitter ($user: ID!, $zone: String!, $jobExp: String!, $otherExp: String!, $shortNotice: Boolean!, $transportation: String!, $activities: String!, $pets: Boolean!, $smoker: Boolean!, $rates: String!, $profilePic: String) {
+  mutation createBabysitter ($user: ID!, $zone: String!, $jobExp: String, $otherExp: String, $shortNotice: Boolean, $transportation: String, $activities: String, $pets: Boolean, $smoker: Boolean, $rates: String, $profilePic: String) {
     createBabysitter(user: $user, zone: $zone, jobExp: $jobExp, otherExp: $otherExp, shortNotice: $shortNotice, transportation: $transportation, activities: $activities, pets: $pets, smoker: $smoker, rates: $rates, profilePic: $profilePic) {
       user {
         _id
@@ -58,7 +58,7 @@ export const CREATE_BABYSITTER = gql`
 `;
 
 export const CREATE_PARENT = gql`
-  mutation CreateParent($user: ID!, $zone: String!, $howMany: String!, $age: String!, $activities: String!, $allergies: String!, $pets: Boolean!, $smoker: Boolean!, $requests: String!, $contact: String!) {
+  mutation CreateParent($user: ID!, $zone: String!, $howMany: String, $age: String, $activities: String, $allergies: String, $pets: Boolean, $smoker: Boolean, $requests: String, $contact: String) {
     createParent(user: $user, zone: $zone, howMany: $howMany, age: $age, activities: $activities, allergies: $allergies, pets: $pets, smoker: $smoker, requests: $requests, contact: $contact) {
       user {
         _id

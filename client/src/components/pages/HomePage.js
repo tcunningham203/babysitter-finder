@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import ProfileTemplate from "../templates/ProfileTemplate";
 import Auth from "../../utils/auth";
@@ -10,24 +10,36 @@ import {
 } from "../../utils/queries";
 import LandingPage from "./LandingPage";
 import NoProfileWarning from "../templates/NoProfileWarning";
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
  
   function ShowHome() {
+    const navigate=useNavigate();
     const { data: babysittersData, loading } = useQuery(QUERY_BABYSITTERS);
-    const { data: profileData } = useQuery(
+    const { data: profileData,loading:profileLoading } = useQuery(
       getUserType() === "Parent"
         ? QUERY_MY_PROFILE_PARENT
         : QUERY_MY_PROFILE_BABYSITTER
     );
 
+ 
+    const zone = profileData?.myProfileDetailParent?.zone || profileData?.myProfileDetailBabysitter?.zone;
+    useEffect(()=>{
+     if(!profileLoading && !zone){
+      navigate("/create-profile");
+     }
+     Auth.userZoneGlobal=zone;
+      
+    },[profileData,profileLoading])
+
     if (loading) {
       return <h1>Loading...</h1>;
     }
-
+    
     const userType = getUserType();
-    const zone = profileData?.myProfileDetailParent?.zone || profileData?.myProfileDetailBabysitter?.zone;
+    
     const filteredBabysitters = babysittersData?.babysitters.filter(
       (babysitter) => babysitter.zone === zone
     );

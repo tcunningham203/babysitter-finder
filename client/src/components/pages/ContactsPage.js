@@ -27,7 +27,7 @@ export default function Contacts() {
       }
   
       console.log(data)
-      const parents = data.interestedParents.interestedParents || [];
+      const parents = data?.interestedParents?.interestedParents || [];
       console.log(parents)
     if (Auth.loggedIn()) {
     return (
