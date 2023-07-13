@@ -24,7 +24,7 @@ CubCare is a childcare website where parents can match with babysitters (based o
 
 AS A parent living in Manhattan,
 
-I WANT to find the right babysitter that match my qualifications and can babysit my child/children,
+I WANT to find the right babysitter that matches my qualifications and can babysit my child/children,
 
 SO THAT my children can still receive proper care while I prioritize other needs. 
 
