@@ -9,9 +9,8 @@ import { getUserType } from "../../utils/helpers";
 export default function ProfileTemplate({ babysitters, zone }) {
   const userType = getUserType();
 
-  const [toastStates, setToastStates] = useState(() =>
-    babysitters.map(() => false)
-  );
+  const babysitterArray = Array.isArray(babysitters) ? babysitters : [babysitters];
+  const [toastStates, setToastStates] = useState(babysitterArray.map(() => false));
 
   const showToastMessage = (index) => {
     setToastStates((prevStates) =>
@@ -27,14 +26,13 @@ export default function ProfileTemplate({ babysitters, zone }) {
 
   useEffect(() => {
     return () => {
-      setToastStates(() => babysitters.map(() => false));
+      setToastStates(babysitterArray.map(() => false));
     };
   }, [babysitters]);
 
   return (
     <>
-      {babysitters &&
-        babysitters.map((babysitter, index) => (
+      {babysitterArray.map((babysitter, index) => (
           <div
             key={babysitter._id}
             className=" m-2 md:m-5  font-cool sm:w-80 w-72 z-10"

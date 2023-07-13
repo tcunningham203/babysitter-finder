@@ -1,16 +1,33 @@
 
 import { NavLink } from "react-router-dom"
 import React from 'react'
+import { useQuery } from "@apollo/client";
 import Auth from "../../utils/auth";
 import LandingPage from "./LandingPage";
 import { getUserType } from "../../utils/helpers";
-
+import { QUERY_MY_PROFILE_BABYSITTER, QUERY_MY_PROFILE_PARENT } from "../../utils/queries";
 import ProfileTemplate from "../templates/ProfileTemplate";
 import ParentContactInfo from "../templates/ParentInfoTemplate";
 
 
 export default function Profile() {
-    const userType = getUserType();
+      const userType = getUserType();
+const { data, loading } = useQuery(userType==='Parent'?QUERY_MY_PROFILE_PARENT:QUERY_MY_PROFILE_BABYSITTER,{
+      context: {
+            headers: {
+              authorization: `${
+                Auth.getToken()||''
+              }`,
+            },
+          },
+    });
+    if(loading){
+     return (
+        <h1>Loading...</h1>
+       )
+    }
+
+  
     if (Auth.loggedIn()) {
         return (
         <div className="break-before-column bg-slate-300 min-h-screen z-10 font-cool pt-16 sm:pt-20 md:pt-24 ">
@@ -36,11 +53,11 @@ export default function Profile() {
             <div className="    justify-center z-10 ">
 
                 <div className="  flex flex-wrap justify-center 2xl:mx-72 z-10 ">
-                {/* {userType === "Babysitter" && (
-                    <ProfileTemplate />
-                    )} */}
+                {userType === "Babysitter" && (
+               <ProfileTemplate babysitters={data?.myProfileDetailBabysitter} zone={data?.myProfileDetailBabysitter?.zone} />
+                    )} 
                     {userType === "Parent" && (
-                    <ParentContactInfo />
+                    <ParentContactInfo parent={data?.myProfileDetailParent} />
                     )}
                 </div>
             </div>
