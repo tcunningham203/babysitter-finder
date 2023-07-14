@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b83ba9f6.css",
+    "main.js": "/static/js/main.7e742c9c.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/libre-baskerville.regular.ttf": "/static/media/libre-baskerville.regular.79ca0ffb93959a378f3d.ttf",
+    "static/media/MADE Evolve Sans Regular (PERSONAL USE).otf": "/static/media/MADE Evolve Sans Regular (PERSONAL USE).da4f12f0090b4fb6af59.otf",
+    "static/media/MADE TOMMY Regular_PERSONAL USE.otf": "/static/media/MADE TOMMY Regular_PERSONAL USE.101be848d2d18e7296bc.otf",
+    "static/media/SmartKid.otf": "/static/media/SmartKid.3932336eeafabca52b21.otf",
+    "static/media/thin lines and curves.ttf": "/static/media/thin lines and curves.4caa09cc91798fbc7ad7.ttf",
+    "static/media/KGNeatlyPrinted.ttf": "/static/media/KGNeatlyPrinted.2da6d9a018c15ffd019d.ttf",
+    "index.html": "/index.html",
+    "main.b83ba9f6.css.map": "/static/css/main.b83ba9f6.css.map",
+    "main.7e742c9c.js.map": "/static/js/main.7e742c9c.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b83ba9f6.css",
+    "static/js/main.7e742c9c.js"
+  ]
+}
