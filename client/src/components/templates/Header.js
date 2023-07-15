@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import BearIcon from "../svg/BearIcon";
 import Clouds from "../svg/clouds";
 import Auth from "../../utils/auth";
-
-
+import Context from "../../context";
+import { getUserType } from "../../utils/helpers";
+import { useQuery } from "@apollo/client";
+import { QUERY_MY_PROFILE_PARENT,QUERY_MY_PROFILE_BABYSITTER } from "../../utils/queries";
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const {zone,setZone}=useContext(Context);
+  const { data: profileData,loading:profileLoading } = useQuery(
+    getUserType() === "Parent"
+      ? QUERY_MY_PROFILE_PARENT
+      : QUERY_MY_PROFILE_BABYSITTER
+  );
+
+  useEffect(()=>{
+    if(profileData){
+    const temp_zone = profileData?.myProfileDetailParent?.zone || profileData?.myProfileDetailBabysitter?.zone;
+    setZone(temp_zone)  
+  }
+  },[profileData])
+
+  
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -68,6 +86,7 @@ function Header() {
             <ul className="z-10    font-medium grid grid-cols-2 md:grid-cols-4 md:pe-7 flex flex-col font-neat md:p-0 my-1 md:flex-row   md:border-0">
               <li>
                 <NavLink
+                  style={{visibility:zone?'visible':'hidden'}}
                   to="/profile"
                   className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center"
                 >
@@ -77,6 +96,7 @@ function Header() {
              
               <li>
                 <NavLink
+                 style={{visibility:zone?'visible':'hidden'}}
                   to="/contacts"
                   className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center"
                 >
@@ -87,6 +107,7 @@ function Header() {
             
               <li>
                 <NavLink
+                 style={{visibility:zone?'visible':'hidden'}}
                   to="/map"
                   className="md:bg-transparent md:hover:bg-transparent hover:bg-slate-900 bg-slate-800 rounded my-1 md:my-0 mx-8 md:mx-8 text-white hover:text-blue-300 active:text-blue-400 lg:text-5xl md:text-xl text-4xl items-center justify-center flex align-center"
                 >

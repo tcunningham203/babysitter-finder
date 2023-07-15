@@ -109,9 +109,23 @@ export const UPDATE_PARENT = gql`
   }
 `;
 
-// export const ADD_TO_STARRED = gql`
-
-// `;
+export const ADD_TO_STARRED = gql`
+mutation AddToStarred($babySitter: ID!) {
+  addToStarred(babySitter: $babySitter) {
+    _id
+    zone
+    howMany
+    age
+    activities
+    allergies
+    pets
+    smoker
+    requests
+    starredBabysitters {
+      _id
+    }
+  }
+}`;
 
 // export const REMOVE_STARRED = gql`
 

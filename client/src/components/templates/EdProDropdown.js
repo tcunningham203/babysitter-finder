@@ -25,7 +25,7 @@ const EdProDropdown = ({ zone, onChange }) => {
           onChange={handleDropdownChange}
           className='z-10 h-12 bg-slate-700 overflow-auto rounded-lg w-56'
         >
-          <option value={' Washington Heights'}>
+          <option value={'Washington Heights'}>
             Washington Heights
           </option>
           <option value={'Morningside Heights'}>
@@ -43,10 +43,10 @@ const EdProDropdown = ({ zone, onChange }) => {
           <option value={'Upper East Side'}>
             Upper East Side
           </option>
-          <option value=' Chelsea'>
+          <option value='Chelsea'>
             Chelsea
           </option>
-          <option value=' Midtown'>
+          <option value='Midtown'>
             Midtown
           </option>
           <option value='Midtown East'>

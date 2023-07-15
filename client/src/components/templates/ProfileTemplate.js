@@ -6,12 +6,22 @@ import { LuTimerOff, LuTimer } from "react-icons/lu";
 import { Button, Accordion } from "flowbite-react";
 import React, { useState, useEffect } from "react";
 import { getUserType } from "../../utils/helpers";
-
+import { ADD_TO_STARRED } from "../../utils/mutations";
+import Auth from "../../utils/auth";
+import { useMutation } from "@apollo/client";
 export default function ProfileTemplate({ babysitters, zone }) {
   const userType = getUserType();
-
   const babysitterArray = Array.isArray(babysitters) ? babysitters : [babysitters];
   const [toastStates, setToastStates] = useState(babysitterArray.map(() => false));
+  const [add_To_Starred] = useMutation(ADD_TO_STARRED,{
+    context: {
+      headers: {
+        authorization: `${
+          Auth.getToken()||''
+        }`,
+      },
+    },
+  });
 
   const showToastMessage = (index) => {
     setToastStates((prevStates) =>
@@ -30,6 +40,12 @@ export default function ProfileTemplate({ babysitters, zone }) {
       setToastStates(babysitterArray.map(() => false));
     };
   }, [babysitters]);
+
+  const addToStarred=async(index)=>{
+    let babySitter= babysitterArray[index]._id
+    await add_To_Starred({variables: {babySitter}})
+    hideToast(index);
+  }
 
   return (
     <>
@@ -191,7 +207,7 @@ export default function ProfileTemplate({ babysitters, zone }) {
                         <div className="flex items-center justify-between">
                           <button
                             className="text-gray-100 hover:text-white"
-                            onClick={() => hideToast(index)}
+                            onClick={() => addToStarred(index)}
                           >
                             Confirm
                           </button>

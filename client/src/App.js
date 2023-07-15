@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React from "react";
+import React,{useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -17,7 +17,7 @@ import Map from "./components/pages/MapPage";
 import Profile from "./components/pages/ProfilePage";
 import EditProfile from "./components/pages/EditProfilePage";
 import Contacts from "./components/pages/ContactsPage";
-
+import Context from "./context";
 import SkylineWrapper from './components/svg/SkylineWrapper';
 import CreateProfile from "./components/pages/CreateProfile";
 
@@ -41,8 +41,9 @@ const client = new ApolloClient({
 });
 
 function App() {
-  console.log(process.env.NODE_ENV=='production'?"/graphql":'http://localhost:3001/graphql')
+  const [zone,setZone]=useState(null);
   return (
+    <Context.Provider value={{zone,setZone}}>
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
@@ -60,6 +61,7 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+    </Context.Provider>
   );
 }
 

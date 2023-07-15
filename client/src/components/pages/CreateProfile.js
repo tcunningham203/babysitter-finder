@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { app } from "../../Firebase";
 import LandingPage from "./LandingPage";
 import Auth from "../../utils/auth";
@@ -15,10 +15,11 @@ import ProfilePicture from "../templates/profilePicture";
 import { QUERY_MY_PROFILE_BABYSITTER, QUERY_MY_PROFILE_PARENT } from "../../utils/queries";
 import { CREATE_BABYSITTER, CREATE_PARENT } from "../../utils/mutations";
 import { Button } from "flowbite-react";
-
+import Context from "../../context";
 function CreateProfile() {
   const userType = getUserType();
   const [temp, setTemp] = useState({});
+  const {setZone}=useContext(Context)
   const [createParent] = useMutation(CREATE_PARENT, {
     context: {
       headers: {
@@ -70,6 +71,7 @@ function CreateProfile() {
     let userData=Auth.getProfile().data;
     let id=userData._id;
     try {
+      setZone(temp.zone)
       if (userType === "Parent") {
        createParent({
           variables: {

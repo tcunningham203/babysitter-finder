@@ -12,7 +12,8 @@ import { QUERY_STARREDBABYSITTERS } from '../../utils/queries';
 export default function Contacts() {
     const userType = getUserType();
     const { data, loading } = useQuery(userType==='Babysitter' ? QUERY_INTERESTEDPARENTS : QUERY_STARREDBABYSITTERS,{
-        context: {
+      fetchPolicy: 'no-cache', // Disable caching
+      context: {
               headers: {
                 authorization: `${
                   Auth.getToken()||''
@@ -20,15 +21,16 @@ export default function Contacts() {
               },
             },
       });
+     
       if(loading){
        return (
           <h1>Loading...</h1>
          )
       }
   
-      console.log(data)
-      const parents = data?.interestedParents?.interestedParents || [];
-      console.log(parents)
+    
+    const parents = data?.interestedParents?.interestedParents || [];
+    const babysitter=data?.starredBabysitters?.starredBabysitters||[];
     if (Auth.loggedIn()) {
     return (
         <div className="bg-slate-300 min-h-screen  pt-16 sm:pt-20 md:pt-24 z-10 ">
@@ -59,12 +61,11 @@ export default function Contacts() {
                     <ParentContactInfo parents={parents}/>
                     </div>
                     )}
-                     {userType === "Parent" && (
-                      <div className="  flex flex-wrap justify-center 2xl:mx-72 z-10 animate-fade-in-word ">
-  <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/> <ProfileTemplate/>
-  </div>
-
-)}
+               {userType === "Parent" && (
+                <div className="  flex flex-wrap justify-center 2xl:mx-72 z-10 animate-fade-in-word ">
+              <ProfileTemplate babysitters={babysitter}/> 
+               </div>
+               )}
                 
             </div>
         </div>

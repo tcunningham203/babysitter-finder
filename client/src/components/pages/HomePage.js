@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import ProfileTemplate from "../templates/ProfileTemplate";
 import Auth from "../../utils/auth";
@@ -11,12 +11,13 @@ import {
 import LandingPage from "./LandingPage";
 import NoProfileWarning from "../templates/NoProfileWarning";
 import { useNavigate } from "react-router-dom";
-
+import Context from "../../context";
 
 function Home() {
  
   function ShowHome() {
     const navigate=useNavigate();
+    const {setZone}=useContext(Context);
     const { data: babysittersData, loading } = useQuery(QUERY_BABYSITTERS);
     const { data: profileData,loading:profileLoading } = useQuery(
       getUserType() === "Parent"
@@ -29,6 +30,8 @@ function Home() {
     useEffect(()=>{
      if(!profileLoading && !zone){
       navigate("/create-profile");
+     }else{
+      setZone(zone)
      }
      Auth.userZoneGlobal=zone;
       

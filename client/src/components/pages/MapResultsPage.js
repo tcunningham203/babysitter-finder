@@ -18,6 +18,7 @@ const MapResultsPage = () => {
     const filteredBabysitters = babysittersData?.babysitters.filter(
       (babysitter) => babysitter.zone === zone
     );
+
     useEffect(() => {
         // Update the URL and page title with the decoded zone
         const decodedZone = decodeURIComponent(zone);

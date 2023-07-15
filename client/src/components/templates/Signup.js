@@ -37,7 +37,7 @@ const hideToast = () => {
       showToastMessage();
       return;
     }
-
+    try{
     const mutationResponse = await signup({
       variables: {
         firstName: formState.firstName,
@@ -47,8 +47,18 @@ const hideToast = () => {
         userType: formState.userType,
       },
     });
+     if (mutationResponse.data.signup === null) {
+      showToastMessage();
+      return;
+    }
     const token = mutationResponse.data.signup.token;
     Auth.login(token);
+  }catch (error) {
+    showToastMessage();
+    console.log(error);
+  }
+
+
   };
 
   const handleChange = (event) => {
@@ -94,7 +104,11 @@ const hideToast = () => {
                 >
                   Sign up with CubCare
                 </div>
-
+               {showToast && (
+                     <div className="bg-rose-100 text-center py-2 absolute top-0 left-0 w-full">
+                     <p>Email Already Exists !!</p>
+               </div>
+                   )}
                 <input
                   className="appearance-none border border-slate-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="firstName"
