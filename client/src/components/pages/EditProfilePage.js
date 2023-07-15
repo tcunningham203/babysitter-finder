@@ -47,7 +47,7 @@ function EditProfile() {
             },
           },
     });
-    if(!data?.myProfileDetailParent || !data?.myProfileDetailBabysitter){
+    if(!loading &&(!data?.myProfileDetailParent && !data?.myProfileDetailBabysitter)){
       data={myProfileDetailParent:{},myProfileDetailBabysitter:{}}
     }
     if(loading){
@@ -76,6 +76,8 @@ function EditProfile() {
           ...data.myProfileDetailParent,
           ...temp
           }
+        }).then(()=>{
+          window.location.href='/profile'
         })
 
       }else{
@@ -84,11 +86,15 @@ function EditProfile() {
           ...data.myProfileDetailBabysitter,
           ...temp
           }
+        }).then(()=>{
+          window.location.href='/profile'
         })
       }
-      window.location.href='/profile'
+      
 
     }
+
+    console.log('profile',data.myProfileDetailBabysitter?.profilePic)
     if (Auth.loggedIn()) {
         return (
           <div className="bg-slate-300 min-h-screen pt-16 sm:pt-20 md:pt-24 font-cool">

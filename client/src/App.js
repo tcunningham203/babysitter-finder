@@ -22,7 +22,7 @@ import SkylineWrapper from './components/svg/SkylineWrapper';
 import CreateProfile from "./components/pages/CreateProfile";
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri:process.env.NODE_ENV=='production'?"/graphql":'http://localhost:3001/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -41,6 +41,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  console.log(process.env.NODE_ENV=='production'?"/graphql":'http://localhost:3001/graphql')
   return (
     <ApolloProvider client={client}>
       <Router>

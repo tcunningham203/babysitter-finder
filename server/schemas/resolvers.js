@@ -113,6 +113,7 @@ const resolvers = {
       return parentObj;
     },
     updateBabysitter: async (parent, args, context) => {
+      console.log("ok")
       if (context.user) {
         let babysitter = await Babysitter.findOne({ user: context.user._id });
         if (!babysitter) {
