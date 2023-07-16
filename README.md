@@ -4,8 +4,8 @@
 CubCare is a childcare website where parents can match with babysitters (based on a questionaire) and can select babysitters to care for their children. This app is designed for both parents and babysitters to benefit, where parents can gain the time off that they have needed away from their kids, while babysitters can earn an income by babysitting their children.  This app is targeted to parents and babysitters living inside the borough of Manhattan in NYC.  
 
 <h1 align="center">
-    <a href="LINK HERE" target="_blank">
-     Deployed Application
+    <a href="https://cubcare-9dc4e13d9451.herokuapp.com/create-profile" target="_blank">
+     Link to Deployed Application
     </a>
     <br>
 
